@@ -1,10 +1,13 @@
 {
   "resources": [
     {"id":{"name":"spr_room_tile_single","path":"sprites/spr_room_tile_single/spr_room_tile_single.yy",},"order":1,},
+    {"id":{"name":"spr_room_tile_spawner_mask","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"order":4,},
     {"id":{"name":"spr_room_tile_64x64","path":"sprites/spr_room_tile_64x64/spr_room_tile_64x64.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
+    {"id":{"name":"obj_node_rock","path":"objects/obj_node_rock/obj_node_rock.yy",},"order":0,},
     {"id":{"name":"spr_rock_node","path":"sprites/spr_rock_node/spr_rock_node.yy",},"order":3,},
+    {"id":{"name":"obj_resource_node_spawner","path":"objects/obj_resource_node_spawner/obj_resource_node_spawner.yy",},"order":4,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":0,},
   ],
   "Options": [
@@ -38,6 +41,8 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Resource Nodes.yy","order":2,"resourceVersion":"1.0","name":"Resource Nodes","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Invisible Spawning Objects.yy","order":3,"resourceVersion":"1.0","name":"Invisible Spawning Objects","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
