@@ -1,15 +1,14 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 3AB636E2
+/// @DnDInput : 3
+/// @DnDArgument : "expr_1" "true"
 /// @DnDArgument : "var" "structure_level"
+/// @DnDArgument : "var_1" "in_use"
+/// @DnDArgument : "var_2" "needed_shiny_rocks"
 structure_level = 0;
-
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 3F08AD33
-/// @DnDArgument : "expr" "true"
-/// @DnDArgument : "var" "in_use"
 in_use = true;
+needed_shiny_rocks = 0;
 
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1

@@ -22,5 +22,5 @@ draw_set_alpha(l1AF7C74B_0 / $ff);
 /// @DnDArgument : "y" "8"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "var" "global.num_shiny_rocks"
-draw_text(x + 8, y + 8,  + string(global.num_shiny_rocks));
+/// @DnDArgument : "var" "structure_level"
+draw_text(x + 8, y + 8,  + string(structure_level));
