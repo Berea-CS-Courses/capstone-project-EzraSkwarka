@@ -23,9 +23,9 @@ if (l78D4F13D_0)
 	/// @DnDHash : 570F7DEB
 	/// @DnDParent : 78D4F13D
 	/// @DnDArgument : "imageind" "1"
-	/// @DnDArgument : "spriteind" "spr_room_tile_spawner_mask"
-	/// @DnDSaveInfo : "spriteind" "spr_room_tile_spawner_mask"
-	sprite_index = spr_room_tile_spawner_mask;
+	/// @DnDArgument : "spriteind" "spr_room_tile_spawner_node"
+	/// @DnDSaveInfo : "spriteind" "spr_room_tile_spawner_node"
+	sprite_index = spr_room_tile_spawner_node;
 	image_index = 1;
 }
 

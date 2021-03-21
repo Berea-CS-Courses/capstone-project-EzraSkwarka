@@ -11,6 +11,6 @@ var global.player_height = sprite_height;
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
 /// @DnDArgument : "objectid" "obj_player_vacuum"
-/// @DnDArgument : "layer" ""Active""
+/// @DnDArgument : "layer" ""Spawning""
 /// @DnDSaveInfo : "objectid" "obj_player_vacuum"
-instance_create_layer(x + 0, y + 0, "Active", obj_player_vacuum);
+instance_create_layer(x + 0, y + 0, "Spawning", obj_player_vacuum);

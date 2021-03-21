@@ -1,6 +1,6 @@
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
-/// @DnDHash : 61E27BD7
+/// @DnDHash : 2FFFA878
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""Current Pebbles: ""

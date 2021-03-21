@@ -11,8 +11,8 @@ if (l4ED14E88_0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 2CBCD7BA
 	/// @DnDParent : 4ED14E88
-	/// @DnDArgument : "spriteind" "spr_room_tile_spawner_mask"
-	/// @DnDSaveInfo : "spriteind" "spr_room_tile_spawner_mask"
-	sprite_index = spr_room_tile_spawner_mask;
+	/// @DnDArgument : "spriteind" "spr_room_tile_spawner_node"
+	/// @DnDSaveInfo : "spriteind" "spr_room_tile_spawner_node"
+	sprite_index = spr_room_tile_spawner_node;
 	image_index = 0;
 }
