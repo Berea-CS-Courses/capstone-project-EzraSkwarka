@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Drawing.Set_Font
+/// @DnDVersion : 1
+/// @DnDHash : 5B646342
+/// @DnDArgument : "font" "fnt_basic_large"
+/// @DnDSaveInfo : "font" "fnt_basic_large"
+draw_set_font(fnt_basic_large);
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 2FFFA878
@@ -41,3 +48,29 @@ if(has_had_shiny_rocks == true)
 	/// @DnDArgument : "var" "global.num_shiny_rocks"
 	draw_text(x + 0, y + 15, string("Current Shiny Rocks: ") + string(global.num_shiny_rocks));
 }
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 3EA41200
+/// @DnDArgument : "var" "global.mouse_level"
+/// @DnDArgument : "op" "2"
+if(global.mouse_level > 0)
+{
+	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 029EDB80
+	/// @DnDParent : 3EA41200
+	/// @DnDArgument : "x_relative" "1"
+	/// @DnDArgument : "y" "30"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "caption" ""Mouse Level: ""
+	/// @DnDArgument : "var" "global.mouse_level"
+	draw_text(x + 0, y + 30, string("Mouse Level: ") + string(global.mouse_level));
+}
+
+/// @DnDAction : YoYo Games.Drawing.Set_Font
+/// @DnDVersion : 1
+/// @DnDHash : 673262B9
+/// @DnDArgument : "font" "fnt_basic"
+/// @DnDSaveInfo : "font" "fnt_basic"
+draw_set_font(fnt_basic);

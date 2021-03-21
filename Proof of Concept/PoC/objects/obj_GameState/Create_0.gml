@@ -1,12 +1,14 @@
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 3F353F9E
-/// @DnDInput : 2
-/// @DnDArgument : "value" "20"
+/// @DnDInput : 3
+/// @DnDArgument : "value" "200"
 /// @DnDArgument : "var" "num_pebbles"
 /// @DnDArgument : "var_1" "num_shiny_rocks"
-global.num_pebbles = 20;
+/// @DnDArgument : "var_2" "mouse_level"
+global.num_pebbles = 200;
 global.num_shiny_rocks = 0;
+global.mouse_level = 0;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
