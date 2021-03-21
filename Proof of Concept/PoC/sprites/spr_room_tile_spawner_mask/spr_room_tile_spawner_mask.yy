@@ -27,21 +27,25 @@
     {"compositeImage":{"FrameId":{"name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"LayerId":{"name":"60b939c8-771b-49ff-b913-4789fe11d39f","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_room_tile_spawner_mask","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"resourceVersion":"1.0","name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"351296e9-bda0-46db-a9b8-8adc0da55177","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"351296e9-bda0-46db-a9b8-8adc0da55177","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"LayerId":{"name":"60b939c8-771b-49ff-b913-4789fe11d39f","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_room_tile_spawner_mask","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"resourceVersion":"1.0","name":"351296e9-bda0-46db-a9b8-8adc0da55177","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_room_tile_spawner_mask","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 2.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f1e5397d-3811-4abf-bff7-c66d3dd81809","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5dd3ffd8-455b-4d95-a715-8536ebd17e91","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"351296e9-bda0-46db-a9b8-8adc0da55177","path":"sprites/spr_room_tile_spawner_mask/spr_room_tile_spawner_mask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
