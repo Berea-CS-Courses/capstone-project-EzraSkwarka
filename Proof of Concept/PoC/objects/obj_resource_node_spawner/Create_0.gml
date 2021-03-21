@@ -1,9 +1,5 @@
-/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
-/// @DnDHash : 167596D4
-/// @DnDArgument : "xpos_relative" "1"
-/// @DnDArgument : "ypos_relative" "1"
-/// @DnDArgument : "objectid" "obj_node_rock"
-/// @DnDArgument : "layer" ""Active""
-/// @DnDSaveInfo : "objectid" "obj_node_rock"
-instance_create_layer(x + 0, y + 0, "Active", obj_node_rock);
+/// @DnDHash : 0E9F5392
+/// @DnDArgument : "steps" "90"
+alarm_set(0, 90);

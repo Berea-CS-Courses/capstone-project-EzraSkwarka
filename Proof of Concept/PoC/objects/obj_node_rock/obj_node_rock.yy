@@ -3,7 +3,7 @@
     "name": "spr_rock_node",
     "path": "sprites/spr_rock_node/spr_rock_node.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
