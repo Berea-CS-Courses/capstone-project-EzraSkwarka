@@ -23,6 +23,7 @@
   "eventList": [
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_player_vacuum","path":"objects/obj_player_vacuum/obj_player_vacuum.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_mat_pebble","path":"objects/obj_mat_pebble/obj_mat_pebble.yy",},"parent":{"name":"obj_player_vacuum","path":"objects/obj_player_vacuum/obj_player_vacuum.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":true,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_mat_shiny_rock","path":"objects/obj_mat_shiny_rock/obj_mat_shiny_rock.yy",},"parent":{"name":"obj_player_vacuum","path":"objects/obj_player_vacuum/obj_player_vacuum.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
