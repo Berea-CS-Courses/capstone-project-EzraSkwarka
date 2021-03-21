@@ -35,6 +35,10 @@ What should my proof-of-concept be able to do?
 
 ### Are there any components of the code or systems you have submitted that you did not create? If so, document them here alongside their source or reference.
 
+- Getting GMS2 to play nice with GitHub (https://docs2.yoyogames.com/source/_build/2_interface/2_extras/source_control.html)
+
+- Understanding Movement (https://www.youtube.com/watch?v=9drRR2jE4lE&ab_channel=ShaunSpalding)
+
 
 # Updates to previous Documents
 
