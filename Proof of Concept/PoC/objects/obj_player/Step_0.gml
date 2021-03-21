@@ -1,3 +1,7 @@
+//Set global position
+global.player_x = x;
+global.player_y = y;
+
 
 // Keep player within the room
 x = clamp(x, 0, room_width-16);
@@ -11,3 +15,4 @@ if (keyboard_check(vk_nokey) and (speed > 0)) {
 	speed -= .15;
 	if (speed < 0) speed = 0;
 	}
+
