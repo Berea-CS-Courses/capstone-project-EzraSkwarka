@@ -4,6 +4,7 @@
     {"id":{"name":"spr_room_tile_64x64","path":"sprites/spr_room_tile_64x64/spr_room_tile_64x64.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
+    {"id":{"name":"spr_rock_node","path":"sprites/spr_rock_node/spr_rock_node.yy",},"order":3,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":0,},
   ],
   "Options": [
