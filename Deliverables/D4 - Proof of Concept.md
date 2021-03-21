@@ -37,12 +37,15 @@ To test it yourself, simply unzip the POC_demo.zip file and run the included exe
 - To build the Refinery, move over to the pumpkin-colored tile and left-click it. You need to have at least ten Pebbles in your inventory to build the Refinery successfully. Once the Refinery is built, you can left-click it again to create Shiny Rocks at a base rate of one for every three Pebbles. To upgrade the Refinery station, right-click it. The currency for upgrading it is Shiny Rocks, and it will cost you 1.1^(current structure level) of Shiny Rocks to upgrade it one step. Each level bat the structure is upgraded will cause it to produce point one additional shiny rocks per activation; however, that number will always be floored as I'm not allowing for partial resources, so not every level represents an immediate change in production. The current level of the structure is indicated by the number in it's lower right-hand region.
 - To build the Mouse Tool upgrade station, move over to the raspberry-colored tile and left-click it. You will need at least 10 shiny stones to build the upgrade station successfully. As this station does not have a primary output, left-clicking the completed station will do you no good, but right-clicking it will give you Mouse Levels. Mouse Levels are a stand-in for Pick Levels, and they allow you to increase the number of resources gathered per Rock Node you break at a rate of 10% per Mouse Level. Again partial resources are not allowed.
 - To reset the run and gather your Renown points, position the character on top of the blue-colored reset panel and press the E key on the keyboard. You will know you're standing in the correct position because the panels will change color, and you'll know the reset command went through successfully because it will reset the room and you will gain the appropriate amount of Renown points. As a reminder, the Renown points gathered are equal to log base 2 of the current number of Shiny Rocks in your inventory. The calculator does not take into account Shiny Rocks produced but not held during the run, but it does allow you to carry Renown points over so that each run will add to your Renown points not set your Renown points.
-But that's basically it, in a section below I have done a walkthrough with examples of this basic process to demonstrate the functionality of my proof of concept.
+
 
 
 ### Are there any components of the code or systems you have submitted that you did not create? If so, document them here alongside their source or reference.
+Below I have linked any resources that I used during the creation of this project and for some of them I've included a brief description of what the source is.
 
 - GML Documentation (https://docs.yoyogames.com/)
+
+-Basic tutorial (https://www.youtube.com/playlist?list=PLhIbBGhnxj5JcbfoxS_CWTnImRL_wB_Wg)
 
 - Getting GMS2 to play nice with GitHub (https://docs2.yoyogames.com/source/_build/2_interface/2_extras/source_control.html)
 
@@ -51,5 +54,9 @@ But that's basically it, in a section below I have done a walkthrough with examp
 -Understanding GMS2's Layer system (https://forum.yoyogames.com/index.php?threads/guide-getting-started-with-room-layers-mostly-new-gml-functions.13068/)
 
 # Updates to previous Documents
+At this level of implementation, not much has changed for my previous design documents, with a single exception. I've shifted up how I'm naming and handling my layering system, so I'm going back to D2 to change that. Previously my layers were: Active -> Placeable and Node layer -> Hex Grid -> Background Image. Now they are: UI -> Active -> Spawning -> Hex Grid -> Tile Sheet -> Background Image.
 
 # Reflection
+Overall I'm pretty happy with how this proof-of-concept turned out, it does have a couple of deficiencies that I'd like to figure out and it is still pretty ugly, but I am quite happy with it especially after my disaster of a Lo-Fi prototype. We swing into full implementation I'll be able to add a considerable amount of Polish, and sound because currently this game makes no sound and I'll probably have to shift have some of my references and functions work, but for right now I just wanted to get something working to show that I could do this project.
+
+As I said I have two noticeable deficiencies right now that I need to sort out at some point. The first is that if the player is persistent enough they can force themselves out of bounds of the game, and the second issue is probably related I think it's also a collision issue. If the player is touching a collidable object sideways, they won't be able to move up or down until they move away from the collidable object. It's kind of hard to explain, but it's really easy to replicate.

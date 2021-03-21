@@ -95,7 +95,7 @@
 
 ### How many times am I supposed to play this game?
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is one of the aspects that I'm incorporating from incremental games, endless replayability and scalability.  the Renown system effectively removes any fear medical ceiling that resource generation has in this game, but in its design I've also tried to keep it a fully active game so that it never becomes a self-running machine. A few times you all have asked “How much automation will this game have?” and my answer to that is “As close to zero as I can get it.”
-  
+
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A "Run" in this game is everything the player does from the moment they wake up on the beach till the moment they sail off on the endgame boat from beach 2. A "Campain" is the collection of everything the player has done and can be thought of as their current progress on their persistent relics plus the progress in their current run.
 
 
@@ -127,11 +127,16 @@
   * 2.5D perspective
     * This is more a reminder than anything else as the perspective is handled by the engine and the art style
   * Layering system:
+    * UI
+      * This layer is where I actually draw information on to the screen, but it does not directly interact with anything on the game world
     * Active layer
-    * Placeables and Node layer
-      * Not sure if this needs to be distinct from the “Active Layer”
+    * Spawning
+      * This layer will be an invisible layer that handles the object placement and collision logic for node and resource spawning
+      * ~~Not sure if this needs to be distinct from the “Active Layer”~~
     * Hex Grid
       * as an overlay that is toggleable for both in game and debug purposes
+    * Tile Sheet
+      * This layer is where I actually put the visuals for the game map.  For example, this is where I would place the esthetic differentials between ocean coasts and grass tiles on the beach map
     * Background Image
       * This is the actual map that adds flavor instead of just a series of grids
       * Put in a placeholder as the actual map will be made in the polish section
@@ -156,8 +161,8 @@
         * Is there a mob or structure currently on top of me?
         * Simple collision check maybe?
         * Dynamic
-  ~~* Resource/enemy spawn points~~
-  ~~* Structure placeable points~~
+  * ~~ Resource/enemy spawn points~~
+  * ~~ Structure placeable points~~
     * Covered by grid tagging system (I hope)
 
 ### Resource Objects
