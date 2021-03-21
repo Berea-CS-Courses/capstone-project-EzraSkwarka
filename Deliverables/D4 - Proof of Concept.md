@@ -20,7 +20,7 @@ What should my proof-of-concept be able to do?
 - The player should be able to “vacuum” up the Pebbles when sufficiently close to them, again I can probably accomplish this with a collision mask on top of the player.
 - I need to display a Pebble counter, this is a stand-in for the inventory backstage menu which I don't feel is necessary to implement yet. This counter should display the current number of Pebbles the player has that they have not spent. It should *not* display the total number of collected Pebbles.
 - The player should be able to build a Pebble Refinar at a cost of three Pebbles. For right now I'm going to restrict it to where they can only build one refinery and when they click the button I'm going to place the refinery on a predetermined hex. I need to make sure the player is not standing on that hex before it is spawned in.
-- There needs be an interaction key that pops up once the player is sufficiently close to the Refiner, and upon pressing that it should bring up its crafting dialog menu. The menu needs to display its name, current level (start at 0), a crafting recipe that will turn to Pebbles into one Shiny Rock after 1 second, and a button for the player to upgrade the Refiner.
+- If the player is sufficiently close to the Refiner, they need to be able to left-click to have it produced Shiny Rocks and right-click to upgrade its level. Level change needs to be reflected by the draw event of the object and the calculation of the Shiny Rock output.
 - Once the refinery is able to create shiny rocks, I need to go to the same basic process that I went through for Pebbles
 - I need to create a system in which the shiny rocks can be used to upgrade the Refiner and the Mouse. In this sense, the mouse level functions as though it were tool levels. The formula for the cost of upgrading structure and mouse levels is 1.1^(current level) Shinny Rocks.
 - Mouse levels need to interact with the resource node such that each level of the mouse increases the amount of Pebbles dropped by 10%. This will not be immediately noticeable as I'm not allowing for partial resource objects, so there won't be any noticeable difference until Mouse level 4 at which point the resource node should drop a total of 4 Pebbles.
@@ -35,10 +35,13 @@ What should my proof-of-concept be able to do?
 
 ### Are there any components of the code or systems you have submitted that you did not create? If so, document them here alongside their source or reference.
 
+- GML Documentation (https://docs.yoyogames.com/)
+
 - Getting GMS2 to play nice with GitHub (https://docs2.yoyogames.com/source/_build/2_interface/2_extras/source_control.html)
 
 - Understanding Movement (https://www.youtube.com/watch?v=9drRR2jE4lE&ab_channel=ShaunSpalding)
 
+-Understanding GMS2's Layer system (https://forum.yoyogames.com/index.php?threads/guide-getting-started-with-room-layers-mostly-new-gml-functions.13068/)
 
 # Updates to previous Documents
 
