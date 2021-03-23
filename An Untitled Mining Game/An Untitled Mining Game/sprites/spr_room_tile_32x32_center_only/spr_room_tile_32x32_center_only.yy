@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"345eaa8f-08d0-4d38-99da-5b2efb95bd43","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Sprites/Tiles.yy",
+    "name": "Square",
+    "path": "folders/Sprites/Tiles/Square.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_room_tile_32x32_center_only",

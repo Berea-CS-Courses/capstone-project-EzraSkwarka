@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"82f55e9a-3129-462a-9234-aff64da6a31b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Sprites/Tiles.yy",
+    "name": "Hex",
+    "path": "folders/Sprites/Tiles/Hex.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_grass_tile_backup",
