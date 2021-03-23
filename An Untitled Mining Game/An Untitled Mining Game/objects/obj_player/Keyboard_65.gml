@@ -4,5 +4,5 @@
 /// @DnDInput : 2
 /// @DnDArgument : "function" "motion_add"
 /// @DnDArgument : "arg" "180"
-/// @DnDArgument : "arg_1" ".05"
-motion_add(180, .05);
+/// @DnDArgument : "arg_1" "player_acceleration"
+motion_add(180, player_acceleration);
