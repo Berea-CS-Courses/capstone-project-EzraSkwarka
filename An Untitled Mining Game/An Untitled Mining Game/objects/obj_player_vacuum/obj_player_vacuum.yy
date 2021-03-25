@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player Objects",
-    "path": "folders/Objects/Player Objects.yy",
+    "name": "Tools",
+    "path": "folders/Objects/Player Objects/Tools.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_player_vacuum",
