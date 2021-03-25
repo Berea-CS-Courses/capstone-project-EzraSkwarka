@@ -23,8 +23,8 @@ if(!(global.is_swinging))
 	/// @DnDVersion : 1
 	/// @DnDHash : 1686BB56
 	/// @DnDParent : 4649E3F1
-	/// @DnDArgument : "spriteind" "spr_pickaxe_swing"
-	/// @DnDSaveInfo : "spriteind" "spr_pickaxe_swing"
-	sprite_index = spr_pickaxe_swing;
+	/// @DnDArgument : "spriteind" "spr_axe_swing"
+	/// @DnDSaveInfo : "spriteind" "spr_axe_swing"
+	sprite_index = spr_axe_swing;
 	image_index = 0;
 }

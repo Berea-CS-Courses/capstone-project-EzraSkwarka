@@ -8,7 +8,7 @@ global.is_swinging = false;
 /// @DnDAction : YoYo Games.Instances.Set_Sprite
 /// @DnDVersion : 1
 /// @DnDHash : 0D8E0232
-/// @DnDArgument : "spriteind" "spr_pickaxe"
-/// @DnDSaveInfo : "spriteind" "spr_pickaxe"
-sprite_index = spr_pickaxe;
+/// @DnDArgument : "spriteind" "spr_axe"
+/// @DnDSaveInfo : "spriteind" "spr_axe"
+sprite_index = spr_axe;
 image_index = 0;
