@@ -20,3 +20,11 @@ global.num_sticks = 0;
 /// @DnDArgument : "expr" "false"
 /// @DnDArgument : "var" "has_had_shiny_rocks"
 has_had_shiny_rocks = false;
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 2DEA4C07
+/// @DnDArgument : "objectid" "obj_toolbar"
+/// @DnDArgument : "layer" ""UI""
+/// @DnDSaveInfo : "objectid" "obj_toolbar"
+instance_create_layer(0, 0, "UI", obj_toolbar);
