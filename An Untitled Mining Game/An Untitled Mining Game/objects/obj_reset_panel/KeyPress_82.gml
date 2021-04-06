@@ -1,8 +1,8 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 4026BE75
-/// @DnDArgument : "code" "global.renown += floor(log2(global.num_shiny_rocks));"
-global.renown += floor(log2(global.num_shiny_rocks));
+/// @DnDArgument : "code" "global.renown += max(floor(log2(global.num_shiny_rocks)),0);"
+global.renown += max(floor(log2(global.num_shiny_rocks)),0);
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1

@@ -11,6 +11,7 @@
     {"id":{"name":"spr_mat_shiny_pebble","path":"sprites/spr_mat_shiny_pebble/spr_mat_shiny_pebble.yy",},"order":1,},
     {"id":{"name":"spr_room_tile_single","path":"sprites/spr_room_tile_single/spr_room_tile_single.yy",},"order":0,},
     {"id":{"name":"spr_mat_pebble","path":"sprites/spr_mat_pebble/spr_mat_pebble.yy",},"order":0,},
+    {"id":{"name":"obj_inventory_tracker","path":"objects/obj_inventory_tracker/obj_inventory_tracker.yy",},"order":2,},
     {"id":{"name":"spr_room_tile_spawner_node","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},"order":2,},
     {"id":{"name":"obj_toolbar","path":"objects/obj_toolbar/obj_toolbar.yy",},"order":1,},
     {"id":{"name":"obj_structure_pebble_refiner","path":"objects/obj_structure_pebble_refiner/obj_structure_pebble_refiner.yy",},"order":0,},
