@@ -32,3 +32,11 @@ instance_create_layer(0, 0, "UI", obj_toolbar);
 /// @DnDArgument : "layer" ""UI""
 /// @DnDSaveInfo : "objectid" "obj_inventory_tracker"
 instance_create_layer(0, 0, "UI", obj_inventory_tracker);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 5C6F6B08
+/// @DnDArgument : "objectid" "obj_inventory"
+/// @DnDArgument : "layer" ""UI""
+/// @DnDSaveInfo : "objectid" "obj_inventory"
+instance_create_layer(0, 0, "UI", obj_inventory);
