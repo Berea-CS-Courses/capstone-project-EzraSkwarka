@@ -27,16 +27,6 @@ global.current_tool = 1;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
-/// @DnDHash : 614DE735
-/// @DnDArgument : "xpos_relative" "1"
-/// @DnDArgument : "ypos_relative" "1"
-/// @DnDArgument : "objectid" "obj_player_vacuum"
-/// @DnDArgument : "layer" ""Spawning""
-/// @DnDSaveInfo : "objectid" "obj_player_vacuum"
-instance_create_layer(x + 0, y + 0, "Spawning", obj_player_vacuum);
-
-/// @DnDAction : YoYo Games.Instances.Create_Instance
-/// @DnDVersion : 1
 /// @DnDHash : 78238EC9
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"

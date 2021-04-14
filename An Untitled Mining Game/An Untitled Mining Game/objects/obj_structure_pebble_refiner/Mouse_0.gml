@@ -1,6 +1,4 @@
-var l24CF565B_0;
-l24CF565B_0 = keyboard_check(vk_shift);
-if (l24CF565B_0)
+if (keyboard_check(vk_shift))
 {
 	if (distance_to_object(obj_player) <= 16) {
 		var is_close_enough = true;
