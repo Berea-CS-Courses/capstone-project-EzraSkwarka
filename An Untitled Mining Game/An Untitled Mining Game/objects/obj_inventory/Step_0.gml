@@ -70,3 +70,8 @@ if (pickup_slot != -1) {
 		pickup_slot = selected_slot;
 	}
 }
+
+//----------
+// Update Renown
+//----------
+ds_player_info[# 1, 1] = global.renown;

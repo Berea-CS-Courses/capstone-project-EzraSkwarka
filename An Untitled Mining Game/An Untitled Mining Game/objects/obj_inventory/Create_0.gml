@@ -64,9 +64,10 @@ enum item {
 	height		= 3,
 }
 
-var yy = 0; repeat(inv_slots){
-	ds_inventory[# 0, yy] = irandom_range(1, item.height-1);
-	ds_inventory[# 1, yy] = irandom_range(1, 10);
+//randomly fill inventory for testing
+/*var ii = 0; repeat(inv_slots){
+	ds_inventory[# 0, ii] = irandom_range(1, item.height-1);
+	ds_inventory[# 1, ii] = irandom_range(1, 10);
 	
 	yy += 1;
-}
+}*/
