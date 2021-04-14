@@ -10,7 +10,13 @@ var info_grid = ds_player_info;
 
 draw_set_font(fnt_text_24);
 var c = c_black; 
-draw_text_color(info_x, info_y, info_grid[# 0, 3] + ": " + info_grid[# 1, 3], c,c,c,c, 1);
+draw_text_color(info_x, info_y, info_grid[# 0, 0] + ": " + info_grid[# 0, 1], c,c,c,c, 1);
+
+draw_set_font(fnt_smalldigits);
+draw_text_color(
+	info_x + (192*scale) + ((15+18)*scale), info_y, 
+	string(info_grid[# 1, 1]), c,c,c,c, 1
+	);
 
 
 //------Inventory

@@ -38,21 +38,17 @@ slots_x = info_x;
 slots_y = inv_UI_y + (40 * scale);
 
 //---------Player Info
-//0 = GOLD
-//1 = SILVER
-//2 = BRONZE
-//3 = NAME
+//0 = NAME
+//1 = Renown
 
-ds_player_info = ds_grid_create(2, 4);
-ds_player_info[# 0, 0] = "Gold";
-ds_player_info[# 0, 1] = "Silver";
-ds_player_info[# 0, 2] = "Copper";
-ds_player_info[# 0, 3] = "Name";
+ds_player_info = ds_grid_create(2, 2);
+ds_player_info[# 0, 0] = "Name";
+ds_player_info[# 1, 0] = "Renown";
 
-ds_player_info[# 1, 0] = irandom_range(0,99);
-ds_player_info[# 1, 1] = irandom_range(0,99);
-ds_player_info[# 1, 2] = irandom_range(0,99);
-ds_player_info[# 1, 3] = "Player";
+
+ds_player_info[# 0, 1] = "Player";
+ds_player_info[# 1, 1] = global.renown;
+
 
 //---------Inventory
 //0 = ITEM
