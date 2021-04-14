@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_player_vacuum",
-    "path": "sprites/spr_player_vacuum/spr_player_vacuum.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -21,16 +18,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tools",
-    "path": "folders/Objects/Player Objects/Tools.yy",
+    "name": "Mats",
+    "path": "folders/Objects/Resources/Mats.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player_vacuum",
+  "name": "obj_item",
   "tags": [],
   "resourceType": "GMObject",
 }

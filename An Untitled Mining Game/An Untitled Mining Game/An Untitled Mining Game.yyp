@@ -1,10 +1,12 @@
 {
   "resources": [
+    {"id":{"name":"spr_inventory_items_small","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"order":3,},
     {"id":{"name":"spr_tree","path":"sprites/spr_tree/spr_tree.yy",},"order":1,},
     {"id":{"name":"obj_tool_axe","path":"objects/obj_tool_axe/obj_tool_axe.yy",},"order":2,},
     {"id":{"name":"obj_GameState","path":"objects/obj_GameState/obj_GameState.yy",},"order":0,},
     {"id":{"name":"spr_room_tile_reset","path":"sprites/spr_room_tile_reset/spr_room_tile_reset.yy",},"order":4,},
     {"id":{"name":"spr_hex_tile","path":"sprites/spr_hex_tile/spr_hex_tile.yy",},"order":0,},
+    {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},"order":2,},
     {"id":{"name":"spr_pickaxe","path":"sprites/spr_pickaxe/spr_pickaxe.yy",},"order":0,},
     {"id":{"name":"obj_mat_pebble","path":"objects/obj_mat_pebble/obj_mat_pebble.yy",},"order":0,},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":3,},
@@ -23,6 +25,7 @@
     {"id":{"name":"obj_reset_panel","path":"objects/obj_reset_panel/obj_reset_panel.yy",},"order":3,},
     {"id":{"name":"scr_tool_check","path":"scripts/scr_tool_check/scr_tool_check.yy",},"order":1,},
     {"id":{"name":"spr_inventory_UI","path":"sprites/spr_inventory_UI/spr_inventory_UI.yy",},"order":1,},
+    {"id":{"name":"obj_structure_pebble_refiner20","path":"objects/obj_structure_pebble_refiner20/obj_structure_pebble_refiner20.yy",},"order":3,},
     {"id":{"name":"obj_resource_mouse_spawner","path":"objects/obj_resource_mouse_spawner/obj_resource_mouse_spawner.yy",},"order":2,},
     {"id":{"name":"spr_axe_swing","path":"sprites/spr_axe_swing/spr_axe_swing.yy",},"order":3,},
     {"id":{"name":"obj_node_tree","path":"objects/obj_node_tree/obj_node_tree.yy",},"order":1,},

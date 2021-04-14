@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 2,
-  "bbox_right": 509,
+  "bbox_left": 1,
+  "bbox_right": 254,
   "bbox_top": 0,
-  "bbox_bottom": 61,
+  "bbox_bottom": 30,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 512,
-  "height": 256,
+  "width": 256,
+  "height": 128,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 32,
   "gridY": 32,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},"LayerId":{"name":"3d33f06a-9348-4b0f-a07d-557a9ae0ff52","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_inventory_items","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},"resourceVersion":"1.0","name":"e6a27a74-52dd-49ea-8200-b32118849260","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"LayerId":{"name":"3d33f06a-9348-4b0f-a07d-557a9ae0ff52","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_inventory_items_small","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"resourceVersion":"1.0","name":"e6a27a74-52dd-49ea-8200-b32118849260","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_inventory_items","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},
+    "spriteId": {"name":"spr_inventory_items_small","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fe2089f1-b2c8-4c92-86ed-c5d6ac014d72","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3a51fac0-9241-443e-a280-185622dc211f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_inventory_items","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},
+    "parent": {"name":"spr_inventory_items_small","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_inventory_items",
+    "name": "spr_inventory_items_small",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/GUI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_inventory_items",
+  "name": "spr_inventory_items_small",
   "tags": [],
   "resourceType": "GMSprite",
 }
