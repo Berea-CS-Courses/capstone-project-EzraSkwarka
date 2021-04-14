@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "GUI Objects",
-    "path": "folders/Objects/GUI Objects.yy",
+    "name": "Backstage",
+    "path": "folders/Objects/GUI Objects/Backstage.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_inventory",
