@@ -35,7 +35,7 @@
     "path": "folders/Objects/Structures.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_structure_pebble_refiner20",
+  "name": "obj_structure_pebble_refiner_backup",
   "tags": [],
   "resourceType": "GMObject",
 }
