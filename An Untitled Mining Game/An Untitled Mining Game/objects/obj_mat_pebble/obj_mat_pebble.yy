@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Mats",
-    "path": "folders/Objects/Resources/Mats.yy",
+    "name": "zzOld",
+    "path": "folders/Objects/zzOld.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_mat_pebble",

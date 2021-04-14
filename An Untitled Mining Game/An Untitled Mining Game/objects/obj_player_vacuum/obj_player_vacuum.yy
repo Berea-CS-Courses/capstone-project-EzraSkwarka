@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tools",
-    "path": "folders/Objects/Player Objects/Tools.yy",
+    "name": "zzOld",
+    "path": "folders/Objects/zzOld.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_player_vacuum",

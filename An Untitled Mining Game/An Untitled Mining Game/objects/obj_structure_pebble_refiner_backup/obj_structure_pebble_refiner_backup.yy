@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Structures",
-    "path": "folders/Objects/Structures.yy",
+    "name": "zzOld",
+    "path": "folders/Objects/zzOld.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_structure_pebble_refiner_backup",
