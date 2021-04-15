@@ -2,7 +2,7 @@ depth = -1;
 scale = 2;
 show_inventory = false;
 
-inv_slots = 4;
+inv_slots = 6;
 inv_slots_width = 8;
 inv_slots_height = 3;
 
@@ -61,13 +61,14 @@ enum item {
 	none		= 0,
 	rock		= 1,
 	shiny_rock	= 2,
+//	carrot		= 3,
 	height		= 3,
 }
 
 //randomly fill inventory for testing
-/*var ii = 0; repeat(inv_slots){
+var ii = 0; repeat(inv_slots){
 	ds_inventory[# 0, ii] = irandom_range(1, item.height-1);
 	ds_inventory[# 1, ii] = irandom_range(1, 10);
 	
-	yy += 1;
-}*/
+	ii += 1;
+}
