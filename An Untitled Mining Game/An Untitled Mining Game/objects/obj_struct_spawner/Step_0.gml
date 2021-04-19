@@ -8,6 +8,6 @@ if (building) {
 	mousey = mouse_y;
 	
 	if (mouse_check_button_pressed(mb_left)) {
-		scr_create_struct(mousex, mousey, obj_structure_pebble_refiner);
+		scr_create_struct(mousex_adjusted, mousey_adjusted, obj_structure_pebble_refiner);
 	}
 }

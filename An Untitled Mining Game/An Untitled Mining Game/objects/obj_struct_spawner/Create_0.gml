@@ -13,3 +13,10 @@ selectStruct = 0;
 
 mousex = 0;
 mousey = 0;
+
+//these are to account for the fact that the inital grid does not line up with the room's origin
+cell_offset_x = 10; //there is no reason for these values other than assethic 
+cell_offset_y = 15; 
+
+cellHeight = 50;
+cellWidth = 48; 
