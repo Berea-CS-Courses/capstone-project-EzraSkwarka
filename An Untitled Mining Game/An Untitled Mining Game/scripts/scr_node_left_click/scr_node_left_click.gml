@@ -1,6 +1,6 @@
 // // Script assets have changed for v2.3.0 see
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_node_left_click(node_health, tool_to_use, resource_obj_to_spawn, base_rate) 
+function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_spawn, base_rate) 
 {
 	if (global.current_tool == tool_to_use) {
 		if !global.is_swinging {
@@ -16,7 +16,14 @@ function scr_node_left_click(node_health, tool_to_use, resource_obj_to_spawn, ba
 					instance_destroy();
 					bonus_multiplier = (1 + .1 * (global.mouse_level + global.renown));
 					repeat(floor(base_rate * bonus_multiplier))	{
-						instance_create_layer(x + 0, y + 0, "Active", resource_obj_to_spawn);
+						//instance_create_layer(x + 0, y + 0, "Active", resource_obj_to_spawn);
+						var inst = instance_create_layer(x, y, "Active", obj_item);
+						with (inst) {
+							item_num = resource_mat_number_to_spawn;
+							x_frame = item_num mod (spr_width/cell_size);
+							y_frame = item_num div (spr_width/cell_size);
+						}
+						show_debug_message("dropped an item")
 					}
 				}
 			}

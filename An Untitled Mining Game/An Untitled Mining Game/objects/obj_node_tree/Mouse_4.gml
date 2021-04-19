@@ -6,7 +6,7 @@
 /// @DnDArgument : "script" "scr_node_left_click"
 /// @DnDArgument : "arg" "node_health"
 /// @DnDArgument : "arg_1" "2"
-/// @DnDArgument : "arg_2" "obj_mat_pebble"
+/// @DnDArgument : "arg_2" "1"
 /// @DnDArgument : "arg_3" "15"
 /// @DnDSaveInfo : "script" "scr_node_left_click"
-node_health = script_execute(scr_node_left_click, node_health, 2, obj_mat_pebble, 15);
+node_health = script_execute(scr_node_left_click, node_health, 2, 1, 15);
