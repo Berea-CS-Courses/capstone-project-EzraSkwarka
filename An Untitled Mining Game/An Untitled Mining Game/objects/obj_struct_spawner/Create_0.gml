@@ -2,13 +2,14 @@ ds_struct_types = 0;
 
 enum struct {
 	obj_structure_pebble_refiner,
-	obj_structure_mouse_tool
+	obj_structure_mouse_tool,
+	height = 2
 }
 
-
-active_sprite = 0;
-active_object = 0;
-required_mats = 0; 
+// Default case in case draw runs before step
+active_sprite = spr_pebble_refiner;
+active_object = obj_structure_pebble_refiner;
+required_mats = [item.rock, 10]; 
 
 //scr_create_struct_type("Pebble Reffiner", obj_structure_pebble_refiner, [item.rock, 10]);
 //scr_create_struct_type("Mouse Tool", obj_structure_mouse_tool, [item.shiny_rock, 10]);
