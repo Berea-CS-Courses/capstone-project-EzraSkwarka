@@ -1,8 +1,8 @@
 ds_struct_types = 0;
 
 enum struct {
-	obj_structure_pebble_refiner,
-	obj_structure_mouse_tool,
+	pebble_refiner,
+	mouse_tool,
 	height = 2
 }
 

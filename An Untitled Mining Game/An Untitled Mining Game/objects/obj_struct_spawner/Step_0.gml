@@ -15,12 +15,12 @@ if (building) {
 	
 	// Determine active struct
 	switch (selected_struct) {
-		case 0:
+		case struct.pebble_refiner: // technically equivlent to "case 0" but much more clear
 			active_sprite = spr_pebble_refiner;
 			active_object = obj_structure_pebble_refiner;
 			required_mats = [item.rock, 10];
 			break;
-		case 1:
+		case struct.mouse_tool:
 			active_sprite = spr_mouse_level_station;
 			active_object = obj_structure_mouse_tool;
 			required_mats = [item.shiny_rock, 10];
