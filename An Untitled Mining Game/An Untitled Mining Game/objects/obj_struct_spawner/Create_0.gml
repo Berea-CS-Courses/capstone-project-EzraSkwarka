@@ -5,11 +5,16 @@ enum struct {
 	obj_structure_mouse_tool
 }
 
-scr_create_struct_type("Pebble Reffiner", obj_structure_pebble_refiner);
-scr_create_struct_type("Mouse Tool", obj_structure_mouse_tool);
+
+active_sprite = 0;
+active_object = 0;
+required_mats = 0; 
+
+//scr_create_struct_type("Pebble Reffiner", obj_structure_pebble_refiner, [item.rock, 10]);
+//scr_create_struct_type("Mouse Tool", obj_structure_mouse_tool, [item.shiny_rock, 10]);
 
 building = false;
-selectStruct = 0;
+selected_struct = 1;
 
 mousex = 0;
 mousey = 0;

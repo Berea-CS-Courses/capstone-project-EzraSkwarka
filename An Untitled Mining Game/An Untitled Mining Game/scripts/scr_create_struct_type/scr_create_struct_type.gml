@@ -1,6 +1,6 @@
 // // Script assets have changed for v2.3.0 see
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_create_struct_type(struct_name, struct_obj_type) 
+function scr_create_struct_type(struct_name, struct_obj_type, struct_cost) 
 {
 var arg_num = argument_count;
 
@@ -17,5 +17,6 @@ var i = 0; repeat(arg_num) {
 	ds_struct_types[# i, height - 1] = argument[i];
 	i += 1;
 }
-
+var debug_str = "added " + argument[0] + " to ds_struct_types";
+show_debug_message(debug_str);
 }

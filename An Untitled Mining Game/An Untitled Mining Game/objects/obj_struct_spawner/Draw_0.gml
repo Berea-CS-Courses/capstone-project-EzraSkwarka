@@ -16,4 +16,4 @@ mousex_adjusted = mousex_adjusted * cW + cell_offset_x + (cW/2);
 
 
 //Draw the Struct to build
-draw_sprite(spr_pebble_refiner, 0, mousex_adjusted, mousey_adjusted);
+draw_sprite(active_sprite, 0, mousex_adjusted, mousey_adjusted);
