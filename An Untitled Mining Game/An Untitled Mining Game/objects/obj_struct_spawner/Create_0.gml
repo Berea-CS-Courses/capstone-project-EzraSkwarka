@@ -19,6 +19,8 @@ selected_struct = 1;
 
 mousex = 0;
 mousey = 0;
+hex_empty = true;
+mask_index = spr_tiny_col_mask; //so place_free will work
 
 //these are to account for the fact that the inital grid does not line up with the room's origin
 cell_offset_x = 10; //there is no reason for these values other than assethic 

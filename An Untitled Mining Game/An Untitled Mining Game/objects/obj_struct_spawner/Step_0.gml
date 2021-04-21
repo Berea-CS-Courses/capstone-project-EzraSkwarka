@@ -7,13 +7,13 @@ if (building) {
 	mousex = mouse_x;
 	mousey = mouse_y;
 	
+	// Determine active struct
 	if (mouse_wheel_up()) {selected_struct += 1};
 	if (mouse_wheel_down()) {selected_struct -= 1};
 	
 	if (selected_struct >= struct.height) {selected_struct = 0};
 	if (selected_struct < 0) {selected_struct = struct.height -1};
 	
-	// Determine active struct
 	switch (selected_struct) {
 		case struct.pebble_refiner: // technically equivlent to "case 0" but much more clear
 			active_sprite = spr_pebble_refiner;
@@ -29,7 +29,26 @@ if (building) {
 			exit;
 	}
 	
-	if (mouse_check_button_pressed(mb_left) and scr_have_mats_for_struct(required_mats)) {
+	//Determine if area is clear
+	var cH = cellHeight;
+	var cW = cellWidth;
+	mousex_adjusted = (mousex div cW);
+	mousey_adjusted = (mousey div cH);
+	if ((mousex_adjusted mod 2) == 0) {
+		mousey_adjusted = (mousey div cH) * cH + cell_offset_y + (cH/2);
+	} else {
+		mousey_adjusted = (mousey div cH) * cH + cell_offset_y + cH;	
+	}
+	mousex_adjusted = mousex_adjusted * cW + cell_offset_x + (cW/2);
+	
+	if (!place_free(mousex_adjusted, mousey_adjusted)) {
+		hex_empty = false;	
+	} else {
+		hex_empty = true;
+	}
+	
+	//Build
+	if (mouse_check_button_pressed(mb_left) and scr_have_mats_for_struct(required_mats) and hex_empty) {
 		scr_create_struct(mousex_adjusted, mousey_adjusted, active_object);
 		scr_consume_mats_for_struct(required_mats)
 	}
