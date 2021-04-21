@@ -11,8 +11,8 @@ if (building) {
 	if (mouse_wheel_up()) {selected_struct += 1};
 	if (mouse_wheel_down()) {selected_struct -= 1};
 	
-	if (selected_struct >= struct.height) {selected_struct = 0};
-	if (selected_struct < 0) {selected_struct = struct.height -1};
+	if (selected_struct >= struct.height) {selected_struct = 1};
+	if (selected_struct <= 0) {selected_struct = struct.height -1};
 	
 	switch (selected_struct) {
 		case struct.pebble_refiner: // technically equivlent to "case 0" but much more clear

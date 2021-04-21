@@ -5,6 +5,7 @@
     {"id":{"name":"scr_have_mats_for_struct","path":"scripts/scr_have_mats_for_struct/scr_have_mats_for_struct.yy",},"order":7,},
     {"id":{"name":"obj_tool_axe","path":"objects/obj_tool_axe/obj_tool_axe.yy",},"order":2,},
     {"id":{"name":"obj_GameState","path":"objects/obj_GameState/obj_GameState.yy",},"order":0,},
+    {"id":{"name":"spr_struct_items","path":"sprites/spr_struct_items/spr_struct_items.yy",},"order":8,},
     {"id":{"name":"spr_room_tile_reset","path":"sprites/spr_room_tile_reset/spr_room_tile_reset.yy",},"order":4,},
     {"id":{"name":"scr_consume_item_from_inventory","path":"scripts/scr_consume_item_from_inventory/scr_consume_item_from_inventory.yy",},"order":2,},
     {"id":{"name":"spr_inventory_UI","path":"sprites/spr_inventory_UI/spr_inventory_UI.yy",},"order":4,},

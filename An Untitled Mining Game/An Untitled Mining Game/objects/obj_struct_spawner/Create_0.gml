@@ -1,10 +1,5 @@
 ds_struct_types = 0;
 
-enum struct {
-	pebble_refiner,
-	mouse_tool,
-	height = 2
-}
 
 // Default case in case draw runs before step
 active_sprite = spr_pebble_refiner;
