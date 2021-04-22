@@ -1,7 +1,6 @@
 // Load Game
 
 // for every parant instance, build a map to append to the list
-var node_type_array = [obj_node_rock, obj_node_tree];
 var i = 0; repeat(array_length(node_type_array)) {
 	with (node_type_array[i])
 	{
@@ -21,9 +20,16 @@ if (file_exists("savegame.sav")) {
 	while (array_length(load_data) > 0 ) {
 		var load_entity = array_pop(load_data);
 		with (instance_create_layer(load_entity.x, load_entity.y, load_entity.layer, asset_get_index(load_entity.obj))) {
-			bonus_multiplier = load_entity.bonus_multiplier;
-			node_health = load_entity.node_health;
-			spr_to_draw = load_entity.spr_to_draw;
+			//-----Nodes
+			if (variable_instance_exists(load_entity, "bonus_multiplier")) {bonus_multiplier = load_entity.bonus_multiplier; }
+			if (variable_instance_exists(load_entity, "node_health")) {node_health = load_entity.node_health; }
+			if (variable_instance_exists(load_entity, "spr_to_draw")) {spr_to_draw = load_entity.spr_to_draw; }
+			
+			//-----Structs
+			if (variable_instance_exists(load_entity, "structure_level")) {structure_level = load_entity.structure_level; }
+			if (variable_instance_exists(load_entity, "in_use")) {in_use = load_entity.in_use; }
+			if (variable_instance_exists(load_entity, "needed_shiny_rocks")) {needed_shiny_rocks = load_entity.needed_shiny_rocks; }
+			if (variable_instance_exists(load_entity, "shiny_multiplier")) {shiny_multiplier = load_entity.shiny_multiplier; }
 		}
 	}
 }
