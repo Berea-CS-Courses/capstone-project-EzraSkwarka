@@ -40,6 +40,8 @@ if (file_exists("savegame.sav")) {
 				//-----Inventory
 				case "obj_inventory":
 					inv_slots = load_entity.inv_slots;
+					pickup_slot = load_entity.pickup_slot;
+					selected_slot = load_entity.selected_slot;
 					var inv_array = load_entity.inv_array;
 					var ii = 0; repeat(inv_slots){
 						ds_inventory[# 0, ii] = inv_array[ii][0];

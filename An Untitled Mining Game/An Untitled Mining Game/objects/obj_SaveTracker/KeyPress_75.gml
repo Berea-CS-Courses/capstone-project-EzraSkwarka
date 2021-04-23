@@ -38,6 +38,8 @@ var i = 0; repeat(array_length(node_type_array)) {
 				case "obj_inventory":
 					save_entity.layer = "UI";
 					save_entity.inv_slots = inv_slots;
+					save_entity.pickup_slot = pickup_slot;
+					save_entity.selected_slot = selected_slot;
 					var inv_array = [];
 					var ii = 0; repeat(inv_slots){
 						array_push(inv_array, [ds_inventory[# 0, ii], ds_inventory[# 1, ii]])
