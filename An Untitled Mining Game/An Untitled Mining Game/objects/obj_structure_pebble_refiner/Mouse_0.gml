@@ -7,7 +7,7 @@ if (keyboard_check(vk_shift)) {
 
 	if(is_close_enough == true) {
 		if (scr_consume_item_from_inventory(1,3)) { // rock
-			shiny_multiplier = floor(1+.1*structure_level);
+			var shiny_multiplier = floor(1+.1*structure_level);
 		
 			repeat(shiny_multiplier) {
 				scr_create_obj_item(2); //shiny rock

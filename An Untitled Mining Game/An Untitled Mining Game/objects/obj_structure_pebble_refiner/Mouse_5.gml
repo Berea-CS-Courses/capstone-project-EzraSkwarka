@@ -6,7 +6,7 @@ if (distance_to_object(obj_player) <= 16) {
 }
 
 // If you have enough shiny rocks
-needed_shiny_rocks = floor(power(1.1, structure_level));
+var needed_shiny_rocks = floor(power(1.1, structure_level));
 
 if(is_close_enough == true)
 {

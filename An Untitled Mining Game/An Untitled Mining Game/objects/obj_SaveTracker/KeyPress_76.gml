@@ -20,16 +20,37 @@ if (file_exists("savegame.sav")) {
 	while (array_length(load_data) > 0 ) {
 		var load_entity = array_pop(load_data);
 		with (instance_create_layer(load_entity.x, load_entity.y, load_entity.layer, asset_get_index(load_entity.obj))) {
+			show_debug_message("Created a " + load_entity.obj);
+			switch (load_entity.obj) {
 			//-----Nodes
-			if (variable_instance_exists(load_entity, "bonus_multiplier")) {bonus_multiplier = load_entity.bonus_multiplier; }
-			if (variable_instance_exists(load_entity, "node_health")) {node_health = load_entity.node_health; }
-			if (variable_instance_exists(load_entity, "spr_to_draw")) {spr_to_draw = load_entity.spr_to_draw; }
-			
+				case "obj_node_rock": 
+				case "obj_node_tree": 
+					bonus_multiplier = load_entity.bonus_multiplier;
+					node_health = load_entity.node_health;
+					spr_to_draw = load_entity.spr_to_draw;
+					break;
 			//-----Structs
-			if (variable_instance_exists(load_entity, "structure_level")) {structure_level = load_entity.structure_level; }
-			if (variable_instance_exists(load_entity, "in_use")) {in_use = load_entity.in_use; }
-			if (variable_instance_exists(load_entity, "needed_shiny_rocks")) {needed_shiny_rocks = load_entity.needed_shiny_rocks; }
-			if (variable_instance_exists(load_entity, "shiny_multiplier")) {shiny_multiplier = load_entity.shiny_multiplier; }
+				case "obj_structure_mouse_tool":
+				case "obj_structure_pebble_refiner":
+					structure_level = structure_level;
+					in_use = in_use;
+					structure_level = structure_level;
+					break;
+			//-----Player
+				//-----Inventory
+				case "obj_inventory":
+					inv_slots = load_entity.inv_slots;
+					var inv_array = load_entity.inv_array;
+					var ii = 0; repeat(inv_slots){
+						ds_inventory[# 0, ii] = inv_array[ii][0];
+						ds_inventory[# 1, ii] = inv_array[ii][1];
+						ii++;
+					}
+					break;
+				default:
+					break;
+			}
+				
 		}
 	}
 }
