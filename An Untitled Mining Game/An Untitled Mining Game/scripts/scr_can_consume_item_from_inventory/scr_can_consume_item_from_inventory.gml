@@ -8,9 +8,8 @@ with(obj_inventory) {
 		var ii = 0; repeat(inv_slots){ // look through inventory for pebble
 			if (ds_inv[# 0, ii] == item_number) {
 				amount_found += ds_inv[# 1, ii];
-			} else {
-				ii += 1;
 			}
+			ii += 1;
 		}
 		if (amount_found >= item_amount) {
 			item_found = true;	
