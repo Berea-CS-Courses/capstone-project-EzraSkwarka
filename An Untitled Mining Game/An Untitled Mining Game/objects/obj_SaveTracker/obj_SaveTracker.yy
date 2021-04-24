@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Save Parents",
-    "path": "folders/Objects/Save Parents.yy",
+    "name": "GUI Objects",
+    "path": "folders/Objects/GUI Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_SaveTracker",
