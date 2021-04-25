@@ -1,5 +1,5 @@
-random_number = floor(random_range(0, 100 + 1));
-
 is_alarm_set = true;
+alarm_step = 0;
+spawn_delay = 90; //messured in frames, 60 fps
 
 alarm_set(0, 90);
