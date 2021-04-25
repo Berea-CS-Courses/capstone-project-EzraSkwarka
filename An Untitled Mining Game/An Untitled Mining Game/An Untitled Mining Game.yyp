@@ -16,6 +16,7 @@
     {"id":{"name":"obj_mat_pebble","path":"objects/obj_mat_pebble/obj_mat_pebble.yy",},"order":2,},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":0,},
     {"id":{"name":"spr_grass_tile_backup","path":"sprites/spr_grass_tile_backup/spr_grass_tile_backup.yy",},"order":1,},
+    {"id":{"name":"obj_SaveTracker","path":"objects/obj_SaveTracker/obj_SaveTracker.yy",},"order":3,},
     {"id":{"name":"spr_inventory_items","path":"sprites/spr_inventory_items/spr_inventory_items.yy",},"order":2,},
     {"id":{"name":"spr_mat_shiny_pebble","path":"sprites/spr_mat_shiny_pebble/spr_mat_shiny_pebble.yy",},"order":1,},
     {"id":{"name":"spr_room_tile_single","path":"sprites/spr_room_tile_single/spr_room_tile_single.yy",},"order":0,},
@@ -121,7 +122,8 @@
     {"folderPath":"folders/Sprites/GUI.yy","order":6,"resourceVersion":"1.0","name":"GUI","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/GUI/Toolbar.yy","order":0,"resourceVersion":"1.0","name":"Toolbar","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/zzOld.yy","order":8,"resourceVersion":"1.0","name":"zzOld","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/GUI Objects/Backstage.yy","order":4,"resourceVersion":"1.0","name":"Backstage","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/GUI Objects/Backstage.yy","order":2,"resourceVersion":"1.0","name":"Backstage","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Save Parents.yy","order":9,"resourceVersion":"1.0","name":"Save Parents","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

@@ -1,6 +1,7 @@
 depth = -1;
 scale = 2;
 show_inventory = false;
+//i_am_inventory = "Don't worry about it, im for the save file";
 
 inv_slots = 6;
 inv_slots_width = 8;
@@ -61,7 +62,6 @@ enum item {
 	none		= 0,
 	rock		= 1,
 	shiny_rock	= 2,
-//	carrot		= 3,
 	height		= 3,
 }
 
