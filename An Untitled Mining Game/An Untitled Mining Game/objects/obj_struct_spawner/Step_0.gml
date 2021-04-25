@@ -2,8 +2,10 @@ if (keyboard_check_pressed(ord("B"))) {
 	building = !building;
 }
 
-
-if (building) {
+if (!building) {
+	window_set_cursor(cr_default);
+} else {
+	window_set_cursor(cr_none);
 	mousex = mouse_x;
 	mousey = mouse_y;
 	
