@@ -3,7 +3,7 @@
     "name": "spr_pebble_refiner",
     "path": "sprites/spr_pebble_refiner/spr_pebble_refiner.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

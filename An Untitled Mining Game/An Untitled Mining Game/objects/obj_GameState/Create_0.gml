@@ -11,3 +11,4 @@ instance_create_layer(0, 0, "UI", obj_toolbar);
 instance_create_layer(0, 0, "UI", obj_inventory);
 instance_create_layer(0, 0, "UI", obj_relics_menu);
 instance_create_layer(0, 0, "UI", obj_structures_menu);
+instance_create_layer(0, 0, "UI", obj_struct_spawner);
