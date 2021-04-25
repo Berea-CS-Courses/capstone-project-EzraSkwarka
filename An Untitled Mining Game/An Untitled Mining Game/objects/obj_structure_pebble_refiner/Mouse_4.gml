@@ -6,7 +6,8 @@ if (distance_to_object(obj_player) <= 16) {
 
 if(is_close_enough == true)
 {
-	if (scr_consume_item_from_inventory(1,3)) { // rock
+	if (scr_can_consume_item_from_inventory(item.rock, 3)) { // rock
+		scr_consume_item_from_inventory(item.rock, 3);
 		shiny_multiplier = floor(1+.1*structure_level);
 	
 		repeat(shiny_multiplier)

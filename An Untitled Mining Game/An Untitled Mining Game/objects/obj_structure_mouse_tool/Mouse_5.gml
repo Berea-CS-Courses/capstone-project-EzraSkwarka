@@ -10,8 +10,9 @@ needed_shiny_rocks = floor(power(1.1, structure_level));
 
 if(is_close_enough == true)
 {
-	if(scr_consume_item_from_inventory(2, needed_shiny_rocks))
+	if(scr_can_consume_item_from_inventory(2, needed_shiny_rocks))
 	{
+		scr_consume_item_from_inventory(item.shiny_rock, needed_shiny_rocks);
 		global.mouse_level += 1;
 		structure_level += 1;
 	}
