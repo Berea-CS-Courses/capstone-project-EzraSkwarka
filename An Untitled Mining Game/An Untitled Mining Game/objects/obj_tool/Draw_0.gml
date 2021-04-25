@@ -1,6 +1,6 @@
 with (obj_player) {
-	var handsx = x;
-	var handsy = y;
+	var handsx = x + 8;
+	var handsy = y - 12;
 }
 
 draw_sprite_part_ext(
