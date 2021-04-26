@@ -1,5 +1,9 @@
 equiped_tool = 1;
 toolbar_size = 2;
+scale = 2;
+
+cell_size_sheet = 16;
+cell_size = 32;
 
 
 instance_create_layer(0,0,layer,obj_tool);
