@@ -5,8 +5,15 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 	with(obj_toolbar) {
 		var current_tool = equiped_tool;
 	}
+	with (obj_tool) {
+		if !(swing_state == "rest") {
+			var is_swinging = true;
+		} else {
+			var is_swinging = false;	
+		}
+	}
 	if (current_tool == tool_to_use) {
-		if !global.is_swinging {
+		if !is_swinging {
 			if (distance_to_object(obj_player) <= 16) {
 				if (node_health > 0) {
 					node_health -= 1;
