@@ -1,5 +1,7 @@
 if(!show_structures_menu) exit;
 
+window_set_cursor(cr_default);
+
 draw_sprite_part_ext(
 	spr_inv_UI, 0, cell_size, 0, inv_UI_width, inv_UI_height, 
 	inv_UI_x, inv_UI_y, scale, scale, c_white, 1

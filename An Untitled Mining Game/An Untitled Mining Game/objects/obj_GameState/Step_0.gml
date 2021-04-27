@@ -5,7 +5,9 @@
 if(keyboard_check_pressed(vk_escape)) { 
 	global.is_paused = !global.is_paused; 
 }
-
+//----------
+// Inventory
+//----------
 with(obj_inventory) {
 	if(keyboard_check_pressed(ord("I"))) {
 		with(obj_relics_menu) {
@@ -29,6 +31,9 @@ with(obj_inventory) {
 	}
 }
 
+//----------
+// Relics
+//----------
 with(obj_relics_menu) {
 	if(keyboard_check_pressed(ord("O"))) { 
 		with(obj_structures_menu) {
@@ -52,7 +57,9 @@ with(obj_relics_menu) {
 	}
 }
 
-
+//----------
+// Structures
+//----------
 with(obj_structures_menu) {
 	if(keyboard_check_pressed(ord("P"))) {
 		with(obj_relics_menu) {

@@ -27,10 +27,12 @@ if(nx >= 0 and nx < inv_slots_width and ny >= 0 and ny < inv_slots_height) {
 
 //Set Selected Slot to Mouse Pos
 selected_slot = min(inv_slots - 1 , m_slotx + (m_sloty * inv_slots_width));
-if (mouse_check_button_pressed(mb_right)) {
-		//pickup_slot = selected_slot;
+if (mouse_check_button_pressed(mb_left)) {
 		var passing_slot = selected_slot;
+		show_structures_menu = false;
+		global.is_paused = false;
 		with (obj_struct_spawner) {
-			selected_struct = passing_slot + 1;	
+			selected_struct = passing_slot + 1;
+			building = true;
 		}
 }
