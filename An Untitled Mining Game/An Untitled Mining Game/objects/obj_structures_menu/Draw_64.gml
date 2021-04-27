@@ -1,8 +1,5 @@
 if(!show_structures_menu) exit;
 
-draw_set_font(fnt_basic_large);
-draw_text(20,0, "structures")
-
 draw_sprite_part_ext(
 	spr_inv_UI, 0, cell_size, 0, inv_UI_width, inv_UI_height, 
 	inv_UI_x, inv_UI_y, scale, scale, c_white, 1

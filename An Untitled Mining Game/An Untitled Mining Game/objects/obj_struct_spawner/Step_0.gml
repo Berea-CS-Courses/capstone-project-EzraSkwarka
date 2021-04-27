@@ -1,3 +1,5 @@
+if (global.is_paused) exit;
+
 if (keyboard_check_pressed(ord("B"))) {
 	building = !building;
 }

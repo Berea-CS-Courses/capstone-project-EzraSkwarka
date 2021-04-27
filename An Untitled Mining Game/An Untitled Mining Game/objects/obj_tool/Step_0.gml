@@ -1,3 +1,5 @@
+if (global.is_paused) exit;
+
 with (obj_toolbar) {
 	var ct = equiped_tool;
 }

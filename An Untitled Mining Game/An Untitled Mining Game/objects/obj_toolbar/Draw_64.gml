@@ -1,4 +1,5 @@
-//draw_sprite(spr_toolbar, equiped_tool, 128 * 4, 212 * 4);
+if (global.is_paused) exit;
+
 var i = 0; repeat (2) {
 	//find x-offset
 	var xi = 512 + ((cell_size + 2)* scale * i);

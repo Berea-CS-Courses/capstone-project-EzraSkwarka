@@ -14,9 +14,9 @@ with(obj_inventory) {
 		with(obj_structures_menu) {
 			show_structures_menu = false;
 		}
-		if (!show_inventory and !global.is_paused) {
-			show_inventory = true;
-			global.is_paused = true;
+		if (show_inventory == global.is_paused) {
+			show_inventory = !show_inventory;
+			global.is_paused = !global.is_paused;
 		} else if (!show_inventory and global.is_paused) {
 			show_inventory = true;	
 		}
@@ -37,9 +37,9 @@ with(obj_relics_menu) {
 		with(obj_inventory) {
 			show_inventory = false;
 		}
-		if (!show_relics_menu and !global.is_paused) {
-			show_relics_menu = true;
-			global.is_paused = true;
+		if (show_relics_menu == global.is_paused) {
+			show_relics_menu = !show_relics_menu;
+			global.is_paused = !global.is_paused;
 		} else if (!show_relics_menu and global.is_paused) {
 			show_relics_menu = true;	
 		}
@@ -61,9 +61,9 @@ with(obj_structures_menu) {
 		with(obj_inventory) {
 			show_inventory = false;
 		}
-		if (!show_structures_menu and !global.is_paused) {
-			show_structures_menu = true;
-			global.is_paused = true;
+		if (show_structures_menu == global.is_paused) {
+			show_structures_menu = !show_structures_menu;
+			global.is_paused = !global.is_paused;
 		} else if (!show_structures_menu and global.is_paused) {
 			show_structures_menu = true;	
 		}
