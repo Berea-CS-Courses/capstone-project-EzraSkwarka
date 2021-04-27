@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tools",
-    "path": "folders/Objects/Player Objects/Tools.yy",
+    "name": "Player Objects",
+    "path": "folders/Objects/Player Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_tool",

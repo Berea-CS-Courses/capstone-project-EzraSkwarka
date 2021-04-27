@@ -10,7 +10,7 @@ var i = 0; repeat (2) {
 	//draw tools
 	draw_sprite_part_ext(spr_tool_sheet, 0, 0, cell_size_sheet * (i + 1), cell_size_sheet, cell_size_sheet, 
 	xi, 848, 
-	scale * 2, scale * 2, c_white, 1);
+	scale * 2, scale * 2, c_gray, 1);
 	i++;
 }
 	//draw the indicator
