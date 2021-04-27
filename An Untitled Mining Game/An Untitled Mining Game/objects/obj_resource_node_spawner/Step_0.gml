@@ -1,20 +1,15 @@
-var l4ED14E88_0 = place_empty(x + 0, y + 0);
-if (l4ED14E88_0)
-{
-	//sprite_index = spr_room_tile_spawner_node;
-	//image_index = 0;
-
-	if(!(is_alarm_set))
-	{
-		is_alarm_set = true;
-	
-		alarm_set(0, 90);
+var is_empty = place_empty(x + 0, y + 0);
+if (is_empty) {
+	if(alarm_step >= spawn_delay) {
+		var random_number = floor(random_range(0, 100 + 1));
+		if((random_number >= 75)) {
+			instance_create_layer(x + 0, y + 0, "Active", obj_node_tree);
+		} else {
+			instance_create_layer(x + 0, y + 0, "Active", obj_node_rock);
+		}
+		alarm_step = 0;
+	} else {
+		alarm_step += 1;	
 	}
 }
 
-var l61A9923A_0 = place_empty(x + 0, y + 0);
-if (!l61A9923A_0)
-{
-	//sprite_index = spr_room_tile_spawner_node;
-	//image_index = 1;
-}
