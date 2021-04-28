@@ -10,11 +10,11 @@ y = clamp(y, 0, room_height-16);
 
 
 //Keep player from moving into solid objects
-if (!(place_free(x - 2, y)) and (hspeed < 0)) hspeed = 0;
-if (!(place_free(x + 2, y)) and (hspeed > 0)) hspeed = 0;
+if (!(place_free(x - hspeed, y)) and (hspeed < 0)) hspeed = 0; // x+ hspeed
+if (!(place_free(x + hspeed, y)) and (hspeed > 0)) hspeed = 0;
 
-if (!(place_free(x , y - 2)) and (vspeed < 0)) vspeed = 0;
-if (!(place_free(x, y + 2)) and (vspeed > 0)) vspeed = 0;
+if (!(place_free(x , y - vspeed)) and (vspeed < 0)) vspeed = 0;
+if (!(place_free(x, y + vspeed)) and (vspeed > 0)) vspeed = 0;
 
 // Keep the player from moving too fast
 if (speed > max_speed) speed = max_speed;
