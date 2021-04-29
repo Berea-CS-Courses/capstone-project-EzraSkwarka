@@ -32,9 +32,9 @@ if (file_exists("savegame.sav")) {
 			//-----Structs
 				case "obj_structure_mouse_tool":
 				case "obj_structure_pebble_refiner":
-					structure_level = structure_level;
-					in_use = in_use;
-					structure_level = structure_level;
+					structure_level = load_entity.structure_level;
+					in_use = load_entity.in_use;
+					structure_level = load_entity.structure_level;
 					break;
 			//-----Player
 				//-----Inventory
