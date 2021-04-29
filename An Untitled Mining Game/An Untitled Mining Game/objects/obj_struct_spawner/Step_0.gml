@@ -1,9 +1,5 @@
 if (global.is_paused) exit;
 
-if (keyboard_check_pressed(ord("B"))) {
-	building = !building;
-}
-
 if (!building) {
 	window_set_cursor(cr_default);
 } else {
