@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Inventory Managment",
-    "path": "folders/Scripts/Inventory Managment.yy",
+    "name": "Buttons",
+    "path": "folders/Scripts/Buttons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_have_mats_for_struct",
+  "name": "scr_get_hover",
   "tags": [],
   "resourceType": "GMScript",
 }
