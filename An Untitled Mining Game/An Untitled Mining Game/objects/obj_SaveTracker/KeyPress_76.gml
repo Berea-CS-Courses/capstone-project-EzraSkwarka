@@ -29,6 +29,12 @@ if (file_exists("savegame.sav")) {
 					node_health = load_entity.node_health;
 					spr_to_draw = load_entity.spr_to_draw;
 					break;
+			//-----Obj_items
+				case "obj_item":
+					item_num = load_entity.item_num;
+					x_frame = load_entity.x_frame;
+					y_frame = load_entity.y_frame;
+					break;
 			//-----Structs
 				case "obj_structure_mouse_tool":
 				case "obj_structure_pebble_refiner":

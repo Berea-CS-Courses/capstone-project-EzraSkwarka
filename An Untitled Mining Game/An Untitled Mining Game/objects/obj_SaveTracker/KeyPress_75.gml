@@ -26,6 +26,12 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.node_health = node_health;
 					save_entity.spr_to_draw = spr_to_draw;
 					break;
+			//-----Obj_items
+				case "obj_item":
+					save_entity.item_num = item_num;
+					save_entity.x_frame = x_frame;
+					save_entity.y_frame = y_frame;
+					break;
 			//-----Structs
 				case "obj_structure_mouse_tool":
 				case "obj_structure_pebble_refiner":
