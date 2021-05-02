@@ -1,7 +1,9 @@
 switch (menu_to_draw) {
 	case menu_type.pebble_refiner:
 	if !(menu_drawn) {
-			scr_draw_pebble_reffiner_menu();
+		var _width = 100;
+		scr_create_crafting_button(screen_width/2 -  _width/2, 100, _width, 100, 
+									"Make Shiny", item.shiny_rock, x_base, y_base);
 		}
 	menu_drawn = true;
 		break;
