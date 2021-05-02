@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Buttons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_create_button",
+  "name": "scr_create_crafting_button",
   "tags": [],
   "resourceType": "GMScript",
 }

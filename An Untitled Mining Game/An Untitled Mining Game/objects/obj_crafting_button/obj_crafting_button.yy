@@ -29,7 +29,7 @@
     "path": "folders/Objects/GUI Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_button",
+  "name": "obj_crafting_button",
   "tags": [],
   "resourceType": "GMObject",
 }
