@@ -1,4 +1,4 @@
-if (distance_to_object(obj_player) <= 16) {
+/*if (distance_to_object(obj_player) <= 16) {
 	var is_close_enough = true;
 } else {
 	is_close_enough = false;
@@ -12,7 +12,7 @@ if(is_close_enough == true)
 	
 		repeat(shiny_multiplier)
 		{
-			scr_create_obj_item(2) //shiny rock
+			scr_create_obj_item(item.shiny_rock, x, y) //shiny rock
 		}
 	}
-}
+}*/
