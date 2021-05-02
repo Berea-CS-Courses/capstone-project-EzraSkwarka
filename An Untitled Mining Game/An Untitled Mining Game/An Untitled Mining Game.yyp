@@ -34,6 +34,7 @@
     {"id":{"name":"spr_room_tile_32x32_center_only","path":"sprites/spr_room_tile_32x32_center_only/spr_room_tile_32x32_center_only.yy",},"order":5,},
     {"id":{"name":"spr_room_tile_32x32","path":"sprites/spr_room_tile_32x32/spr_room_tile_32x32.yy",},"order":6,},
     {"id":{"name":"obj_reset_panel","path":"objects/obj_reset_panel/obj_reset_panel.yy",},"order":3,},
+    {"id":{"name":"scr_draw_pebble_reffiner_menu","path":"scripts/scr_draw_pebble_reffiner_menu/scr_draw_pebble_reffiner_menu.yy",},"order":0,},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},"order":1,},
     {"id":{"name":"spr_equipment_UI","path":"sprites/spr_equipment_UI/spr_equipment_UI.yy",},"order":1,},
     {"id":{"name":"spr_relics_UI","path":"sprites/spr_relics_UI/spr_relics_UI.yy",},"order":6,},
@@ -122,6 +123,7 @@
     {"folderPath":"folders/Objects/GUI Objects/Backstage.yy","order":2,"resourceVersion":"1.0","name":"Backstage","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Inventory Managment.yy","order":10,"resourceVersion":"1.0","name":"Inventory Managment","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Buttons.yy","order":11,"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/Button Groups.yy","order":12,"resourceVersion":"1.0","name":"Button Groups","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
