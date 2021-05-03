@@ -29,7 +29,7 @@
     {"id":{"name":"spr_tools_UI","path":"sprites/spr_tools_UI/spr_tools_UI.yy",},"order":5,},
     {"id":{"name":"obj_structure_pebble_refiner","path":"objects/obj_structure_pebble_refiner/obj_structure_pebble_refiner.yy",},"order":0,},
     {"id":{"name":"scr_create_crafting_button","path":"scripts/scr_create_crafting_button/scr_create_crafting_button.yy",},"order":1,},
-    {"id":{"name":"scr_show_and_craft","path":"scripts/scr_show_and_craft/scr_show_and_craft.yy",},"order":12,},
+    {"id":{"name":"scr_show_and_craft","path":"scripts/scr_show_and_craft/scr_show_and_craft.yy",},"order":4,},
     {"id":{"name":"fnt_text_24","path":"fonts/fnt_text_24/fnt_text_24.yy",},"order":4,},
     {"id":{"name":"scr_create_struct","path":"scripts/scr_create_struct/scr_create_struct.yy",},"order":5,},
     {"id":{"name":"spr_room_tile_32x32_center_only","path":"sprites/spr_room_tile_32x32_center_only/spr_room_tile_32x32_center_only.yy",},"order":5,},
