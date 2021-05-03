@@ -17,14 +17,14 @@ if (!(place_free(x , y - 2)) and (vspeed < 0)) vspeed = 0;
 if (!(place_free(x, y + 2)) and (vspeed > 0)) vspeed = 0;
 
 // Keep the player from moving too fast
-if (speed > 3) speed = 3;
+if (speed > max_speed) speed = max_speed;
 if (player_speed > 3) player_speed = 3;
 
 // Stop player if no key pressed
 if (!keyboard_check(ord("W")) and !keyboard_check(ord("A")) and !keyboard_check(ord("S")) and !keyboard_check(ord("D")) and (speed > 0)) {
 	speed -= .15;
 	if (speed < 0) speed = 0;
-	}
+}
 
 // if the game is paused, dont allow the player to accelerate
 if (global.is_paused) {
