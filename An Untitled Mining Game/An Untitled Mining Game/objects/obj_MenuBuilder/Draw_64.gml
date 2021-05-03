@@ -12,7 +12,10 @@ switch (menu_to_draw) {
 			scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * 1, _width, _height, 
 										"Infinate Shiny", [item.shiny_rock, 1], [item.shiny_rock, 2], x_base, y_base,
 										struct_refrence, 600);
-			
+			// nx Shinny Rocks -> Increse Struct Level, 0 ticks
+			scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * 2, _width, _height, 
+										"Level up", [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))], ["Level up", "Stupid math, .5 rounds to 0, whatever"], x_base, y_base,
+										struct_refrence, 0);
 			}
 			
 		menu_drawn = true;
