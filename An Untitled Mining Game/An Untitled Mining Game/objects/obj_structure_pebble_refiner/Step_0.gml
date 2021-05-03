@@ -9,11 +9,13 @@ if (!menu_up) {
 		menu_up = true;
 		var _x = x;
 		var _y = y;
+		var _id = id;
 		with (obj_MenuBuilder) { //these can be wrapped into a function for later
 			menu_active = true;
 			menu_to_draw = menu_type.pebble_refiner;
 			x_base = _x;
 			y_base = _y;
+			struct_refrence = _id;
 		}
 	}
 } else {

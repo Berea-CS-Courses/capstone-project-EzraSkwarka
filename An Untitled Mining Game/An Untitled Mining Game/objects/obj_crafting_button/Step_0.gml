@@ -7,8 +7,12 @@ if (_hover and click) {
 	show_debug_message("making one")
 	if(scr_have_mats(input)) {
 		scr_consume_mats(input);
+		var struct_level = struct_id.structure_level;
+
 		var i = 0; repeat (array_length(output)/2) {
-			scr_create_obj_item(output[@ i], x_loc, y_loc);
+			repeat (struct_level) {
+				scr_create_obj_item(output[@ i], x_loc, y_loc);
+			}
 			i += 2;
 		}
 	}

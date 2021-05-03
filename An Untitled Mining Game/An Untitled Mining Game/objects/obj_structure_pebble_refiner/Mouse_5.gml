@@ -1,4 +1,3 @@
-/*
 // If close enough
 if (distance_to_object(obj_player) <= 16) {
 	var is_close_enough = true;
@@ -16,4 +15,4 @@ if(is_close_enough == true)
 		scr_consume_item_from_inventory(item.shiny_rock, needed_shiny_rocks);
 		structure_level += 1;
 	}
-}*/
+}

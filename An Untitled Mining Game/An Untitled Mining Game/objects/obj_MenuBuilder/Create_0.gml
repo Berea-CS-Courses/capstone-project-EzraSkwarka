@@ -6,6 +6,7 @@ menu_to_draw = menu_type.none;
 x_base = 0;
 y_base = 0;
 menu_drawn = false;
+struct_refrence = 0;
 
 //GUI settings
 screen_width = 1280;
