@@ -58,8 +58,8 @@ if (!building) {
 	}
 	
 	//Build
-	if (mouse_check_button_pressed(mb_left) and scr_have_mats_for_struct(required_mats) and hex_empty) {
+	if (mouse_check_button_pressed(mb_left) and scr_have_mats(required_mats) and hex_empty) {
 		scr_create_struct(mousex_adjusted, mousey_adjusted, active_object);
-		scr_consume_mats_for_struct(required_mats)
+		scr_consume_mats(required_mats)
 	}
 }
