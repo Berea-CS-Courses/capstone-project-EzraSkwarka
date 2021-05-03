@@ -17,7 +17,9 @@ if (_hover and click and (!struct_in_use)) {
 			var repeat_count = max(((6 * struct_level)) div crafting_time, 1);
 			show_debug_message(string(repeat_count))
 			repeat (repeat_count) {
-				scr_create_obj_item(output[@ i], x_loc, y_loc);
+				repeat (output[@ i + 1]) {
+					scr_create_obj_item(output[@ i], x_loc, y_loc);
+				}
 			}
 			i += 2;
 		}

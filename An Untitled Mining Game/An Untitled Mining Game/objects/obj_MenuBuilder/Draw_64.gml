@@ -2,10 +2,18 @@ switch (menu_to_draw) {
 	case menu_type.pebble_refiner:
 		if !(menu_drawn) {
 			var _width = 100;
+			var _h_space = 100
+			//3x Rock -> 1x Shiny rock, 60 tics
 			scr_create_crafting_button(screen_width/2 -  _width/2, 100, _width, 100, 
 										"Make Shiny", [item.rock, 3], [item.shiny_rock, 1], x_base, y_base,
 										struct_refrence, 60);
+			//1x Shinny rock -> 1x Carrot?, 600 tic
+			scr_create_crafting_button(screen_width/2 -  _width/2, 100 + _h_space * 1, _width, 100, 
+										"Infinate Shiny", [item.shiny_rock, 1], [item.shiny_rock, 2], x_base, y_base,
+										struct_refrence, 600);
+			
 			}
+			
 		menu_drawn = true;
 		break;
 	
