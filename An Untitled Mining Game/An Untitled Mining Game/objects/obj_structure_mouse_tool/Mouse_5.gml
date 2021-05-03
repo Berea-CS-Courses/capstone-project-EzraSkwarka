@@ -1,3 +1,4 @@
+/*
 // If close enough
 if (distance_to_object(obj_player) <= 16) {
 	var is_close_enough = true;
@@ -17,3 +18,4 @@ if(is_close_enough == true)
 		structure_level += 1;
 	}
 }
+*/

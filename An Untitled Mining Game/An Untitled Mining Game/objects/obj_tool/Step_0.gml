@@ -1,5 +1,13 @@
 if (global.is_paused) exit;
 
+if instance_exists(obj_structure_mouse_tool) {
+	var _gml = 0;
+	with (obj_structure_mouse_tool) {
+		_gml += structure_level;		
+	}
+	global.mouse_level = _gml;
+}
+
 with (obj_toolbar) {
 	var ct = equiped_tool;
 }

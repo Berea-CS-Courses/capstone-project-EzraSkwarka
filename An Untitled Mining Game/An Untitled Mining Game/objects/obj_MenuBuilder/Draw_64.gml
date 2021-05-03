@@ -28,6 +28,19 @@ switch (menu_to_draw) {
 			
 		menu_drawn = true;
 		break;
+	case menu_type.mouse_tool:
+	if !(menu_drawn) {
+			var _width = 250;
+			var _height = 25;
+			var _h_space = 5;
+			//3x Rock -> 1x Shiny rock, 60 tics
+			scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * 0, _width, _height, 
+										"Level up!", [item.shiny_rock, floor(power(1.1, global.mouse_level))], ["Level up", ""], x_base, y_base,
+										struct_refrence, 60);
+			}
+			
+		menu_drawn = true;
+		break;
 	
 	
 	case menu_type.none: // this means only one "type" of menu can be active at a time
