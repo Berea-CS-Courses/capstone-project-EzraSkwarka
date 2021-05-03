@@ -12,16 +12,17 @@ if (_hover and click and (!struct_in_use)) {
 		struct_id.wait_time = max(crafting_time - (6 * struct_level), 6);
 		scr_consume_mats(input);
 		
-
-		var i = 0; repeat (array_length(output)/2) {
-			var repeat_count = max(((6 * struct_level)) div crafting_time, 1);
-			show_debug_message(string(repeat_count))
-			repeat (repeat_count) {
-				repeat (output[@ i + 1]) {
-					scr_create_obj_item(output[@ i], x_loc, y_loc);
+		if struct_id.current_step == (struct_id.wait_time - 1) {
+			var i = 0; repeat (array_length(output)/2) {
+				var repeat_count = max(((6 * struct_level)) div crafting_time, 1);
+				show_debug_message(string(repeat_count))
+				repeat (repeat_count) {
+					repeat (output[@ i + 1]) {
+						scr_create_obj_item(output[@ i], x_loc, y_loc);
+					}
 				}
+				i += 2;
 			}
-			i += 2;
 		}
 	}
 }
