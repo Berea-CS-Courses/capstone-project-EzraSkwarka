@@ -10,7 +10,7 @@ draw_text(x + 8, y + 8,  + string(structure_level));
 //Timed delay and thermo
 if in_use and (current_step < wait_time) {
 	current_step++;
-	draw_pie(x ,y , current_step, wait_time, c_red, 20, 1)
+	draw_pie(x ,y , current_step, wait_time,[c_red, c_lime], 15, .5)
 	if (current_step >= wait_time) {
 		in_use = false;
 		current_step = 0;

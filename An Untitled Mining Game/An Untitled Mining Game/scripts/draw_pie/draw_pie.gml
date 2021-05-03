@@ -1,6 +1,6 @@
 // // Script assets have changed for v2.3.0 see
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function draw_pie(x ,y ,value, max, colour, radius, transparency) {
+function draw_pie(x ,y ,value, max, colours, radius, transparency) {
 
 if (argument2 > 0) { // no point even running if there is nothing to display (also stops /0
     var i, len, tx, ty, val;
@@ -12,7 +12,7 @@ if (argument2 > 0) { // no point even running if there is nothing to display (al
     
     if (val > 1) { // HTML5 version doesnt like triangle with only 2 sides 
     
-        draw_set_colour(argument4);
+        draw_set_colour(merge_color(argument4[@ 0], argument4[@ 1], argument2/argument3));
         draw_set_alpha(argument6);
         
         draw_primitive_begin(pr_trianglefan);
