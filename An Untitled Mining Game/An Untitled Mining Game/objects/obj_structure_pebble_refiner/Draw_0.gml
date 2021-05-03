@@ -14,5 +14,14 @@ if in_use and (current_step < wait_time) {
 	if (current_step >= wait_time) {
 		in_use = false;
 		current_step = 0;
+		var i = 0; repeat (array_length(output)/2) {
+				var repeat_count = max(((6 * structure_level)) div base_speed, 1);
+				repeat (repeat_count) {
+					repeat (output[@ i + 1]) {
+						scr_create_obj_item(output[@ i], x, y);
+					}
+				}
+				i += 2;
+		}
 	}
 }
