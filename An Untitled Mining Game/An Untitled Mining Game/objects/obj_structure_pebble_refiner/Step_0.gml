@@ -9,7 +9,7 @@ if (!menu_up) {
 		menu_up = true;
 		var _x = x;
 		var _y = y;
-		var _id = id;
+		var _id = id; 
 		with (obj_MenuBuilder) { //these can be wrapped into a function for later
 			menu_active = true;
 			menu_to_draw = menu_type.pebble_refiner;
@@ -26,5 +26,5 @@ if (!menu_up) {
 			menu_to_draw = menu_type.none;
 		}
 		
-	}
+	}	
 }

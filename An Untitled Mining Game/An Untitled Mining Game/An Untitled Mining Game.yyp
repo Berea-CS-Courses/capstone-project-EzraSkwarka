@@ -38,6 +38,7 @@
     {"id":{"name":"spr_equipment_UI","path":"sprites/spr_equipment_UI/spr_equipment_UI.yy",},"order":1,},
     {"id":{"name":"spr_relics_UI","path":"sprites/spr_relics_UI/spr_relics_UI.yy",},"order":6,},
     {"id":{"name":"spr_axe_swing","path":"sprites/spr_axe_swing/spr_axe_swing.yy",},"order":3,},
+    {"id":{"name":"draw_pie","path":"scripts/draw_pie/draw_pie.yy",},"order":12,},
     {"id":{"name":"obj_node_tree","path":"objects/obj_node_tree/obj_node_tree.yy",},"order":1,},
     {"id":{"name":"spr_axe","path":"sprites/spr_axe/spr_axe.yy",},"order":2,},
     {"id":{"name":"obj_struct_spawner","path":"objects/obj_struct_spawner/obj_struct_spawner.yy",},"order":4,},

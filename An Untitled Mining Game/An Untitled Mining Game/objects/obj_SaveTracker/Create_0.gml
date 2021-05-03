@@ -8,3 +8,7 @@ node_type_array = [
 	obj_player,
 	obj_inventory
 ];
+
+load_kill_list = [
+	obj_crafting_button
+]

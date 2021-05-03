@@ -2,7 +2,7 @@
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_create_crafting_button(draw_x, draw_y, button_width, button_height, 
 									text, input_array, output_array, item_x, item_y,
-									struct_refrence) 
+									struct_refrence, time) 
 {
 var button = instance_create_layer(draw_x, draw_y, "UI", obj_crafting_button);
 
@@ -17,6 +17,7 @@ with (button) {
 	output = output_array;
 	x_loc = item_x;
 	y_loc = item_y;
+	crafting_time = time;
 	
 }
 

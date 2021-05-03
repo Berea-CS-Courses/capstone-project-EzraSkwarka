@@ -8,6 +8,13 @@ var i = 0; repeat(array_length(node_type_array)) {
 	}
 	i++;
 }
+var i = 0; repeat(array_length(load_kill_list)) {
+	with (load_kill_list[i])
+	{
+		instance_destroy();
+	}
+	i++;
+}
 
 // put it back!!!
 if (file_exists("savegame.sav")) {
