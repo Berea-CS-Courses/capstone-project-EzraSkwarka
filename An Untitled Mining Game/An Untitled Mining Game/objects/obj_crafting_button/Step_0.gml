@@ -5,5 +5,11 @@ hover = lerp(hover, _hover, 0.1);
 
 if (_hover and click) {
 	show_debug_message("making one")
-	//scr_create_obj_item(item_type, x_loc, y_loc);	
+	if(scr_have_mats(input)) {
+		scr_consume_mats(input);
+		var i = 0; repeat (array_length(output)/2) {
+			scr_create_obj_item(output[@ i], x_loc, y_loc);
+			i += 2;
+		}
+	}
 }
