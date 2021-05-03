@@ -12,8 +12,8 @@ var i = 0; repeat(array_length(node_type_array)) {
 			var save_entity = 
 			{
 				obj : object_get_name(object_index),
-				x:x,
-				y:y,
+				x: floor(x),
+				y: floor(y),
 				layer : layer,
 			}
 			

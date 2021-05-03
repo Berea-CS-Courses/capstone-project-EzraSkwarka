@@ -1,10 +1,18 @@
-if (keyboard_check_pressed(ord("B"))) {
-	building = !building;
-}
+if (global.is_paused) exit;
 
 if (!building) {
 	window_set_cursor(cr_default);
 } else {
+	if (mouse_check_button_pressed(mb_right)) {
+		building = false;
+		global.is_paused = true;
+		with (obj_structures_menu) {
+			show_structures_menu = true;
+		}
+		window_set_cursor(cr_default);
+		exit;
+	}
+	
 	window_set_cursor(cr_none);
 	mousex = mouse_x;
 	mousey = mouse_y;

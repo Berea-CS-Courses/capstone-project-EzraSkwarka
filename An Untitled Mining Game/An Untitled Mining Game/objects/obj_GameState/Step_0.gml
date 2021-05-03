@@ -5,7 +5,9 @@
 if(keyboard_check_pressed(vk_escape)) { 
 	global.is_paused = !global.is_paused; 
 }
-
+//----------
+// Inventory
+//----------
 with(obj_inventory) {
 	if(keyboard_check_pressed(ord("I"))) {
 		with(obj_relics_menu) {
@@ -14,9 +16,9 @@ with(obj_inventory) {
 		with(obj_structures_menu) {
 			show_structures_menu = false;
 		}
-		if (!show_inventory and !global.is_paused) {
-			show_inventory = true;
-			global.is_paused = true;
+		if (show_inventory == global.is_paused) {
+			show_inventory = !show_inventory;
+			global.is_paused = !global.is_paused;
 		} else if (!show_inventory and global.is_paused) {
 			show_inventory = true;	
 		}
@@ -29,6 +31,9 @@ with(obj_inventory) {
 	}
 }
 
+//----------
+// Relics
+//----------
 with(obj_relics_menu) {
 	if(keyboard_check_pressed(ord("O"))) { 
 		with(obj_structures_menu) {
@@ -37,9 +42,9 @@ with(obj_relics_menu) {
 		with(obj_inventory) {
 			show_inventory = false;
 		}
-		if (!show_relics_menu and !global.is_paused) {
-			show_relics_menu = true;
-			global.is_paused = true;
+		if (show_relics_menu == global.is_paused) {
+			show_relics_menu = !show_relics_menu;
+			global.is_paused = !global.is_paused;
 		} else if (!show_relics_menu and global.is_paused) {
 			show_relics_menu = true;	
 		}
@@ -52,7 +57,9 @@ with(obj_relics_menu) {
 	}
 }
 
-
+//----------
+// Structures
+//----------
 with(obj_structures_menu) {
 	if(keyboard_check_pressed(ord("P"))) {
 		with(obj_relics_menu) {
@@ -61,9 +68,9 @@ with(obj_structures_menu) {
 		with(obj_inventory) {
 			show_inventory = false;
 		}
-		if (!show_structures_menu and !global.is_paused) {
-			show_structures_menu = true;
-			global.is_paused = true;
+		if (show_structures_menu == global.is_paused) {
+			show_structures_menu = !show_structures_menu;
+			global.is_paused = !global.is_paused;
 		} else if (!show_structures_menu and global.is_paused) {
 			show_structures_menu = true;	
 		}
