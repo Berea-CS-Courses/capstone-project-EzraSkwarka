@@ -38,6 +38,9 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.structure_level = structure_level;
 					save_entity.in_use = in_use;
 					save_entity.structure_level = structure_level;
+					save_entity.wait_time = wait_time;
+					save_entity.current_step = current_step;
+					save_entity.menu_up = menu_up;
 					break;
 			//-----Player
 				//-----Inventory

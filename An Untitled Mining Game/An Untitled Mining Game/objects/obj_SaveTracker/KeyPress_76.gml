@@ -48,6 +48,9 @@ if (file_exists("savegame.sav")) {
 					structure_level = load_entity.structure_level;
 					in_use = load_entity.in_use;
 					structure_level = load_entity.structure_level;
+					wait_time = load_entity.wait_time;
+					current_step = load_entity.current_step;
+					menu_up = load_entity.menu_up;
 					break;
 			//-----Player
 				//-----Inventory
