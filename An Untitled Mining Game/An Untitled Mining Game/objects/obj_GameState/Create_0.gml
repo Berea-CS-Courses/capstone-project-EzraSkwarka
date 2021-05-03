@@ -2,7 +2,6 @@ global.mouse_level = 0;
 global.renown = 0;
 global.is_paused = false;
 
-has_had_shiny_rocks = false;
 show_inventory = false;
 
 instance_create_layer(0, 0, "UI", obj_toolbar);

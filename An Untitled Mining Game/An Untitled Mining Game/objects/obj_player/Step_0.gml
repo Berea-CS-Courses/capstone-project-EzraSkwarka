@@ -1,6 +1,6 @@
 //Set global position
-global.player_x = x;
-global.player_y = y;
+//global.player_x = x;
+//global.player_y = y;
 
 
 // Keep player within the room

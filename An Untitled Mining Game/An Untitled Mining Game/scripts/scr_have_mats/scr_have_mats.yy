@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Button Groups",
-    "path": "folders/Scripts/Button Groups.yy",
+    "name": "Inventory Managment",
+    "path": "folders/Scripts/Inventory Managment.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_draw_pebble_reffiner_menu",
+  "name": "scr_have_mats",
   "tags": [],
   "resourceType": "GMScript",
 }

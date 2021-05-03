@@ -1,6 +1,6 @@
 // // Script assets have changed for v2.3.0 see
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_create_crafting_button(draw_x, draw_y, button_width, button_height, text, make_item, item_x, item_y) 
+function scr_create_crafting_button(draw_x, draw_y, button_width, button_height, text, input_array, output_array, item_x, item_y) 
 {
 var button = instance_create_layer(draw_x, draw_y, "UI", obj_crafting_button);
 
@@ -10,7 +10,8 @@ with (button) {
 	height = button_height;
 	display_text = text;
 	//What
-	item_type = make_item;
+	input = input_array;
+	output = output_array;
 	x_loc = item_x;
 	y_loc = item_y;
 	

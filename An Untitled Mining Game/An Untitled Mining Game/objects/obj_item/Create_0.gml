@@ -4,12 +4,12 @@
 cell_size = 16;
 item_spr = spr_inventory_items_small;
 spr_width = sprite_get_width(item_spr);
-spr_height = sprite_get_height(item_spr);
+//spr_height = sprite_get_height(item_spr);
 
 //----------
 // Info for subsprite
 //----------
-item_nun = 1;
+//item_nun = 1;
 x_frame = 0;
 y_frame = 0;
 

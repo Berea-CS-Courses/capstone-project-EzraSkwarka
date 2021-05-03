@@ -1,4 +1,3 @@
-is_alarm_set = true;
 alarm_step = 0;
 spawn_delay = 90; //messured in frames, 60 fps
 

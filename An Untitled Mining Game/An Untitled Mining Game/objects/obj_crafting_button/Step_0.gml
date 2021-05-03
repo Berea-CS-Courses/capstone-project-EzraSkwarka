@@ -5,5 +5,5 @@ hover = lerp(hover, _hover, 0.1);
 
 if (_hover and click) {
 	show_debug_message("making one")
-	scr_create_obj_item(item_type, x_loc, y_loc);	
+	//scr_create_obj_item(item_type, x_loc, y_loc);	
 }
