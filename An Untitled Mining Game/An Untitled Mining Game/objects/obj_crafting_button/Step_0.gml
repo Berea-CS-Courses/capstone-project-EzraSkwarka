@@ -7,7 +7,6 @@ hover = lerp(hover, _hover, 0.1);
 
 if (_hover and click and (!struct_in_use)) {
 	if(scr_have_mats(input)) {
-		show_debug_message(string(struct_in_use))
 		var struct_level = struct_id.structure_level;
 		struct_id.in_use = true;
 		struct_id.wait_time = max(crafting_time - (6 * struct_level), 6);
@@ -15,7 +14,11 @@ if (_hover and click and (!struct_in_use)) {
 		
 
 		var i = 0; repeat (array_length(output)/2) {
-			scr_create_obj_item(output[@ i], x_loc, y_loc);
+			var repeat_count = max(((6 * struct_level)) div crafting_time, 1);
+			show_debug_message(string(repeat_count))
+			repeat (repeat_count) {
+				scr_create_obj_item(output[@ i], x_loc, y_loc);
+			}
 			i += 2;
 		}
 	}
