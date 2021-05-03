@@ -1,10 +1,5 @@
-//Internal
-structure_level = 0;
-in_use = false;
-menu_up = false;
+event_inherited();
 
-//Crafting
-base_speed = 0;
-wait_time = -1;
-current_step = 0;
-output = [];
+//Child Specfic
+draw_spr = spr_pebble_refiner;
+draw_menu = menu_type.pebble_refiner;

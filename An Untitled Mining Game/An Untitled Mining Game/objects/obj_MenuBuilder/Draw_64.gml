@@ -1,3 +1,11 @@
+if global.is_paused {
+	menu_to_draw = menu_type.none;
+	with (obj_structure_parent) {
+		menu_up = false;	
+	}
+}
+
+
 switch (menu_to_draw) {
 	case menu_type.pebble_refiner:
 		if !(menu_drawn) {
