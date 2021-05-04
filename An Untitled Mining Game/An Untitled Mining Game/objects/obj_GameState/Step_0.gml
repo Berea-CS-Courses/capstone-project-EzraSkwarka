@@ -3,8 +3,16 @@
 //----------
 
 if(keyboard_check_pressed(vk_escape)) { 
+	if (global.is_paused) {
+		esc_menu_up = false;
+		with obj_button {
+			instance_destroy();	
+		}
+	}
 	global.is_paused = !global.is_paused; 
 }
+	
+	
 //----------
 // Inventory
 //----------
