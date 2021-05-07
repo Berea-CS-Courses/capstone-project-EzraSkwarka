@@ -1,5 +1,5 @@
 /// @description 
-var _hover = scr_get_hover();
+var _hover = scr_get_hover(width, height, x, y);
 var _click = _hover && mouse_check_button_pressed(mb_left);
 
 // Hover
