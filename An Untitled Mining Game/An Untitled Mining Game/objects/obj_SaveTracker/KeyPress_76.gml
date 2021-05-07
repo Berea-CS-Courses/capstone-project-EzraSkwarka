@@ -8,6 +8,13 @@ var i = 0; repeat(array_length(node_type_array)) {
 	}
 	i++;
 }
+var i = 0; repeat(array_length(load_kill_list)) {
+	with (load_kill_list[i])
+	{
+		instance_destroy();
+	}
+	i++;
+}
 
 // put it back!!!
 if (file_exists("savegame.sav")) {
@@ -29,12 +36,21 @@ if (file_exists("savegame.sav")) {
 					node_health = load_entity.node_health;
 					spr_to_draw = load_entity.spr_to_draw;
 					break;
+			//-----Obj_items
+				case "obj_item":
+					item_num = load_entity.item_num;
+					x_frame = load_entity.x_frame;
+					y_frame = load_entity.y_frame;
+					break;
 			//-----Structs
 				case "obj_structure_mouse_tool":
 				case "obj_structure_pebble_refiner":
 					structure_level = load_entity.structure_level;
 					in_use = load_entity.in_use;
 					structure_level = load_entity.structure_level;
+					wait_time = load_entity.wait_time;
+					current_step = load_entity.current_step;
+					menu_up = load_entity.menu_up;
 					break;
 			//-----Player
 				//-----Inventory

@@ -1,3 +1,5 @@
-structure_level = 0;
-in_use = true;
-needed_shiny_rocks = 0;
+event_inherited();
+
+//Child Specfic
+draw_spr = spr_pebble_refiner;
+draw_menu = menu_type.pebble_refiner;

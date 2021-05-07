@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Inventory Managment.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_consume_item_from_inventory",
+  "name": "scr_comsume_mats",
   "tags": [],
   "resourceType": "GMScript",
 }
