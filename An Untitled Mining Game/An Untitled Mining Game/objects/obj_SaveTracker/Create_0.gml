@@ -13,5 +13,6 @@ nta = [
 
 //load_kill_list
 lkl = [
-	obj_crafting_button
+	obj_crafting_button,
+	obj_button
 ]

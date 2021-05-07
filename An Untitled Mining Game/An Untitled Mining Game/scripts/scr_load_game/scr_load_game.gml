@@ -76,6 +76,13 @@ if (file_exists("savegame.sav")) {
 				
 		}
 	}
+	if (global.is_paused) {
+		global.is_paused = false;
+		with (obj_GameState) {
+			show_menu = false;
+			drawn_menu = false;
+		}
+	}
 }
 
 }
