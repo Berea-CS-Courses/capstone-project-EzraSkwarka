@@ -1,10 +1,5 @@
-// // Script assets have changed for v2.3.0 see
-// // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_load_game() 
-{
 // Load Game
-var node_type_array = obj_SaveTracker.nta;
-var load_kill_list = obj_SaveTracker.lkl;
+
 // for every parant instance, build a map to append to the list
 var i = 0; repeat(array_length(node_type_array)) {
 	with (node_type_array[i])
@@ -75,10 +70,5 @@ if (file_exists("savegame.sav")) {
 			}
 				
 		}
-	}
-}
-if global.is_paused {
-	global.is_paused = false;
-	obj_GameState.esc_menu_up = false;
 	}
 }

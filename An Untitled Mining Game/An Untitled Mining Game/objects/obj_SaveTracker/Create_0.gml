@@ -1,5 +1,5 @@
 //Create list of objects with info that needs to be saved
-nta = [ // node type array
+node_type_array = [
 	obj_node_rock, 
 	obj_node_tree, 
 	obj_item,
@@ -9,7 +9,6 @@ nta = [ // node type array
 	obj_inventory
 ];
 
-lkl = [ // load kill list
-	obj_crafting_button,
-	obj_button
+load_kill_list = [
+	obj_crafting_button
 ]

@@ -1,9 +1,5 @@
-// // Script assets have changed for v2.3.0 see
-// // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_save_game() 
-{
 // Save Game
-var node_type_array = obj_SaveTracker.nta;
+
 // make save array
 var save_data = array_create(0);
 
@@ -76,4 +72,3 @@ buffer_save(_buffer, "savegame.sav");
 buffer_delete(_buffer);
 
 show_debug_message("Game saved! " + out_string);
-}
