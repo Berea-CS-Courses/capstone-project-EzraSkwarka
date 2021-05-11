@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 95,
+  "bbox_right": 63,
   "bbox_top": 0,
   "bbox_bottom": 49,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 96,
+  "width": 64,
   "height": 50,
   "textureGroupId": {
     "name": "Default",
@@ -24,15 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0e6960ad-77cd-4eae-885d-cd7bb87080a2","path":"sprites/spr_grass_tile/spr_grass_tile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0e6960ad-77cd-4eae-885d-cd7bb87080a2","path":"sprites/spr_grass_tile/spr_grass_tile.yy",},"LayerId":{"name":"82f55e9a-3129-462a-9234-aff64da6a31b","path":"sprites/spr_grass_tile/spr_grass_tile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_grass_tile","path":"sprites/spr_grass_tile/spr_grass_tile.yy",},"resourceVersion":"1.0","name":"0e6960ad-77cd-4eae-885d-cd7bb87080a2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8789d9d0-a74b-4f3f-9448-c2f757fc01a3","path":"sprites/spr_water_tile/spr_water_tile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8789d9d0-a74b-4f3f-9448-c2f757fc01a3","path":"sprites/spr_water_tile/spr_water_tile.yy",},"LayerId":{"name":"d10cfad1-ccbf-47a1-90ca-4508231f3e6f","path":"sprites/spr_water_tile/spr_water_tile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_water_tile","path":"sprites/spr_water_tile/spr_water_tile.yy",},"resourceVersion":"1.0","name":"8789d9d0-a74b-4f3f-9448-c2f757fc01a3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_grass_tile","path":"sprites/spr_grass_tile/spr_grass_tile.yy",},
+    "spriteId": {"name":"spr_water_tile","path":"sprites/spr_water_tile/spr_water_tile.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f418aef5-1292-4986-9e8c-20357322e3fe","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0e6960ad-77cd-4eae-885d-cd7bb87080a2","path":"sprites/spr_grass_tile/spr_grass_tile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6bb6b30c-98cf-4eaf-a93f-99b81461b594","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8789d9d0-a74b-4f3f-9448-c2f757fc01a3","path":"sprites/spr_water_tile/spr_water_tile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,18 +54,18 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 48,
+    "xorigin": 32,
     "yorigin": 25,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_grass_tile","path":"sprites/spr_grass_tile/spr_grass_tile.yy",},
+    "parent": {"name":"spr_water_tile","path":"sprites/spr_water_tile/spr_water_tile.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_grass_tile",
+    "name": "spr_water_tile",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"82f55e9a-3129-462a-9234-aff64da6a31b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d10cfad1-ccbf-47a1-90ca-4508231f3e6f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Tiles/Hex.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_grass_tile",
+  "name": "spr_water_tile",
   "tags": [],
   "resourceType": "GMSprite",
 }

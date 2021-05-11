@@ -1,0 +1,1 @@
+instance_create_layer(x,y,"Spawning",obj_resource_node_spawner)
