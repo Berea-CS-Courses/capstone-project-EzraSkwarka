@@ -1,1 +1,0 @@
-node_health = script_execute(scr_node_left_click, node_health, 2, item.rock, 15);

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Nodes",
-    "path": "folders/Sprites/Resources/Nodes.yy",
+    "name": "Rock",
+    "path": "folders/Sprites/Resources/Nodes/Rock.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_rock_coral_node",

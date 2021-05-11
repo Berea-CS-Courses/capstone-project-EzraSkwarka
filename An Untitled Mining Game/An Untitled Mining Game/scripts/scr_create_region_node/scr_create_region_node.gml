@@ -9,17 +9,21 @@ switch (_region) {
 	case region_list.mountian:
 		if((random_number >= 90)) {
 				instance_create_layer(x + 0, y + 0, "Active", obj_node_tree);
+				obj_NodeController.nodes_spawned += 1;
 			} else {
 				instance_create_layer(x + 0, y + 0, "Active", obj_node_rock);
+				obj_NodeController.nodes_spawned += 1;
 			}
 		break;
 		
 	case region_list.beach:
 		instance_create_layer(x + 0, y + 0, "Active", obj_node_rock);
+		obj_NodeController.nodes_spawned += 1;
 		break;
 		
 	case region_list.forest:
 		instance_create_layer(x + 0, y + 0, "Active", obj_node_tree);
+		obj_NodeController.nodes_spawned += 1;
 		break;
 		
 	case region_list.desert:

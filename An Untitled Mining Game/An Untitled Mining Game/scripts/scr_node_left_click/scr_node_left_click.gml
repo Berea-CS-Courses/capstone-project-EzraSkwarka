@@ -17,9 +17,6 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 			if (distance_to_object(obj_player) <= 16) {
 				if (node_health > 0) {
 					node_health -= 1;
-					if (node_health > 0) {
-						return node_health;
-					}
 				} 
 		
 				if (node_health <= 0) {
@@ -41,4 +38,5 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 		
 		}
 	}
+return node_health;
 }
