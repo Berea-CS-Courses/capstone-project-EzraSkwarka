@@ -1,4 +1,4 @@
-var _hover = scr_get_hover(width, height);
+var _hover = scr_get_hover(width, height, x, y);
 var click = _hover and mouse_check_button_pressed(mb_left);
 var struct_in_use = struct_id.in_use;
 
