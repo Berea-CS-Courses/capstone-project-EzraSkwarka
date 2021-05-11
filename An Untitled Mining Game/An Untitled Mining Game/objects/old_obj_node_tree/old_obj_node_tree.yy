@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_tree",
-    "path": "sprites/spr_tree/spr_tree.yy",
+    "name": "spr_tree_node",
+    "path": "sprites/spr_tree_node/spr_tree_node.yy",
   },
   "solid": true,
   "visible": true,
@@ -29,11 +29,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Nodes",
-    "path": "folders/Objects/Resources/Nodes.yy",
+    "name": "zzOld",
+    "path": "folders/Objects/zzOld.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_node_tree",
+  "name": "old_obj_node_tree",
   "tags": [],
   "resourceType": "GMObject",
 }

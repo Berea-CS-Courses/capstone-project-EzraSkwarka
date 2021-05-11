@@ -29,11 +29,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Rock",
-    "path": "folders/Objects/Resources/Nodes/Rock.yy",
+    "name": "zzOld",
+    "path": "folders/Objects/zzOld.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_node_rock",
+  "name": "old_obj_node_rock",
   "tags": [],
   "resourceType": "GMObject",
 }

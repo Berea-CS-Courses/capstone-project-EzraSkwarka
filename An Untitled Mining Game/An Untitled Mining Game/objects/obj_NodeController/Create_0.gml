@@ -11,3 +11,11 @@ enum region_list {
 	tundra,
 	volcano,
 }
+
+enum node_types {
+	none,
+	rock,
+	tree,
+	
+	
+}

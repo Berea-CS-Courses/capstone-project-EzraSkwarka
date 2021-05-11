@@ -2,8 +2,9 @@
 
 //node_type_array
 nta = [
-	obj_node_rock, 
-	obj_node_tree, 
+	//obj_node_rock, 
+	//obj_node_tree, 
+	obj_node_parent,
 	obj_item,
 	obj_structure_mouse_tool, 
 	obj_structure_pebble_refiner,

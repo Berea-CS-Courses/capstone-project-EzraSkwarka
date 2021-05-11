@@ -8,6 +8,7 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 	with (obj_tool) {
 		if !(swing_state == "rest") {
 			var is_swinging = true;
+			show_debug_message("ping");
 		} else {
 			var is_swinging = false;	
 		}

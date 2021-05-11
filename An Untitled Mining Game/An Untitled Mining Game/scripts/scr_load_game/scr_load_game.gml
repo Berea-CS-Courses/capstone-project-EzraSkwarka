@@ -43,6 +43,7 @@ if (file_exists("savegame.sav")) {
 					bonus_multiplier = load_entity.bonus_multiplier;
 					node_health = load_entity.node_health;
 					spr_to_draw = load_entity.spr_to_draw;
+					mask_index = load_entity.mask_index;
 					spawn_resource = load_entity.spawn_resource;
 					base_rate = load_entity.base_rate;
 					tool_to_use = load_entity.tool_to_use;
