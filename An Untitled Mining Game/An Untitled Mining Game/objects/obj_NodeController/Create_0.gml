@@ -1,5 +1,6 @@
-global.NodesSpawned = 0;
-global.NodeSpawnLimit = 5;
+nodes_spawned = 0;
+node_spawn_limit = 5;
+
 
 enum region_list {
 	forest,

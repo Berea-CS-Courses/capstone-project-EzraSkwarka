@@ -24,6 +24,9 @@ var i = 0; repeat(array_length(node_type_array)) {
 
 			switch (save_entity.obj) {
 			//-----Nodes
+				//case "obj_NodeController":
+					
+				
 				case "obj_node_rock": 
 				case "obj_node_tree": 
 					save_entity.bonus_multiplier = bonus_multiplier;

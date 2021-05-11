@@ -19,12 +19,13 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Invisible Spawning Objects",
-    "path": "folders/Objects/Invisible Spawning Objects.yy",
+    "name": "Resources",
+    "path": "folders/Objects/Resources.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_NodeController",
