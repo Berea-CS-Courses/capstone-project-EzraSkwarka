@@ -3,6 +3,11 @@ node_spawn_limit = 5;
 
 
 enum region_list {
+	beach,
 	forest,
-	beach
+	desert,
+	mines,
+	mountian,
+	tundra,
+	volcano,
 }

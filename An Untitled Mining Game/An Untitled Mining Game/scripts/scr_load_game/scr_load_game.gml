@@ -35,6 +35,10 @@ if (file_exists("savegame.sav")) {
 			show_debug_message("Created a " + load_entity.obj);
 			switch (load_entity.obj) {
 			//-----Nodes
+				case "obj_NodeController":
+					node_spawn_limit = load_entity.node_spawn_limit;
+					nodes_spawned = load_entity.nodes_spawned;
+					break;
 				case "obj_node_rock": 
 				case "obj_node_tree": 
 					bonus_multiplier = load_entity.bonus_multiplier;
