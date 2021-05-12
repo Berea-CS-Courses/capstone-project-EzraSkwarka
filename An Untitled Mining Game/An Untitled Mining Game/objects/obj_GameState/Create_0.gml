@@ -3,7 +3,11 @@ global.renown = 0;
 global.is_paused = false;
 
 screen_width = 1280;
+global.ScreenWidth = 1280;
 screen_height = 960;
+global.ScreenHeight = 960;
+
+
 
 show_menu = false;
 drawn_menu = false;

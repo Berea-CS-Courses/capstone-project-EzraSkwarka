@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Nodes",
-    "path": "folders/Objects/Resources/Nodes.yy",
+    "name": "Resources",
+    "path": "folders/Objects/Resources.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_node_parent",
