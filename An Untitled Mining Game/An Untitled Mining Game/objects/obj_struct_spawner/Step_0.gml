@@ -35,6 +35,12 @@ if (!building) {
 			active_object = obj_structure_mouse_tool;
 			required_mats = [item.shiny_rock, 10];
 			break;
+		case struct.points_shop:
+			active_sprite = spr_points_shop;
+			active_object = obj_structure_points_shop;
+			required_mats = [item.wood, 50];
+			break;
+		
 		default:
 			exit;
 	}

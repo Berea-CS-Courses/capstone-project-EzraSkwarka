@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_mouse_level_station",
-    "path": "sprites/spr_mouse_level_station/spr_mouse_level_station.yy",
+    "name": "spr_points_shop",
+    "path": "sprites/spr_points_shop/spr_points_shop.yy",
   },
   "solid": true,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/Structures.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_structure_mouse_tool",
+  "name": "obj_structure_points_shop",
   "tags": [],
   "resourceType": "GMObject",
 }
