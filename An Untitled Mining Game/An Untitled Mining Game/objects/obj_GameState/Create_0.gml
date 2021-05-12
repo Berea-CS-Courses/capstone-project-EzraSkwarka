@@ -10,11 +10,10 @@ global.ScreenWidth = 1280;
 screen_height = 960;
 global.ScreenHeight = 960;
 
-
-
 show_menu = false;
 drawn_menu = false;
 
+//Button refrences
 save_button = 0;
 load_button = 0;
 exit_button = 0;
