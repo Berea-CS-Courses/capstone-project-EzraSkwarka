@@ -7,26 +7,40 @@ var node_type = node_types.none;
 switch (_region) {
 	
 	case region_list.mountian:
-		if((random_number >= 90)) {
-			node_type = node_types.tree;
-		} else {
-			node_type = node_types.rock;
-		}
+		if((random_number >= 10))	{node_type = node_types.rock;}
+		else						{node_type = node_types.tree;}
 		break;
 		
 	case region_list.beach:
-		node_type = node_types.rock;
+		node_type = node_types.rock_coral;
 		break;
 		
 	case region_list.forest:
-		node_type = node_types.tree;
+		if (random_number >= 25)	{node_type = node_types.tree;}
+		else						{node_type = node_types.rock_iron}
 		break;
 		
 	case region_list.desert:
-	case region_list.mines:
-	case region_list.tundra:
-	case region_list.volcano:
+		if (random_number >= 60)	{node_type = node_types.rock_sandstone;}
+		else						{node_type = node_types.rock}
+		
 		break;
+
+	case region_list.mines:
+		if (random_number >= 70)	{node_type = node_types.rock_mythril;}
+		else						{node_type = node_types.rock}
+		break;
+
+	case region_list.tundra:
+		if (random_number >= 80)	{node_type = node_types.rock_uranium;}
+		else						{node_type = node_types.rock}
+		break;
+
+	case region_list.volcano:
+		if (random_number >= 90)	{node_type = node_types.rock_molten;}
+		else						{node_type = node_types.rock}
+		break;
+
 }
 
 switch node_type {
@@ -37,7 +51,84 @@ switch node_type {
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.rock;
+		node.base_rate = 10;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
+	case node_types.rock_iron:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 4;
+		node.spr_to_draw = spr_rock_iron_node;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.rock;
+		node.base_rate = 20;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
+	case node_types.rock_coral:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 1;
+		node.spr_to_draw = spr_rock_coral_node;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.rock;
+		node.base_rate = 10;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
+	case node_types.rock_mythril:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 10;
+		node.spr_to_draw = spr_rock_mythril_node;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.rock;
+		node.base_rate = 50;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
+	case node_types.rock_steel:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 8;
+		node.spr_to_draw = spr_rock_steel_node;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.rock;
+		node.base_rate = 40;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
+	case node_types.rock_sandstone:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 6;
+		node.spr_to_draw = spr_rock_sandstone_node;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.rock;
 		node.base_rate = 30;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
+	case node_types.rock_uranium:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 14;
+		node.spr_to_draw = spr_rock_uranium_node;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.rock;
+		node.base_rate = 70;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
+	case node_types.rock_molten:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 20;
+		node.spr_to_draw = spr_rock_molten_node;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.rock;
+		node.base_rate = 100;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
@@ -48,7 +139,7 @@ switch node_type {
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.axe;
 		node.spawn_resource = item.rock;
-		node.base_rate = 15;
+		node.base_rate = 5;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 
