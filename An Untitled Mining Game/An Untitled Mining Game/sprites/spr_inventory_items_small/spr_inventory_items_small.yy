@@ -10,7 +10,7 @@
   "bbox_left": 1,
   "bbox_right": 254,
   "bbox_top": 0,
-  "bbox_bottom": 30,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -21,8 +21,8 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 32,
-  "gridY": 32,
+  "gridX": 16,
+  "gridY": 16,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"e6a27a74-52dd-49ea-8200-b32118849260","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"LayerId":{"name":"3d33f06a-9348-4b0f-a07d-557a9ae0ff52","path":"sprites/spr_inventory_items_small/spr_inventory_items_small.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},

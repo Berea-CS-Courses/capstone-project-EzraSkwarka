@@ -62,7 +62,8 @@ enum item {
 	none		= 0,
 	rock		= 1,
 	shiny_rock	= 2,
-	height		= 3,
+	wood		= 3,
+	height		= 4,
 }
 
 //randomly fill inventory for testing

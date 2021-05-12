@@ -138,7 +138,7 @@ switch node_type {
 		node.spr_to_draw = spr_tree_node;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.axe;
-		node.spawn_resource = item.rock;
+		node.spawn_resource = item.wood;
 		node.base_rate = 5;
 		obj_NodeController.nodes_spawned += 1;
 		break;
