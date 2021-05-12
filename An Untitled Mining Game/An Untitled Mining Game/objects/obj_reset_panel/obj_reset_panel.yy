@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Invisible Spawning Objects",
-    "path": "folders/Objects/Invisible Spawning Objects.yy",
+    "name": "zzOld",
+    "path": "folders/Objects/zzOld.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_reset_panel",
