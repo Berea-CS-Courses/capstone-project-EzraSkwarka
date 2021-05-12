@@ -1,3 +1,6 @@
+//I want more randomness
+randomize()
+
 global.mouse_level = 0;
 global.renown = 0;
 global.is_paused = false;
