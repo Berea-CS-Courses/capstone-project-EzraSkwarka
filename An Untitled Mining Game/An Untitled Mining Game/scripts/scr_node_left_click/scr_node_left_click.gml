@@ -17,7 +17,7 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 		if !is_swinging {
 			if (distance_to_object(obj_player) <= 16) {
 				if (node_health > 0) {
-					node_health -= 1;
+					node_health -= obj_relics_menu.pick_power;
 				} 
 		
 				if (node_health <= 0) {

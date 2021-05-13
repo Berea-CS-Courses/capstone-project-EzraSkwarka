@@ -100,3 +100,14 @@ relics_UI_y = (gui_height * 0.75) - (relics_UI_height * 0.5 * scale);
 //relics_slots_x = relics_info_x;
 //relics_slots_y = relics_UI_y + (40 * scale);
 //------------
+
+//----------
+// Minor Relics
+//----------
+enum minor_relics{
+	none,
+	pick_power,
+	height
+}
+
+pick_power = 10;
