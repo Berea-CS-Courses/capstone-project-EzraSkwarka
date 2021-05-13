@@ -55,8 +55,8 @@ if (file_exists("savegame.sav")) {
 					y_frame = load_entity.y_frame;
 					break;
 			//-----Structs
-				case "obj_structure_mouse_tool":
-				case "obj_structure_pebble_refiner":
+				case "obj_structure_parent":
+				//case "obj_structure_pebble_refiner":
 					structure_level = load_entity.structure_level;
 					in_use = load_entity.in_use;
 					structure_level = load_entity.structure_level;
@@ -67,7 +67,6 @@ if (file_exists("savegame.sav")) {
 			//-----Player
 				//-----Inventory
 				case "obj_inventory":
-					global.renown = load_entity.renown
 					inv_slots = load_entity.inv_slots;
 					pickup_slot = load_entity.pickup_slot;
 					selected_slot = load_entity.selected_slot;
@@ -77,6 +76,11 @@ if (file_exists("savegame.sav")) {
 						ds_inventory[# 1, ii] = inv_array[ii][1];
 						ii++;
 					}
+					break;
+				//-----Relics
+				case "obj_relics_menu":
+					global.renown = load_entity.renown;
+					pick_power = load_entity.pick_power;
 					break;
 				default:
 					break;

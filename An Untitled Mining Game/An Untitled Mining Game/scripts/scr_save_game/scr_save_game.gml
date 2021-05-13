@@ -44,8 +44,8 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.y_frame = y_frame;
 					break;
 			//-----Structs
-				case "obj_structure_mouse_tool":
-				case "obj_structure_pebble_refiner":
+				case "obj_structure_parent":
+				//case "obj_structure_pebble_refiner":
 					save_entity.structure_level = structure_level;
 					save_entity.in_use = in_use;
 					save_entity.structure_level = structure_level;
@@ -56,7 +56,6 @@ var i = 0; repeat(array_length(node_type_array)) {
 			//-----Player
 				//-----Inventory
 				case "obj_inventory":
-					save_entity.renown = global.renown;
 					save_entity.layer = "UI";
 					save_entity.inv_slots = inv_slots;
 					save_entity.pickup_slot = pickup_slot;
@@ -67,6 +66,12 @@ var i = 0; repeat(array_length(node_type_array)) {
 						ii++;
 					}
 					save_entity.inv_array = inv_array;
+					break;
+				//-----Relics
+				case "obj_relics_menu":
+					save_entity.layer = "UI";
+					save_entity.renown = global.renown;
+					save_entity.pick_power = pick_power;
 					break;
 				default:
 					break;
