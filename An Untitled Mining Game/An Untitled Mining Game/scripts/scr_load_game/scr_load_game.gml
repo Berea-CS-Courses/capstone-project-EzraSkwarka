@@ -59,10 +59,13 @@ if (file_exists("savegame.sav")) {
 				//case "obj_structure_pebble_refiner":
 					structure_level = load_entity.structure_level;
 					in_use = load_entity.in_use;
-					structure_level = load_entity.structure_level;
+					menu_up = load_entity.menu_up;
+					base_speed = load_entity.base_speed;
 					wait_time = load_entity.wait_time;
 					current_step = load_entity.current_step;
-					menu_up = load_entity.menu_up;
+					output = load_entity.output;
+					draw_spr = load_entity.draw_spr;
+					draw_menu = load_entity.draw_menu;
 					break;
 			//-----Player
 				//-----Inventory

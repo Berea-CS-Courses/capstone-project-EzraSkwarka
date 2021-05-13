@@ -7,10 +7,7 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_structure_parent",
-    "path": "objects/obj_structure_parent/obj_structure_parent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -29,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Structures",
-    "path": "folders/Objects/Structures.yy",
+    "name": "zzOld",
+    "path": "folders/Objects/zzOld.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_structure_pebble_refiner",

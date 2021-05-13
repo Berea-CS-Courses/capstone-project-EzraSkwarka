@@ -48,10 +48,14 @@ var i = 0; repeat(array_length(node_type_array)) {
 				//case "obj_structure_pebble_refiner":
 					save_entity.structure_level = structure_level;
 					save_entity.in_use = in_use;
-					save_entity.structure_level = structure_level;
+					save_entity.menu_up = menu_up;
+					save_entity.base_speed = base_speed;
 					save_entity.wait_time = wait_time;
 					save_entity.current_step = current_step;
-					save_entity.menu_up = menu_up;
+					save_entity.output = output;
+					save_entity.draw_spr = draw_spr;
+					save_entity.draw_menu = draw_menu;
+					
 					break;
 			//-----Player
 				//-----Inventory
