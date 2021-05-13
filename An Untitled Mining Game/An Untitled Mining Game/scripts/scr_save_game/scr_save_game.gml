@@ -56,6 +56,7 @@ var i = 0; repeat(array_length(node_type_array)) {
 			//-----Player
 				//-----Inventory
 				case "obj_inventory":
+					save_entity.renown = global.renown;
 					save_entity.layer = "UI";
 					save_entity.inv_slots = inv_slots;
 					save_entity.pickup_slot = pickup_slot;

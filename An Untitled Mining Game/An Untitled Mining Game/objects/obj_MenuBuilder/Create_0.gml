@@ -15,7 +15,8 @@ screen_width = 1280;
 enum menu_type {
 	none,
 	pebble_refiner,
-	mouse_tool
+	mouse_tool,
+	points_shop
 	
 	
 }

@@ -64,6 +64,8 @@ enum item {
 	shiny_rock	= 2,
 	wood		= 3,
 	height		= 4,
+	
+	renown_ref = -2, //for the consume functions
 }
 
 //randomly fill inventory for testing

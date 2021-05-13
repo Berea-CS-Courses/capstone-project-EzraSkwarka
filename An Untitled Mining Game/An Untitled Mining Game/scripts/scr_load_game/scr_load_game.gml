@@ -67,6 +67,7 @@ if (file_exists("savegame.sav")) {
 			//-----Player
 				//-----Inventory
 				case "obj_inventory":
+					global.renown = load_entity.renown
 					inv_slots = load_entity.inv_slots;
 					pickup_slot = load_entity.pickup_slot;
 					selected_slot = load_entity.selected_slot;

@@ -11,11 +11,13 @@ if struct_id.in_use and (struct_id.current_step < struct_id.wait_time) {
 		var i = 0; repeat (array_length(struct_id.output)/2) {
 				if (struct_id.output[@ 0] == "Level up") {
 					struct_id.structure_level += 1;
+				} else if (struct_id.output[@ 0] == "Renown") {
+					obj_relics_menu.pick_power += 1;
 				} else {
-				var repeat_count = max(((6 * struct_id.structure_level)) div struct_id.base_speed, 1);
-				repeat (repeat_count) {
-					repeat (struct_id.output[@ i + 1]) {
-						scr_create_obj_item(struct_id.output[@ i], struct_id.x, struct_id.y);
+					var repeat_count = max(((6 * struct_id.structure_level)) div struct_id.base_speed, 1);
+					repeat (repeat_count) {
+						repeat (struct_id.output[@ i + 1]) {
+							scr_create_obj_item(struct_id.output[@ i], struct_id.x, struct_id.y);
 					}
 				}
 				i += 2;

@@ -110,4 +110,4 @@ enum minor_relics{
 	height
 }
 
-pick_power = 10;
+pick_power = 1;
