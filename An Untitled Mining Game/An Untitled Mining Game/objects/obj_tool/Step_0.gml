@@ -1,9 +1,9 @@
 if (global.is_paused) exit;
 
-if instance_exists(obj_structure_mouse_tool) {
+if instance_exists(obj_structure_parent) {
 	var _gml = 0;
-	with (obj_structure_mouse_tool) {
-		_gml += structure_level;		
+	with (obj_structure_parent) {
+		if (obj_structure_parent.draw_spr == spr_mouse_level_station) _gml += structure_level;		
 	}
 	global.mouse_level = _gml;
 }
