@@ -44,14 +44,18 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.y_frame = y_frame;
 					break;
 			//-----Structs
-				case "obj_structure_mouse_tool":
-				case "obj_structure_pebble_refiner":
+				case "obj_structure_parent":
+				//case "obj_structure_pebble_refiner":
 					save_entity.structure_level = structure_level;
 					save_entity.in_use = in_use;
-					save_entity.structure_level = structure_level;
+					save_entity.menu_up = menu_up;
+					save_entity.base_speed = base_speed;
 					save_entity.wait_time = wait_time;
 					save_entity.current_step = current_step;
-					save_entity.menu_up = menu_up;
+					save_entity.output = output;
+					save_entity.draw_spr = draw_spr;
+					save_entity.draw_menu = draw_menu;
+					
 					break;
 			//-----Player
 				//-----Inventory
@@ -66,6 +70,12 @@ var i = 0; repeat(array_length(node_type_array)) {
 						ii++;
 					}
 					save_entity.inv_array = inv_array;
+					break;
+				//-----Relics
+				case "obj_relics_menu":
+					save_entity.layer = "UI";
+					save_entity.renown = global.renown;
+					save_entity.pick_power = pick_power;
 					break;
 				default:
 					break;

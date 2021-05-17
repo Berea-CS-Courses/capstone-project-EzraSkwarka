@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_pebble_refiner",
-    "path": "sprites/spr_pebble_refiner/spr_pebble_refiner.yy",
+    "name": "spr_oasis_tile",
+    "path": "sprites/spr_oasis_tile/spr_oasis_tile.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_structure_parent",
-    "path": "objects/obj_structure_parent/obj_structure_parent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,16 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":82,"eventType":9,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Structures",
-    "path": "folders/Objects/Structures.yy",
+    "name": "Tiles",
+    "path": "folders/Objects/Tiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_structure_pebble_refiner",
+  "name": "obj_reset_tile",
   "tags": [],
   "resourceType": "GMObject",
 }

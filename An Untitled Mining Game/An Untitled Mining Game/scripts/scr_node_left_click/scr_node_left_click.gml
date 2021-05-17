@@ -8,7 +8,6 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 	with (obj_tool) {
 		if !(swing_state == "rest") {
 			var is_swinging = true;
-			show_debug_message("ping");
 		} else {
 			var is_swinging = false;	
 		}
@@ -17,7 +16,7 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 		if !is_swinging {
 			if (distance_to_object(obj_player) <= 16) {
 				if (node_health > 0) {
-					node_health -= 1;
+					node_health -= obj_relics_menu.pick_power;
 				} 
 		
 				if (node_health <= 0) {
@@ -32,7 +31,6 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 							x_frame = item_num mod (spr_width/cell_size);
 							y_frame = item_num div (spr_width/cell_size);
 						}
-						show_debug_message("dropped an item")
 					}
 				}
 			}

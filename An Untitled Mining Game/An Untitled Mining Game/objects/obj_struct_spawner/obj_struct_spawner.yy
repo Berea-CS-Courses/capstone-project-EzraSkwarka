@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Invisible Spawning Objects",
-    "path": "folders/Objects/Invisible Spawning Objects.yy",
+    "name": "Structures",
+    "path": "folders/Objects/Structures.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_struct_spawner",

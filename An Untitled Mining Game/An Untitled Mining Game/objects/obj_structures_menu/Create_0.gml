@@ -44,6 +44,7 @@ enum struct {
 	none,
 	pebble_refiner,
 	mouse_tool,
+	points_shop,
 	height
 }
 

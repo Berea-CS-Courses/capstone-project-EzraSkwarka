@@ -27,14 +27,20 @@ if (!building) {
 	switch (selected_struct) {
 		case struct.pebble_refiner: // technically equivlent to "case 0" but much more clear
 			active_sprite = spr_pebble_refiner;
-			active_object = obj_structure_pebble_refiner;
+			active_object = struct.pebble_refiner
 			required_mats = [item.rock, 10];
 			break;
 		case struct.mouse_tool:
 			active_sprite = spr_mouse_level_station;
-			active_object = obj_structure_mouse_tool;
+			active_object = struct.mouse_tool;
 			required_mats = [item.shiny_rock, 10];
 			break;
+		case struct.points_shop:
+			active_sprite = spr_points_shop;
+			active_object = struct.points_shop;
+			required_mats = [item.wood, 50];
+			break;
+		
 		default:
 			exit;
 	}

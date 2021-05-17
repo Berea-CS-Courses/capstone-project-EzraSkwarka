@@ -55,14 +55,17 @@ if (file_exists("savegame.sav")) {
 					y_frame = load_entity.y_frame;
 					break;
 			//-----Structs
-				case "obj_structure_mouse_tool":
-				case "obj_structure_pebble_refiner":
+				case "obj_structure_parent":
+				//case "obj_structure_pebble_refiner":
 					structure_level = load_entity.structure_level;
 					in_use = load_entity.in_use;
-					structure_level = load_entity.structure_level;
+					menu_up = load_entity.menu_up;
+					base_speed = load_entity.base_speed;
 					wait_time = load_entity.wait_time;
 					current_step = load_entity.current_step;
-					menu_up = load_entity.menu_up;
+					output = load_entity.output;
+					draw_spr = load_entity.draw_spr;
+					draw_menu = load_entity.draw_menu;
 					break;
 			//-----Player
 				//-----Inventory
@@ -76,6 +79,11 @@ if (file_exists("savegame.sav")) {
 						ds_inventory[# 1, ii] = inv_array[ii][1];
 						ii++;
 					}
+					break;
+				//-----Relics
+				case "obj_relics_menu":
+					global.renown = load_entity.renown;
+					pick_power = load_entity.pick_power;
 					break;
 				default:
 					break;

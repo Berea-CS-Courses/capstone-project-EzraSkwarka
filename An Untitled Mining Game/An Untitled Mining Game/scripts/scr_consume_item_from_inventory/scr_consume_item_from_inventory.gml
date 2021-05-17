@@ -1,6 +1,11 @@
 // // Script assets have changed for v2.3.0 see
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_consume_item_from_inventory (item_number, item_amount) {
+//Renown check
+if (item_number == item.renown_ref) {
+	global.renown -= item_amount;
+	return true;
+}
 with(obj_inventory) {
 		var ds_inv = ds_inventory
 		var item_found = false;

@@ -42,6 +42,20 @@ switch (menu_to_draw) {
 		menu_drawn = true;
 		break;
 	
+	case menu_type.points_shop:
+	if !(menu_drawn) {
+			var _width = 250;
+			var _height = 25;
+			var _h_space = 5;
+			//Renown -> Pick Power, 600 tics
+			scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * 0, _width, _height, 
+										"Strengthen Pickaxe", [item.renown_ref, floor(power(1.1, obj_relics_menu.pick_power))], ["Renown", minor_relics.pick_power], x_base, y_base,
+										struct_refrence, 600);
+			}
+			
+		menu_drawn = true;
+		break
+	
 	
 	case menu_type.none: // this means only one "type" of menu can be active at a time
 	default:

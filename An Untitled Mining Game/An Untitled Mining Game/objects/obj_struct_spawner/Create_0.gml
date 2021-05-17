@@ -3,7 +3,7 @@ ds_struct_types = 0;
 
 // Default case in case draw runs before step
 active_sprite = spr_pebble_refiner;
-active_object = obj_structure_pebble_refiner;
+active_object = struct.pebble_refiner;
 required_mats = [item.rock, 10]; 
 
 //scr_create_struct_type("Pebble Reffiner", obj_structure_pebble_refiner, [item.rock, 10]);
@@ -25,3 +25,4 @@ cell_offset_y = 4;
 
 cellHeight = 50;
 cellWidth = 48; 
+
