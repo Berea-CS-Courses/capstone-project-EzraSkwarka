@@ -1,11 +1,9 @@
 REF: https://docs.google.com/document/d/13Sw5eTgmYt8oLavVeZOz7aWoBfNTwDNmMOVq56VqlfI/edit?usp=sharing
 
 # Testing Plan
-In order to test the functionality of my project as well as to suss out as many bugs I'm able to find, I intend to implement two types of system tests. I will be using ad-hoc end-user tests as well as running an alpha build test myself.
+In order to test the functionality of my project as well as to suss out as many bugs I'm able to find, I intend to implement two types of system tests. I will be using ad-hoc and end-user tests.
 
 To explain exactly what I mean by that, my intent for the end-user ad hoc tests are to have a selection of other students, some in the class some not,  sit down and play a build of my game. I will outline the control scheme for them, give them a very loose goal and otherwise let them muck about in the game to see both how they experience the game and how they interact with it. I intend to be as hands-off as possible during these tests, and I will only answer questions the user has on controls but otherwise let them determine the mechanics themselves.
-
-For the alpha belt test, I am going to look at all of my creative systems individually and interrogate their functionality as outlined in the original decomposition document. Since then there have been some tweaks to what I expect the systems to be able to do, but I'll at all I am looking for isolated functionality of each individual system, I'm not necessarily looking at the interplay between systems.
 
 Once I've run all of these tests, I intend to take a step back and reflect on what I found him as well as Implement a bug fix plan for how to deal with the specific issues found during the testing process. As this is where an alpha build and not a beta build, I'm focusing mainly on gameplay as opposed to gain feel. Any nontechnical issues that I find will be recorded as an individual GitHub issue on my repo page.
 
