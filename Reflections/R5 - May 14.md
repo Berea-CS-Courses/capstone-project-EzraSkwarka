@@ -1,0 +1,14 @@
+## 1. What have you accomplished this week? (Please list each accomplishment, and explain)
+I've had a much more productive week this week then last week. I've implemented my zone and renown system as outlined in the previous reflection document. I've also done some minor tweaking on obj_toolbar. I have also done some user tests to get some more directed feedback on my project from various people not in the class.
+
+
+## 2. What challenges or difficulties did you face? If you solved them, how? If not, what have you learned so far? Have you sought help or other resources?
+The challenges I faced this week are also directly related to what I plan to accomplish in the following week. Namely I've had a bit of confusion understanding how I needed to document the testing process. I think I when I have gotten is a well enough type of documentation, but don't be surprised if it comes up a little bit rough.
+
+
+## 3. What do you plan to accomplish in the following week? (Please list at least 3 concrete "S.M.A.R.T." goals, along with estimated number of hours to complete, or day to complete)
+Over the next week I am going to shift fully into testing and presentation mode. While there are definitely some systems I would still like to be able to implement into the game, I think it's a better use of my time to try to fix some lingering bugs and get ready to show my project off as opposed to trying to add in a new system before doing that. I do intend to continue working on this project past the end of the class, so it's not that those systems will never be put in place, but I feel getting an alpha build ready should take priority over trying to implement the mob and dungeon systems.specifically, by  Monday night of next week I intend to have my testing documentation written up, Tuesday I'm going to use that day to work on some of the major bugs I found during testing (namely the Collision boxes on notes are not properly preventing other notes from spawning beneath them, I forgot to set Collision masks for structures, and due to what I believed to be a minor typo the mouse tool station has stopped properly functioning). Wednesday I'm going to gather up the Snippets of gameplay I need to build my presentation and start building my presentation, and since I was rolled to go on Friday I will have everything done by then so I can present in class.
+
+
+## 4. What resources will you use to accomplish your goals for the upcoming week? (please list out the resources)
+This week the resources I will use to accomplish my goals are a bit different, I don't think I'll have to be relying on the documentation because all I'm doing is bug fixing, and although it feels a bit weird I suppose some of the help from students have gotten for the purposes of testing count as resources I'll use to accomplish my goals. Jury is still out on how to phrase that exactly but that is my plan
