@@ -19,6 +19,7 @@
     {"id":{"name":"spr_points_shop","path":"sprites/spr_points_shop/spr_points_shop.yy",},"order":2,},
     {"id":{"name":"scr_comsume_mats","path":"scripts/scr_comsume_mats/scr_comsume_mats.yy",},"order":1,},
     {"id":{"name":"obj_MenuBuilder","path":"objects/obj_MenuBuilder/obj_MenuBuilder.yy",},"order":3,},
+    {"id":{"name":"spr_room_tile_spawner_node_red","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},"order":7,},
     {"id":{"name":"scr_load_game","path":"scripts/scr_load_game/scr_load_game.yy",},"order":0,},
     {"id":{"name":"spr_rock_mythril_node","path":"sprites/spr_rock_mythril_node/spr_rock_mythril_node.yy",},"order":2,},
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},"order":0,},

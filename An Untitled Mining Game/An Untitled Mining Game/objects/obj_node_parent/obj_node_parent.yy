@@ -3,7 +3,7 @@
     "name": "spr_tiny_col_mask",
     "path": "sprites/spr_tiny_col_mask/spr_tiny_col_mask.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
