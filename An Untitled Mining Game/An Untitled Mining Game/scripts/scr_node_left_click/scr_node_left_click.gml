@@ -8,6 +8,7 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 	with (obj_tool) {
 		if !(swing_state == "rest") {
 			var is_swinging = true;
+			show_debug_message("ping");
 		} else {
 			var is_swinging = false;	
 		}
@@ -17,13 +18,11 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 			if (distance_to_object(obj_player) <= 16) {
 				if (node_health > 0) {
 					node_health -= 1;
-					if (node_health > 0) {
-						return node_health;
-					}
 				} 
 		
 				if (node_health <= 0) {
 					instance_destroy();
+					obj_NodeController.nodes_spawned -= 1;
 					bonus_multiplier = (1 + .1 * (global.mouse_level + global.renown));
 					repeat(floor(base_rate * bonus_multiplier))	{
 						//instance_create_layer(x + 0, y + 0, "Active", resource_obj_to_spawn);
@@ -40,4 +39,5 @@ function scr_node_left_click(node_health, tool_to_use, resource_mat_number_to_sp
 		
 		}
 	}
+return node_health;
 }

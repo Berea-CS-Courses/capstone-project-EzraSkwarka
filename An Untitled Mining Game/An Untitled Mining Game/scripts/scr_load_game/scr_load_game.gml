@@ -35,11 +35,18 @@ if (file_exists("savegame.sav")) {
 			show_debug_message("Created a " + load_entity.obj);
 			switch (load_entity.obj) {
 			//-----Nodes
-				case "obj_node_rock": 
-				case "obj_node_tree": 
+				case "obj_NodeController":
+					node_spawn_limit = load_entity.node_spawn_limit;
+					nodes_spawned = load_entity.nodes_spawned;
+					break;
+				case "obj_node_parent":  
 					bonus_multiplier = load_entity.bonus_multiplier;
 					node_health = load_entity.node_health;
 					spr_to_draw = load_entity.spr_to_draw;
+					mask_index = load_entity.mask_index;
+					spawn_resource = load_entity.spawn_resource;
+					base_rate = load_entity.base_rate;
+					tool_to_use = load_entity.tool_to_use;
 					break;
 			//-----Obj_items
 				case "obj_item":

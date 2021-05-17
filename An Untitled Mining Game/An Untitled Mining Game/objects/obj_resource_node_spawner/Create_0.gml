@@ -1,4 +1,5 @@
 alarm_step = 0;
-spawn_delay = 90; //messured in frames, 60 fps
+spawn_delay = irandom_range(75, 105); //messured in frames, 60 fps
 
-alarm_set(0, 90);
+region = region_list.forest;
+

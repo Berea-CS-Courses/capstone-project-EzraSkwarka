@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "GUI Objects",
-    "path": "folders/Objects/GUI Objects.yy",
+    "name": "Save'n'Load",
+    "path": "folders/Scripts/Save'n'Load.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_SaveTracker",

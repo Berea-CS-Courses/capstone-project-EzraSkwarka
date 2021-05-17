@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Mats",
-    "path": "folders/Objects/Resources/Mats.yy",
+    "name": "Resources",
+    "path": "folders/Objects/Resources.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_item",

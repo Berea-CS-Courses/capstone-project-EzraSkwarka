@@ -1,3 +1,8 @@
+//Stay on screen`
+clamp(x, 0, global.ScreenWidth);
+clamp(y, 0, global.ScreenHeight);
+
+
 if (drop_move) {
 	x = lerp(x, x_goal, .1);	
 	y = lerp(y, y_goal, .1);
