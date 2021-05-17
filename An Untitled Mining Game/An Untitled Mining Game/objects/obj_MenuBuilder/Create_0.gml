@@ -12,6 +12,8 @@ struct_refrence = 0;
 screen_width = 1280;
 //screen_height = 960;
 
+level_up_button = 0;
+
 enum menu_type {
 	none,
 	pebble_refiner,

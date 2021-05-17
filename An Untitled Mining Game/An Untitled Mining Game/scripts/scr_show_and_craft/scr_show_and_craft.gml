@@ -9,7 +9,7 @@ if struct_id.in_use and (struct_id.current_step < struct_id.wait_time) {
 		struct_id.in_use = false;
 		struct_id.current_step = 0;
 		var i = 0; repeat (array_length(struct_id.output)/2) {
-				if (struct_id.output[@ 0] == "Level up") {
+				if (struct_id.output[@ 0] == "Level up") { // needs to recalc input
 					struct_id.structure_level += 1;
 				} else if (struct_id.output[@ 0] == "Renown") {
 					obj_relics_menu.pick_power += 1;
