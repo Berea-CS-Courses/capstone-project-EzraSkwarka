@@ -70,6 +70,7 @@
     {"id":{"name":"spr_oasis_tile","path":"sprites/spr_oasis_tile/spr_oasis_tile.yy",},"order":11,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_structures_menu","path":"objects/obj_structures_menu/obj_structures_menu.yy",},"order":2,},
+    {"id":{"name":"scr_get_mouse_level","path":"scripts/scr_get_mouse_level/scr_get_mouse_level.yy",},"order":16,},
     {"id":{"name":"scr_node_left_click","path":"scripts/scr_node_left_click/scr_node_left_click.yy",},"order":0,},
     {"id":{"name":"spr_mountian_tile","path":"sprites/spr_mountian_tile/spr_mountian_tile.yy",},"order":5,},
     {"id":{"name":"obj_tile_mountian","path":"objects/obj_tile_mountian/obj_tile_mountian.yy",},"order":2,},

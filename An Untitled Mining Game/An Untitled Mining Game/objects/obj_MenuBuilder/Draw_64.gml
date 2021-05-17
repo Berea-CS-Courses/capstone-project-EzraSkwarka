@@ -35,7 +35,7 @@ switch (menu_to_draw) {
 			var _h_space = 5;
 			//3x Rock -> 1x Shiny rock, 60 tics
 			scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * 0, _width, _height, 
-										"Level up!", [item.shiny_rock, floor(power(1.1, global.mouse_level))], ["Level up", ""], x_base, y_base,
+										"Level up!", [item.shiny_rock, floor(power(1.1, scr_get_mouse_level()))], ["Level up", ""], x_base, y_base,
 										struct_refrence, 60);
 			}
 			

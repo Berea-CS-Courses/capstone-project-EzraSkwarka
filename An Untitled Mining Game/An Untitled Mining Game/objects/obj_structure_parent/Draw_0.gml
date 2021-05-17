@@ -1,4 +1,5 @@
 draw_sprite(draw_spr, 0, x + 0, y + 0);
+mask_index = draw_spr;
 
 draw_set_font(fnt_smalldigits);
 draw_set_colour($FFFFFFFF & $ffffff);
