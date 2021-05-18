@@ -26,7 +26,9 @@ For clarity I will be referring to the users by different names, but those are n
   - "cool saving doesn't do anything," since they didn't get any feedback when they hit save, they didn't think that it did anything
 
   Games Literate: 3
+
   Intuitiveness: 7*
+
   Comments: "I think the game could use more Direction, I didn't ever really know what to do. I have no idea what these numbers mean, they could use Clear labels. A lot of times while I was playing I had the thought of 'I don't know what that means, but something sure is happening.'"
 
   Reflection: I'm absolutely not surprised at all to find that Noah was confused as to what they needed to do while they were playing the game. As I said I gave them a goal in the absolute loosest of senses,  in this case I had asked Noah to gather 1,000 shiny rocks, and they spent a lot of time simply trying to figure out how to interact with the world. This does reiterate to me that I need to create a tutorial for the game, but it also shows me what kind of tutorial I want to create. I also noted a couple of polishing issues, namely that the player acceleration seems to be a little bit too fast for Noah. I've got used to it so I know how to work around it, but after watching them play it does seem like either accelerating so or having a lower maximum speed would be useful for new players. That also gives me an idea for a potential minor relic, one that increases movement speed though determining the ceiling on a relic like that might be a bit difficult.
@@ -43,7 +45,9 @@ For clarity I will be referring to the users by different names, but those are n
   - Sally also seem to be struggling with the movement, it was hard for them to make fine short movements they kept overshooting their goal
 
   Games Literate: 8.5
+
   Intuitiveness: 6
+
   Comments: "I like it, but it definitely has room to grow. I've never really clear on what I'm trying to do or what the goal is. I am a fan of watching the rock's blow up into a bunch of baby rocks, but it's kind of hard for me to control the character"
 
   Reflection: Sally since you expressed similar sentiments to Noah in that they wish there was a bit more direction when playing the game. The goal I gave Sally was to get the pebble refiner up to level 100, which they seemed to be able to do easily enough after they figured out how to interact with and build the pebble recliner. They also seems to struggle quite a bit with the structure menu control scheme which ends up being a common theme throughout the tests. This player was very talkative and very persistent, and the notes they provided are very helpful for me.
@@ -57,7 +61,9 @@ For clarity I will be referring to the users by different names, but those are n
   - "I like how you have rocks in different areas, it makes me wish there were like bigger and different trees also," this is another Point into the resource diversity that I need to implement before the game is fully complete
 
   Games Literate: 9
+
   Intuitiveness: 7
+
   Comments: "I don't understand why the structures are found to the P button, and needing to right click and then hit escape to get out of that menu felt really weird. I would have expected the Escape key or P alone to have gotten me out of those menus. Overall I like the game, it has a lot of potential but I wish it did a better job of telling me how to use it"
 
   Reflection: Zack expressed very similar sentiments to Sally and Noah, which isn't surprising considering that this is still an alpha build of the game and I was only focused on functionality. It's giving me a lot of direction as I move into the next phase where I actually Implement aspects of game field to make the game a bit more rewarding to play aside from just the generation of big numbers. They did make some good points about the structure menu, because of how I coded it, I immediately knew how to get out of it but I completely understand their frustration when they were trying to use it. I agree with them that simply hitting the P or the Escape I'm alone should have taken them out of the menu where they were no I'm not 100% sure yet how to implement that, it's definitely going into the GitHub issues.
@@ -75,10 +81,29 @@ For clarity I will be referring to the users by different names, but those are n
   - at one point red gave themselves the goal of they wanted to fill up all of the mine tiles with mithril rocks because "I like this color, it's blue." this led to the discovery of an interesting bug even that it was possible for rock nodes to spawn underneath other Rock nodes because I did not properly implement the Collision mask for them so once they had gotten seven of the slots visually filled up nothing else was spawning on screen. After delving into the save file I was able to see exactly what was happening
 
   Games Literate: 10
+
   Intuitiveness: 9.5
+
   Comments: " well I like zooming about on the map, I felt like I was moving way too fast at first and it took some getting used to. I did find the game intuitive for the most part but the structures menu was extremely difficult to navigate and it's why I had to mark that down half a point. I think that the concept is very promising, but the game might benefit from a bit more structure and direction as well as feedback and labeling"
 
   Reflection: while people are really just pummeling me about the structures menu, which is fair because it is a very important part of how the game function and it is not at all intuitive. Red was able to help me find a myriad of bugs throughout the game, which makes sense because there are computer science major and they apparently do a lot of data and Bug testing on the side. Full disclosure red is a student in the class, so they did have a bit more familiarity with the project than the other testers, and that definitely showed in how they interacted with the game and its systems. All in all, they also provided some very useful feedback.
+
+### Summary
+  I found this type of testing to be very useful, both in finding out how players interpret the game that systems as well as discovering bugs. These tests definitely shed light into how I want to implement tutorial systems moving forward, as well as highlighting some of the communication deficiencies that already exists within the game. The bugs that I have found through this process as well as my thoughts and how to fix them are:
+
+  -  it's very difficult for the user to interact with structure menu, they should also be able to close it by hitting out of the P or Escape key once they are in build mode
+
+  -  when the user goes to place a structure it is always showing them the Green version, because I have forgotten to implement Collision masks on completed structures the players are currently able to build structures on top of structures
+
+  - similarly, the fact that the structure says up is green when they're trying to place it in the world even if they don't have enough materials makes them think that they should be able to place it. To fix this I think I want to list the required materials in the description box within the structures menu (which is something I intended to have any way at one point) and if the user does not have sufficient materials to build the structure, it either needs to show up as read or I need to Simply prevent them from being able to select it as an active structure within the menu itself
+
+  -  two issues with the node Collision masks, something's going wrong that allows rocks to spawn underneath rocks, and that's probably a deficiency with the node spawner, and either the Collision masks for trees and rocks are mismatched such that trees can spawn on the same tile as a rock or it's emblematic of the same issue before
+
+  -  something is wrong with the pick power calculation, it has stopped considering the structure level of mouse tool objects, I imagine it's probably still looking for the outmoded Mouse to object as opposed to be variation of the structure parent objects that I'm now using
+
+  - additionally, there's been a typo where the mouse tool structure is getting faster with each level on it as opposed to slower like it's supposed to. That is to say once it reaches structure level 6 or higher leveling it up always takes a tenth of a second flash 6 frames when in reality it is supposed to get 6 frames slower with each level not faster
+
+  -  not a bug per se, but there definitely needs to be some tweaking with both the movement and the player Collision system, which is already an issue on the GitHub repository, but it does bear repeating because these tests confirmed my suspicions that it didn't play correctly
 
 
 ### End-to-End
@@ -90,7 +115,9 @@ These tests were slightly different than the ad hoc test, but I did record infor
  I asked this user to do their best to break the movement and collision system and to put either themselves or other objects where they didn't belong.  They did struggle a little bit with getting the interactable controls of the game down, but once I told them the keybinds they were able to navigate the game fine. During their tests they found out that while it wasn't possible for them to physically clip their character into any of the objects or out of the world, it was possible for them to build a structure on top of the player character. They also found that they were able to build structures on top of structures, and while they couldn't build a structure on top of a node it was entirely possible for a node to spawn underneath a structure. Because it was possible for nodes to spawn on top of each other, this user made a point of getting all the different modes to spawn on a single tile.
 
 Games Literate: 6-8
+
 Intuitiveness: 6
+
 Comments: "This looks great as a project, but as a finished product it still has a long way to go. The first thing I found myself wanting was a bit more animation, specifically it felt weird that the player character was just a zipping around on the XY axis with no clear indication that they were moving. Well I didn't have any problems specifically with moving around and colliding and objects, it felt very weird to me that if I was touching a collectible object the only way to get away was to move in the exact opposite direction of the object. I did not like that."
 
 Reflection: I promise users feedback very helpful in showing me where I need to go, they didn't have any comments on most of the actual gameplay type mechanics because that's not what I asked them to focus on, but their ideas on the movement and collision system are very enlightening. Three perfectly honest I was a little bit lazy when calculating collision simply allowing gamemaker studio to handle its default way, but it's clear to me that moving forward I'm going to have to implement my own proper system of collision. I've had a lot of collision issues throughout this project which is kind of scared me away from fixing this system, but if it causes this much trouble for the player it clearly needs to be addressed.
@@ -101,7 +128,9 @@ Reflection: I promise users feedback very helpful in showing me where I need to 
 I asked this player to mess around with the tools and nodes and give me feedback on if they could break those interactions or how they felt overall. They also initially thought the player moved around much too fast and for a while avoided going into the volcano or Tundra regions because they assumed the tiles on the ground we're going to hurt them. Because they were trying to hit every button to see what it would do they did highlight that my grid overlay has gotten offset incorrectly, and they also pointed out a couple of spelling errors that I have. They were wondering if it was possible to change the player's name and break structures, neither of which are currently available so I do intend to implement inability for the player to change the character's name. As they were messing around with the tools and The Rock notes they frequently found themselves discouraged because it seems like some of the notes work Breaking. Part of that had to do with it first they didn't realize they had to put the mouse over the item they were trying to click on to break but with a little bit of direction they quickly realized that and afterwards if you struggle with it. One thing they pointed out that I agreed with was that it might be useful to display a sort of health bar on nodes or to implement of Sounder feedback to show that progress is being made on Breaking the nose.
 
 Games literate: 5
+
 Intuitiveness: "7/8, once things were pointed out it made sense, but a lot of things I would not have figured out on my own"
+
 Comments: "The player moves way too fast and I don't ever really know what I'm doing. I think the game would benefit for more feedback from the systems and more direction from the Developers. Maybe some sort of simple questing or tutorial system would go a long way"
 
 Reflection: I got to say I generally find myself agreeing with Francis, some of these things I already knew going in but getting second opinions and reiteration is always helpful. Now regarding the system I specifically asked them to try to break, luckily they didn't uncover any new bugs or systems to the game and I was hoping I wouldn't have to rework it from the ground up. There is the issue with nodes double spawning but this is something I'd already uncovered and know how to fix it's just implementing that.
@@ -119,18 +148,10 @@ Comments: "I think the core gameplay Loop is good, and because of the type of ge
 Reflection: I'm not sure if you could tell, but this was another one of me senior computer science Majors so they clearly knew how to quickly try to break my system and they succeeded. They were able to highlight a myriad of specific but serious bugs that need to be addressed, as well as hit on a bunch of quality-of-life issues that I can tackle moving forward.
 
 ### Summary
-I found this type of testing to be very useful, both in finding out how players interpret the game that systems as well as discovering bugs. These tests definitely shed light into how I want to implement tutorial systems moving forward, as well as highlighting some of the communication deficiencies that already exists within the game. The bugs that I have found through this process as well as my thoughts and how to fix them are:
+I don't want to Discount the usefulness of the more open-ended ad-hoc testing, but I feel at the alpha stage where I'm at that and two ends testing is a bit more useful and productive. While it is technically true that we found more bugs during the ad hoc testing, that's because a lot of the bugs discovered during end-to-end had already been found so I didn't feel the need to repeat them every time someone else discovered them. I feel that because at this stage, the game is open-ended and doesn't have even a basic tutorial rec room if I give the user something specific to try to do one handle they're going to be able to provide more constructive feedback and if I simply and hands off and tell them to do whatever. as for new bugs found during this section and my thoughts and how to solve them they are:
 
--  it's very difficult for the user to interact with structure menu, they should also be able to close it by hitting out of the P or Escape key once they are in build mode
+-  what are the big ones that came up was the overlapping nodes issue, I imagine this will be a simple fixed because I probably just forgot to mark the note parent object as solid
 
--  when the user goes to place a structure it is always showing them the Green version, because I have forgotten to implement Collision masks on completed structures the players are currently able to build structures on top of structures
+- as for why the mouse tool isn't working this one bugs me quite a bit, because as far as I can tell it should be able to work. Right now I don't really have any ideas on how to solve it but I do at least know where the issue would be, and that's in the calculation of the global Mouse level
 
-- similarly, the fact that the structure says up is green when they're trying to place it in the world even if they don't have enough materials makes them think that they should be able to place it. To fix this I think I want to list the required materials in the description box within the structures menu (which is something I intended to have any way at one point) and if the user does not have sufficient materials to build the structure, it either needs to show up as read or I need to Simply prevent them from being able to select it as an active structure within the menu itself
-
--  two issues with the node Collision masks, something's going wrong that allows rocks to spawn underneath rocks, and that's probably a deficiency with the node spawner, and either the Collision masks for trees and rocks are mismatched such that trees can spawn on the same tile as a rock or it's emblematic of the same issue before
-
--  something is wrong with the pick power calculation, it has stopped considering the structure level of mouse tool objects, I imagine it's probably still looking for the outmoded Mouse to object as opposed to be variation of the structure parent objects that I'm now using
-
-- additionally, there's been a typo where the mouse tool structure is getting faster with each level on it as opposed to slower like it's supposed to. That is to say once it reaches structure level 6 or higher leveling it up always takes a tenth of a second flash 6 frames when in reality it is supposed to get 6 frames slower with each level not faster
-
--  not a bug per se, but there definitely needs to be some tweaking with both the movement and the player Collision system, which is already an issue on the GitHub repository, but it does bear repeating because these tests confirmed my suspicions that it didn't play correctly
+-  another important one found was the bug with the crafting buttons and structure levels. I know the issue is because they have a dynamic input and a static output as opposed to all the other buttons would have a static Em Up by Dynamic output, that it's just not recalculating the necessary input when it goes to level up the structure. I can think of a couple different ways to do this, but the biggest challenge will be finding an elegant way to do it
