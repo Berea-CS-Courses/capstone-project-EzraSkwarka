@@ -24,15 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},"LayerId":{"name":"60b939c8-771b-49ff-b913-4789fe11d39f","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_room_tile_spawner_node","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},"resourceVersion":"1.0","name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"30dcc47e-178d-4208-beea-1d51f5b5dc94","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"30dcc47e-178d-4208-beea-1d51f5b5dc94","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},"LayerId":{"name":"f3e8302e-9790-4e4a-b22e-425a13f6b914","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_room_tile_spawner_node_red","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},"resourceVersion":"1.0","name":"30dcc47e-178d-4208-beea-1d51f5b5dc94","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_room_tile_spawner_node","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},
+    "spriteId": {"name":"spr_room_tile_spawner_node_red","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f1e5397d-3811-4abf-bff7-c66d3dd81809","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d26e7de0-03b2-4599-a56e-82f8c0044db3","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4b7f1462-5bad-416c-8e0e-9fe4c38947d7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30dcc47e-178d-4208-beea-1d51f5b5dc94","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_room_tile_spawner_node","path":"sprites/spr_room_tile_spawner_node/spr_room_tile_spawner_node.yy",},
+    "parent": {"name":"spr_room_tile_spawner_node_red","path":"sprites/spr_room_tile_spawner_node_red/spr_room_tile_spawner_node_red.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_room_tile_spawner_node",
+    "name": "spr_room_tile_spawner_node_red",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"60b939c8-771b-49ff-b913-4789fe11d39f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f3e8302e-9790-4e4a-b22e-425a13f6b914","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Tiles/Square.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_room_tile_spawner_node",
+  "name": "spr_room_tile_spawner_node_red",
   "tags": [],
   "resourceType": "GMSprite",
 }

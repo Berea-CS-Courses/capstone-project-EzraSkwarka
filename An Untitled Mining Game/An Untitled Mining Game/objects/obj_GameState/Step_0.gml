@@ -93,7 +93,12 @@ with(obj_structures_menu) {
 		with(obj_inventory) {
 			show_inventory = false;
 		}
-		if (show_structures_menu == global.is_paused) {
+		if (obj_struct_spawner.building) {
+			obj_struct_spawner.building = false;
+			global.is_paused = true;
+			show_structures_menu = true;
+		}
+		else if (show_structures_menu == global.is_paused) {
 			show_structures_menu = !show_structures_menu;
 			global.is_paused = !global.is_paused;
 		} else if (!show_structures_menu and global.is_paused) {
