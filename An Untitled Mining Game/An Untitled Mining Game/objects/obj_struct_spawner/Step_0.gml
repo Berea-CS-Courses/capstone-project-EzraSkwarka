@@ -25,7 +25,7 @@ if (!building) {
 	if (selected_struct <= 0) {selected_struct = struct.height -1};
 	
 	switch (selected_struct) {
-		case struct.pebble_refiner: // technically equivlent to "case 0" but much more clear
+		case struct.pebble_refiner:
 			active_sprite = spr_pebble_refiner;
 			active_object = struct.pebble_refiner
 			required_mats = [item.rock, 10];
