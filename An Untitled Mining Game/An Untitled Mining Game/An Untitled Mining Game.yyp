@@ -52,6 +52,7 @@
     {"id":{"name":"scr_create_struct","path":"scripts/scr_create_struct/scr_create_struct.yy",},"order":5,},
     {"id":{"name":"obj_reset_tile","path":"objects/obj_reset_tile/obj_reset_tile.yy",},"order":8,},
     {"id":{"name":"spr_room_tile_32x32_center_only","path":"sprites/spr_room_tile_32x32_center_only/spr_room_tile_32x32_center_only.yy",},"order":5,},
+    {"id":{"name":"spr_player_spritesheet","path":"sprites/spr_player_spritesheet/spr_player_spritesheet.yy",},"order":3,},
     {"id":{"name":"scr_create_button","path":"scripts/scr_create_button/scr_create_button.yy",},"order":3,},
     {"id":{"name":"spr_room_tile_32x32","path":"sprites/spr_room_tile_32x32/spr_room_tile_32x32.yy",},"order":6,},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},"order":1,},
