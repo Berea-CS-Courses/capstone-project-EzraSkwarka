@@ -2,8 +2,9 @@
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_create_region_node(_region) 
 {
-var random_number = floor(random_range(0, 100 + 1));
+var random_number = floor(random_range(0, 100));
 var node_type = node_types.none;
+var common, uncommon, rare, ultrarare, target_rarity = 0;
 switch (_region) {
 	
 	case region_list.mountian:
