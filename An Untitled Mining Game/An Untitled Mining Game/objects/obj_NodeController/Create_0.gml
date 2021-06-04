@@ -26,3 +26,10 @@ enum node_types {
 	
 	
 }
+
+enum node_rarity {
+	common		= 0,
+	uncommon	= 1,
+	rare		= 2,
+	ultrarare	= 3
+}
