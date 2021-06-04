@@ -2,7 +2,7 @@ ds_struct_types = 0;
 
 
 // Default case in case draw runs before step
-active_sprite = spr_pebble_refiner;
+active_sprite = spr_struct_pebble_refiner;
 active_object = struct.pebble_refiner;
 required_mats = [item.rock, 10]; 
 
