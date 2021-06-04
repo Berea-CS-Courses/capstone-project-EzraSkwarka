@@ -15,5 +15,9 @@ dir = 0;
 anim_length = 4; //length of strip
 anim_speed = 4;  //tweak later
 
+//inits
+hInput = 0;
+vInput = 0;
+
 
 global.mouse_level = 0;

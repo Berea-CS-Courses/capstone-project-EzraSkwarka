@@ -1,7 +1,14 @@
+var _anim_speed;
+if global.is_paused {
+	_anim_speed = 0;
+} else {
+	_anim_speed = anim_speed;
+}
+
 if(hInput != 0 or vInput != 0){     //Are we moving?
     y_frame = dir/45;
     //INCREMENT FRAME FOR ANIMATION
-    x_frame += anim_speed/room_speed;
+    x_frame += _anim_speed/room_speed;
     if(x_frame >= anim_length) x_frame = 0;
 } else {
     x_frame = 0.9;      //If not moving, freeze the animation on the first frame
