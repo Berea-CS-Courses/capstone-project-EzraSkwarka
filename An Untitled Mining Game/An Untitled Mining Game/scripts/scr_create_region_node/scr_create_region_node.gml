@@ -2,48 +2,114 @@
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_create_region_node(_region) 
 {
-var random_number = floor(random_range(0, 100));
+// Init
 var node_type = node_types.none;
-var common, uncommon, rare, ultrarare, target_rarity = 0;
+var common, uncommon, rare, ultrarare = 0;
+var target_rarity = -1;
+//Pull Drop Rates
 switch (_region) {
 	
+	/* Template 
+	case region_list.none:					// use the name of the region
+		common = [node_types.rock];			// fill with nodes of that rarity
+		uncommon = [];						// if none leave blank, rarity will cascade down
+		rare = [];							//common must not ever be empty
+		ultrarare = [];
+		break;
+	*/
+	
+	
 	case region_list.mountian:
-		if((random_number >= 10))	{node_type = node_types.rock;}
-		else						{node_type = node_types.tree;}
+		common = [node_types.rock];
+		uncommon = [];
+		rare = [node_types.tree];
+		ultrarare = [];
 		break;
 		
 	case region_list.beach:
-		node_type = node_types.rock_coral;
+		common = [node_types.rock_coral];
+		uncommon = [];
+		rare = [];
+		ultrarare = [];
 		break;
 		
 	case region_list.forest:
-		if (random_number >= 25)	{node_type = node_types.tree;}
-		else						{node_type = node_types.rock_iron}
+		common = [node_types.tree];
+		uncommon = [node_types.rock_iron];
+		rare = [];
+		ultrarare = [];
 		break;
 		
 	case region_list.desert:
-		if (random_number >= 60)	{node_type = node_types.rock_sandstone;}
-		else						{node_type = node_types.rock}
-		
+		common = [node_types.rock];
+		uncommon = [node_types.rock_sandstone];
+		rare = [];
+		ultrarare = [];
 		break;
 
 	case region_list.mines:
-		if (random_number >= 70)	{node_type = node_types.rock_mythril;}
-		else						{node_type = node_types.rock}
+		common = [node_types.rock];
+		uncommon = [node_types.rock_mythril];
+		rare = [];
+		ultrarare = [];
 		break;
 
 	case region_list.tundra:
-		if (random_number >= 80)	{node_type = node_types.rock_uranium;}
-		else						{node_type = node_types.rock}
+		common = [node_types.rock];
+		uncommon = [];
+		rare = [node_types.rock_uranium];
+		ultrarare = [];
 		break;
 
 	case region_list.volcano:
-		if (random_number >= 90)	{node_type = node_types.rock_molten;}
-		else						{node_type = node_types.rock}
+		common = [node_types.rock];
+		uncommon = [];
+		rare = [node_types.rock_molten];
+		ultrarare = [];
 		break;
 
 }
 
+// Pull Rarity
+var random_number = floor(random_range(0, 100));
+	// frist pass
+	if (random_number > 99) {
+		target_rarity = node_rarity.ultrarare;
+	} else if (random_number > 89) {
+		target_rarity = node_rarity.rare;
+	} else if (random_number > 64) {
+		target_rarity = node_rarity.uncommon;
+	} else {
+		target_rarity = node_rarity.common;
+	}
+	//cascade down if no nodes of that rarity
+	if ((target_rarity == node_rarity.ultrarare) and (array_length(ultrarare) == 0)) {
+		target_rarity -= 1;
+	}
+	if ((target_rarity == node_rarity.rare) and (array_length(rare) == 0)) {
+		target_rarity -= 1;
+	}
+	if ((target_rarity == node_rarity.uncommon) and (array_length(uncommon) == 0)) {
+		target_rarity -= 1;
+	}
+
+// Roll node from Rarity
+if target_rarity == node_rarity.common {
+	random_number = floor(random_range(0, array_length(common) - 1));
+	node_type = common[@ random_number];
+} else if target_rarity == node_rarity.uncommon {
+	random_number = floor(random_range(0, array_length(uncommon) - 1));
+	node_type = uncommon[@ random_number];
+} else if target_rarity == node_rarity.rare { 
+	random_number = floor(random_range(0, array_length(rare) - 1));
+	node_type = rare[@ random_number];
+} else { // ultrarare
+	random_number = floor(random_range(0, array_length(ultrarare) - 1));
+	node_type = ultrarare[@ random_number];
+}
+
+
+// Spawn Node
 switch node_type {
 	case node_types.rock:
 		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
