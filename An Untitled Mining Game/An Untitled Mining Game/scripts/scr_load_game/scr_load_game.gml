@@ -53,6 +53,7 @@ if (file_exists("savegame.sav")) {
 					item_num = load_entity.item_num;
 					x_frame = load_entity.x_frame;
 					y_frame = load_entity.y_frame;
+					drop_move = false; // Assumed, so not needed in save file
 					break;
 			//-----Structs
 				case "obj_structure_parent":
