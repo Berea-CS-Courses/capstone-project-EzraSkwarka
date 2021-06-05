@@ -9,7 +9,8 @@ spr_width = sprite_get_width(item_spr);
 //----------
 // Info for subsprite
 //----------
-//item_nun = 1;
+item_num = 0;
+item_amount = 1;
 x_frame = 0;
 y_frame = 0;
 
@@ -27,3 +28,7 @@ var itemdir = irandom_range(0, 359);
 var len =  irandom_range(cell_size * .9, cell_size * 1.5);
 x_goal = x + lengthdir_x(len, itemdir);
 y_goal = y + lengthdir_y(len, itemdir);;
+
+lerp_speed = .15;
+dectition_radius = 32;
+pickup_radius = 4;
