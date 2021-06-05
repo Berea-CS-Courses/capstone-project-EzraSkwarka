@@ -59,10 +59,10 @@ ds_inventory = ds_grid_create(2, inv_slots);
 
 //---------Items
 enum item {
-	none		= 0,
-	rock		= 1,
-	shiny_rock	= 2,
-	wood		= 3,
+	none,
+	rock,
+	shiny_rock,
+	wood,
 	coal,
 	coral,
 	iron_ore,
@@ -87,7 +87,7 @@ enum item {
 
 //randomly fill inventory for testing
 var ii = 0; repeat(inv_slots){
-	ds_inventory[# 0, ii] = irandom_range(1, item.height-1);
+	ds_inventory[# 0, ii] = irandom_range(1, 3);
 	ds_inventory[# 1, ii] = irandom_range(1, 10);
 	
 	ii += 1;

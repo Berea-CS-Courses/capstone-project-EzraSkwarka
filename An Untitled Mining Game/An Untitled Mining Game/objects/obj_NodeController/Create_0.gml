@@ -17,6 +17,7 @@ enum node_types {
 	rock,
 	tree,
 	rock_iron,
+	rock_coal,
 	rock_coral,
 	rock_mythril,
 	rock_steel,
