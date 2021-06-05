@@ -18,11 +18,11 @@ if (!building) {
 	mousey = mouse_y;
 	
 	// Determine active struct
-	if (mouse_wheel_up()) {selected_struct += 1};
+	/*if (mouse_wheel_up()) {selected_struct += 1};
 	if (mouse_wheel_down()) {selected_struct -= 1};
 	
 	if (selected_struct >= struct.height) {selected_struct = 1};
-	if (selected_struct <= 0) {selected_struct = struct.height -1};
+	if (selected_struct <= 0) {selected_struct = struct.height -1};*/
 	
 	switch (selected_struct) {
 		case struct.pebble_refiner:
