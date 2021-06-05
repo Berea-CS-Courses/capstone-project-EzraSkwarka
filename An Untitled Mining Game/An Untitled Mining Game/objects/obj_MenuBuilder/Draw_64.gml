@@ -15,17 +15,6 @@ switch (menu_to_draw) {
 			var _i = 0;
 			
 			// Background
-			//var _background = instance_create_depth(0,0,1,obj_static_button)
-			//with (_background) {
-			//	draw_spr = spr_blue_button_base;
-			//	width = _width;
-			//	height = _height;
-			//	x = screen_width / 2 - (.6 * width);
-			//	y = 70;
-			//	x_scale = (1.2 * width) / 62;
-			//	y_scale = (_button_count * (height + _h_space) + 64)/32;
-				
-			//}
 			var _background = scr_static_background_button(spr_blue_button_base, (screen_width / 2) - (.6 * _width), 70,
 														   (1.2 * _width) / 64, (_button_count * (_height + _h_space) + 150)/32)
 			
