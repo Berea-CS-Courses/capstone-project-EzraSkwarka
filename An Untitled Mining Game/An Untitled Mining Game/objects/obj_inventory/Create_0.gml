@@ -63,7 +63,24 @@ enum item {
 	rock		= 1,
 	shiny_rock	= 2,
 	wood		= 3,
-	height		= 4,
+	coal,
+	coral,
+	iron_ore,
+	iron_ingot,
+	copper_ore,
+	copper_ingot,
+	steel_ore, ///yes I know steel is an alloy
+	steel_ingot,
+	mythril_ore,
+	mythril_ingot,
+	uranium_ore,
+	uranium_ingot,
+	molten_ore,
+	molten_ingot,
+	
+	
+	
+	height,
 	
 	renown_ref = -2, //for the consume functions
 }
