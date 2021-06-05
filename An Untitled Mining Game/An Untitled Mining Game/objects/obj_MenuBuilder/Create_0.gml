@@ -14,6 +14,9 @@ screen_width = 1280;
 
 level_up_button = 0;
 
+button_ref_list = ds_list_create();
+button_update_ref_list = ds_list_create();
+
 enum menu_type {
 	none,
 	pebble_refiner,
