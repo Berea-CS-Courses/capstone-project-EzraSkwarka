@@ -20,7 +20,7 @@ switch (_region) {
 	
 	
 	case region_list.mountian:
-		common = [node_types.rock];
+		common = [node_types.rock, node_types.rock_coal];
 		uncommon = [];
 		rare = [node_types.tree];
 		ultrarare = [];
@@ -48,7 +48,7 @@ switch (_region) {
 		break;
 
 	case region_list.mines:
-		common = [node_types.rock];
+		common = [node_types.rock, node_types.rock_coal];
 		uncommon = [node_types.rock_mythril];
 		rare = [];
 		ultrarare = [];
@@ -122,14 +122,25 @@ switch node_type {
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
+	case node_types.rock_coal:
+		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		node.node_health = 2;
+		node.spr_to_draw = spr_node_rock_coal;
+		node.mask_index = node.spr_to_draw;
+		node.tool_to_use = tools.pickaxe;
+		node.spawn_resource = item.coal;
+		node.base_rate = 3;
+		obj_NodeController.nodes_spawned += 1;
+		break;
+		
 	case node_types.rock_iron:
 		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
 		node.node_health = 4;
 		node.spr_to_draw = spr_node_rock_iron;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 20;
+		node.spawn_resource = item.iron_ore;
+		node.base_rate = 2;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
@@ -139,8 +150,8 @@ switch node_type {
 		node.spr_to_draw = spr_node_rock_coral;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 10;
+		node.spawn_resource = item.coral;
+		node.base_rate = 2;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
@@ -150,8 +161,8 @@ switch node_type {
 		node.spr_to_draw = spr_node_rock_mythril;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 50;
+		node.spawn_resource = item.mythril_ore;
+		node.base_rate = 2;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
@@ -161,8 +172,8 @@ switch node_type {
 		node.spr_to_draw = spr_node_rock_steel;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 40;
+		node.spawn_resource = item.steel_ore;
+		node.base_rate = 2;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
@@ -172,8 +183,8 @@ switch node_type {
 		node.spr_to_draw = spr_node_rock_sandstone;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 30;
+		node.spawn_resource = item.copper_ore;
+		node.base_rate = 2;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
@@ -183,8 +194,8 @@ switch node_type {
 		node.spr_to_draw = spr_node_rock_uranium;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 70;
+		node.spawn_resource = item.uranium_ore;
+		node.base_rate = 2;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		
@@ -194,8 +205,8 @@ switch node_type {
 		node.spr_to_draw = spr_node_rock_molten;
 		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 100;
+		node.spawn_resource = item.molten_ore;
+		node.base_rate = 2;
 		obj_NodeController.nodes_spawned += 1;
 		break;
 		

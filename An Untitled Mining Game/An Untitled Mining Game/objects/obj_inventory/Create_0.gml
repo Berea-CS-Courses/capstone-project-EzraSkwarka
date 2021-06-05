@@ -59,18 +59,35 @@ ds_inventory = ds_grid_create(2, inv_slots);
 
 //---------Items
 enum item {
-	none		= 0,
-	rock		= 1,
-	shiny_rock	= 2,
-	wood		= 3,
-	height		= 4,
+	none,
+	rock,
+	shiny_rock,
+	wood,
+	coal,
+	coral,
+	iron_ore,
+	iron_ingot,
+	copper_ore,
+	copper_ingot,
+	steel_ore, ///yes I know steel is an alloy
+	steel_ingot,
+	mythril_ore,
+	mythril_ingot,
+	uranium_ore,
+	uranium_ingot,
+	molten_ore,
+	molten_ingot,
+	
+	
+	
+	height,
 	
 	renown_ref = -2, //for the consume functions
 }
 
 //randomly fill inventory for testing
 var ii = 0; repeat(inv_slots){
-	ds_inventory[# 0, ii] = irandom_range(1, item.height-1);
+	ds_inventory[# 0, ii] = irandom_range(1, 3);
 	ds_inventory[# 1, ii] = irandom_range(1, 10);
 	
 	ii += 1;
