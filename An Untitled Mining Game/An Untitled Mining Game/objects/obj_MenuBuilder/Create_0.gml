@@ -11,6 +11,7 @@ crafting_menu_drawn = false;
 
 //Crafting Info
 draw_craft = false;
+recipie_name = "";
 input = 0;
 output = 0;
 crafting_time = 0;

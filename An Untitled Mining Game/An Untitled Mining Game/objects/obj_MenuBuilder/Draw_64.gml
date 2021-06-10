@@ -155,14 +155,37 @@ if (menu_drawn) {
 				}
 				i++;
 			}
-			var _button = scr_static_background_button(spr_blue_button_base, 553, 120, 300, 250);
-			ds_list_add(button_ref_list, _button)
-			
+			//Crafting buttons
 			_button = scr_create_button(561, 250, 284, 50, "Craft", scr_call_crafting)
 			ds_list_add(button_ref_list, _button)
 			crafting_menu_drawn = true;
 		}
-	}
+			//Background
+			var _top_left_x = 553;
+			var _top_left_y = 120;
+			var _width = 300;
+			var _height = 250;
+			var _button = scr_static_background_button(spr_blue_button_base, _top_left_x, _top_left_y, _width, _height);
+			ds_list_add(button_ref_list, _button)
+			
+			// Recipie Info			
+			draw_set_color(c_white);
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_middle);
+			draw_set_font(fnt_basic_large);
+	
+			//Write
+			draw_text(_top_left_x + _width/2, _top_left_y + 20, recipie_name);
+
+			//Reset format
+			draw_set_halign(fa_left);
+			draw_set_valign(fa_top);
+			draw_set_color(c_black);
+
+			
+
+		}
+	
 	
 	
 }
