@@ -70,6 +70,7 @@
     {"id":{"name":"spr_axe","path":"sprites/spr_axe/spr_axe.yy",},"order":2,},
     {"id":{"name":"obj_struct_spawner","path":"objects/obj_struct_spawner/obj_struct_spawner.yy",},"order":4,},
     {"id":{"name":"spr_struct_pebble_refiner","path":"sprites/spr_struct_pebble_refiner/spr_struct_pebble_refiner.yy",},"order":0,},
+    {"id":{"name":"scr_call_crafting","path":"scripts/scr_call_crafting/scr_call_crafting.yy",},"order":6,},
     {"id":{"name":"spr_desert_tile","path":"sprites/spr_desert_tile/spr_desert_tile.yy",},"order":7,},
     {"id":{"name":"spr_tool_sheet","path":"sprites/spr_tool_sheet/spr_tool_sheet.yy",},"order":4,},
     {"id":{"name":"obj_relics_menu","path":"objects/obj_relics_menu/obj_relics_menu.yy",},"order":1,},

@@ -18,7 +18,7 @@ switch (menu_to_draw) {
 			
 			// Background
 			var _background = scr_static_background_button(spr_blue_button_base, (screen_width / 2) - (.6 * _width), 70,
-														   (1.2 * _width) / 64, (_button_count * (_height + _h_space) + 150)/32)
+														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
 			
 			
 			ds_list_add(button_ref_list, _background)
@@ -130,6 +130,7 @@ switch (menu_to_draw) {
 	default:
 		menu_drawn = false;
 		crafting_menu_drawn = false;
+		draw_craft = false;
 		level_up_button = 0;
 		while (ds_list_size(button_ref_list) > 0) {
 			with(button_ref_list[|0]) {
@@ -146,7 +147,7 @@ switch (menu_to_draw) {
 
 //Manipulate Menu
 if (menu_drawn) {
-	if keyboard_check_pressed(ord("Q")) {
+	if draw_craft {
 		if !(crafting_menu_drawn){
 			var i = 0; while (i < ds_list_size(button_ref_list)) {
 				with (button_ref_list[|i]) {
@@ -154,7 +155,10 @@ if (menu_drawn) {
 				}
 				i++;
 			}
-			var _button = scr_static_background_button(spr_blue_button_base, 553, 120, 200, 200);
+			var _button = scr_static_background_button(spr_blue_button_base, 553, 120, 300, 250);
+			ds_list_add(button_ref_list, _button)
+			
+			_button = scr_create_button(561, 250, 284, 50, "Craft", scr_call_crafting)
 			ds_list_add(button_ref_list, _button)
 			crafting_menu_drawn = true;
 		}

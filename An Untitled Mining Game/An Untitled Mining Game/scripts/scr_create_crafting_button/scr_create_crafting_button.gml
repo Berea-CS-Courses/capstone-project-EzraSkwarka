@@ -19,6 +19,7 @@ with (button) {
 	y_loc = item_y;
 	crafting_time = time;
 	
+	
 }
 
 return button;

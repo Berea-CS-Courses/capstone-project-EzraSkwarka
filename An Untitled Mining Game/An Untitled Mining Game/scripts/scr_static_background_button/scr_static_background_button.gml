@@ -11,8 +11,8 @@ function scr_static_background_button(_spr_base, _x, _y, _width, _height)
 var _button = instance_create_depth(0,0,1,obj_static_button)
 			with (_button) {
 				draw_spr = _spr_base;
-				width = _width;
-				height = _height;
+				width = _width / 64;
+				height = _height / 32;
 				x = _x;
 				y = _y;
 			}
