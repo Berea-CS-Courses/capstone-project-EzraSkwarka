@@ -142,3 +142,15 @@ switch (menu_to_draw) {
 		exit
 }	
 
+if (menu_drawn) {
+	if keyboard_check_pressed(ord("Q")) {
+		var i = 0; while (i < ds_list_size(button_ref_list)) {
+			with (button_ref_list[|i]) {
+				x -= 100;
+			}
+			i++;
+		}
+	}
+	
+	
+}
