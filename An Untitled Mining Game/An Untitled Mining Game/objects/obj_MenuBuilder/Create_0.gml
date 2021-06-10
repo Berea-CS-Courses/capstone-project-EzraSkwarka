@@ -7,6 +7,7 @@ x_base = 0;
 y_base = 0;
 menu_drawn = false;
 struct_refrence = 0;
+crafting_menu_drawn = false;
 
 //GUI settings
 screen_width = 1280;
@@ -15,6 +16,7 @@ screen_width = 1280;
 level_up_button = 0;
 
 button_ref_list = ds_list_create();
+//craft_button_ref_list = ds_list_create();
 button_update_ref_list = ds_list_create();
 
 enum menu_type {

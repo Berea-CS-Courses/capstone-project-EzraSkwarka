@@ -1,3 +1,4 @@
+//Pause 
 if global.is_paused {
 	menu_to_draw = menu_type.none;
 	with (obj_structure_parent) {
@@ -5,6 +6,7 @@ if global.is_paused {
 	}
 }
 
+//Build Menu
 switch (menu_to_draw) {
 	case menu_type.pebble_refiner:
 		if !(menu_drawn) {
@@ -127,9 +129,8 @@ switch (menu_to_draw) {
 	case menu_type.none: // this means only one "type" of menu can be active at a time
 	default:
 		menu_drawn = false;
+		crafting_menu_drawn = false;
 		level_up_button = 0;
-		//instance_destroy(obj_crafting_button);
-		//instance_destroy(obj_static_button);
 		while (ds_list_size(button_ref_list) > 0) {
 			with(button_ref_list[|0]) {
 				instance_destroy();
@@ -142,13 +143,20 @@ switch (menu_to_draw) {
 		exit
 }	
 
+
+//Manipulate Menu
 if (menu_drawn) {
 	if keyboard_check_pressed(ord("Q")) {
-		var i = 0; while (i < ds_list_size(button_ref_list)) {
-			with (button_ref_list[|i]) {
-				x -= 100;
+		if !(crafting_menu_drawn){
+			var i = 0; while (i < ds_list_size(button_ref_list)) {
+				with (button_ref_list[|i]) {
+					x -= 250;
+				}
+				i++;
 			}
-			i++;
+			var _button = scr_static_background_button(spr_blue_button_base, 553, 120, 200, 200);
+			ds_list_add(button_ref_list, _button)
+			crafting_menu_drawn = true;
 		}
 	}
 	
