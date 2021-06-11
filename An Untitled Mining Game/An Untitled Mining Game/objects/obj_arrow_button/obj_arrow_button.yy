@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_arrow_right",
+    "path": "sprites/spr_arrow_right/spr_arrow_right.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -29,7 +32,7 @@
     "path": "folders/Objects/Structures.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_crafting_button",
+  "name": "obj_arrow_button",
   "tags": [],
   "resourceType": "GMObject",
 }

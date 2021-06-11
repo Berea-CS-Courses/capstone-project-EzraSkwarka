@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Structures",
-    "path": "folders/Objects/Structures.yy",
+    "name": "GUI Objects",
+    "path": "folders/Objects/GUI Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_crafting_button",
+  "name": "obj_button",
   "tags": [],
   "resourceType": "GMObject",
 }

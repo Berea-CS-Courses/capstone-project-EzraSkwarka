@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_blue_craft_button",
+    "path": "sprites/spr_blue_craft_button/spr_blue_craft_button.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -29,7 +32,7 @@
     "path": "folders/Objects/Structures.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_crafting_button",
+  "name": "obj_craft_button",
   "tags": [],
   "resourceType": "GMObject",
 }

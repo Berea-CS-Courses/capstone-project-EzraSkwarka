@@ -8,7 +8,7 @@ if (distance_to_object(obj_player) <= 16) {
 		}
 
 if (!menu_up) {
-	if (is_close_enough and keyboard_check(ord("E"))) {
+	if (is_close_enough and keyboard_check_pressed(ord("E"))) {
 		menu_up = true;
 		var _x = x;
 		var _y = y;
@@ -23,7 +23,7 @@ if (!menu_up) {
 		}
 	}
 } else {
-	if (menu_up and !is_close_enough) {
+	if (menu_up and !is_close_enough) or (menu_up and keyboard_check_pressed(ord("E"))) {
 		menu_up = false;
 		with (obj_MenuBuilder) {
 			menu_active = false;
