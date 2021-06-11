@@ -47,6 +47,7 @@ if (file_exists("savegame.sav")) {
 					spawn_resource = load_entity.spawn_resource;
 					base_rate = load_entity.base_rate;
 					tool_to_use = load_entity.tool_to_use;
+					region = load_entity.region;
 					break;
 			//-----Obj_items
 				case "obj_item":

@@ -36,6 +36,7 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.spawn_resource = spawn_resource;
 					save_entity.base_rate = base_rate;
 					save_entity.tool_to_use = tool_to_use;
+					save_entity.region = region;
 					break;
 			//-----Obj_items
 				case "obj_item":

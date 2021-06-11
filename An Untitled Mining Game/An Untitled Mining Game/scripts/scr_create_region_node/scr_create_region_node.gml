@@ -6,6 +6,7 @@ function scr_create_region_node(_region)
 var node_type = node_types.none;
 var common, uncommon, rare, ultrarare = 0;
 var target_rarity = -1;
+var _successful_spawn = false;
 //Pull Drop Rates
 switch (_region) {
 	
@@ -119,7 +120,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.rock;
 		node.base_rate = 10;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_coal:
@@ -130,7 +131,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.coal;
 		node.base_rate = 3;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_iron:
@@ -141,7 +142,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.iron_ore;
 		node.base_rate = 2;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_coral:
@@ -152,7 +153,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.coral;
 		node.base_rate = 2;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_mythril:
@@ -163,7 +164,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.mythril_ore;
 		node.base_rate = 2;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_steel:
@@ -174,7 +175,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.steel_ore;
 		node.base_rate = 2;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_sandstone:
@@ -185,7 +186,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.copper_ore;
 		node.base_rate = 2;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_uranium:
@@ -196,7 +197,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.uranium_ore;
 		node.base_rate = 2;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.rock_molten:
@@ -207,7 +208,7 @@ switch node_type {
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.molten_ore;
 		node.base_rate = 2;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 		
 	case node_types.tree:
@@ -218,7 +219,7 @@ switch node_type {
 		node.tool_to_use = tools.axe;
 		node.spawn_resource = item.wood;
 		node.base_rate = 5;
-		obj_NodeController.nodes_spawned += 1;
+		_successful_spawn = true;
 		break;
 
 	case node_types.none:
@@ -226,6 +227,11 @@ switch node_type {
 
 }
 
-
+if (_successful_spawn) {
+	obj_NodeController.nodes_spawned += 1;
+	obj_NodeController.node_region_spawns[_region] += 1;
+	node.region = _region;
+	
+}
 
 }
