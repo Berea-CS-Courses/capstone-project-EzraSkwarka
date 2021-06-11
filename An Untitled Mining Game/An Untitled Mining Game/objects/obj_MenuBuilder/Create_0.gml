@@ -11,10 +11,11 @@ crafting_menu_drawn = false;
 
 //Crafting Info
 draw_craft = false;
-recipie_name = "";
+recipe_name = "";
 input = 0;
 output = 0;
 crafting_time = 0;
+craft_amount = 1;
 
 
 //GUI settings

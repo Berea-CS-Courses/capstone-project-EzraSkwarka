@@ -17,7 +17,7 @@ switch (menu_to_draw) {
 			var _i = 0;
 			
 			// Background
-			var _background = scr_static_background_button(spr_blue_button_base, (screen_width / 2) - (.6 * _width), 70,
+			var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
 														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
 			
 			
@@ -132,6 +132,7 @@ switch (menu_to_draw) {
 		crafting_menu_drawn = false;
 		draw_craft = false;
 		level_up_button = 0;
+		item_amount = 1;
 		while (ds_list_size(button_ref_list) > 0) {
 			with(button_ref_list[|0]) {
 				instance_destroy();
@@ -148,41 +149,76 @@ switch (menu_to_draw) {
 //Manipulate Menu
 if (menu_drawn) {
 	if draw_craft {
-		if !(crafting_menu_drawn){
-			var i = 0; while (i < ds_list_size(button_ref_list)) {
-				with (button_ref_list[|i]) {
-					x -= 250;
-				}
-				i++;
-			}
-			//Crafting buttons
-			_button = scr_create_button(561, 250, 284, 50, "Craft", scr_call_crafting)
-			ds_list_add(button_ref_list, _button)
-			crafting_menu_drawn = true;
-		}
-			//Background
+		//Guidelines
 			var _top_left_x = 553;
 			var _top_left_y = 120;
 			var _width = 300;
-			var _height = 250;
-			var _button = scr_static_background_button(spr_blue_button_base, _top_left_x, _top_left_y, _width, _height);
+			var _height = 400;
+		//Clickable Buttons
+			if !(crafting_menu_drawn){
+				var i = 0; while (i < ds_list_size(button_ref_list)) {
+					with (button_ref_list[|i]) {
+						x -= 250;
+					}
+					i++;
+				}
+				//Crafting buttons
+				_button = instance_create_layer(_top_left_x + (.24 * _width), _top_left_y + (.62 * _height), "UI", obj_craft_button)
+				ds_list_add(button_ref_list, _button)
+				
+				
+				_button = instance_create_layer(_top_left_x + (.03 * _width), _top_left_y + (.63 * _height), "UI", obj_arrow_button)
+					_button.left = true;
+				ds_list_add(button_ref_list, _button)
+				
+				
+				_button = instance_create_layer(_top_left_x + (.78 * _width), _top_left_y + (.63 * _height), "UI", obj_arrow_button)
+				ds_list_add(button_ref_list, _button)
+				
+				
+				crafting_menu_drawn = true;
+			}
+		//Background
+			var _button = scr_static_background_button(spr_brown_button_base, _top_left_x, _top_left_y, _width, _height);
 			ds_list_add(button_ref_list, _button)
 			
-			// Recipie Info			
+		// Recipie Info			
 			draw_set_color(c_white);
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_middle);
 			draw_set_font(fnt_basic_large);
 	
-			//Write
-			draw_text(_top_left_x + _width/2, _top_left_y + 20, recipie_name);
+		//Recipe Name
+			draw_text(_top_left_x + _width/2, _top_left_y + 20, recipe_name);
 
-			//Reset format
+		//Reset format
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
 			draw_set_color(c_black);
 
+		// Input
+			draw_set_font(fnt_basic);
+			draw_set_color(c_white);
 			
+			// Adjust input for quantity
+				var _display_input = [];
+				array_copy(_display_input, 0, input, 0, array_length(input));
+				var i = 0; repeat (array_length(input)/2) {
+					_display_input[@ i + 1] = (input[i + 1] * item_amount)
+					i += 2;
+					}
+				i = 0;
+				var _display_time = crafting_time * item_amount;
+			
+			//Display
+			draw_text(_top_left_x + 20, _top_left_y + 40, "Cost: " + scr_mat_array_to_text(_display_input));
+			draw_text(_top_left_x + 20, _top_left_y + 60, "Crafting Time: " + string(floor(_display_time/6)) + " seconds");
+			draw_text(_top_left_x + 20, _top_left_y + 80, "Amount: " + string(item_amount));
+			
+			draw_set_color(c_black);
+		
+			
+
 
 		}
 	

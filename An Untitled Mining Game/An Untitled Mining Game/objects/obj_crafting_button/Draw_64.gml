@@ -4,9 +4,9 @@
 //Draw bounding box
 	//draw_roundrect(x, y, x + width, y + height, 0);
 	if (hover >= .5) {
-		draw_sprite_ext(spr_blue_button_base, 1, x, y, width/64, height/32, 0, c_white, 1);
+		draw_sprite_ext(spr_brown_button_base, 1, x, y, width/64, height/32, 0, c_white, 1);
 	} else {
-		draw_sprite_ext(spr_blue_button_base, 0, x, y, width/64, height/32, 0, c_white, 1);
+		draw_sprite_ext(spr_brown_button_base, 0, x, y, width/64, height/32, 0, c_white, 1);
 	}
 //Draw text
 	//Format
