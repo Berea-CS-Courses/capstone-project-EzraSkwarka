@@ -85,6 +85,27 @@ enum item {
 	renown_ref = -2, //for the consume functions
 }
 
+name_array = [
+	"none",
+	"Rock",
+	"Shiny Rock",
+	"Wood",
+	"Coal",
+	"Coral",
+	"Iron Ore",
+	"Iron Ingot",
+	"Copper Ore",
+	"Copper Ingot",
+	"Steel Ore", ///yes I know steel is an alloy
+	"Steel Ingot",
+	"Mythril Ore",
+	"Mythril Ingot",
+	"Uranium Ore",
+	"Uranium Ingot",
+	"Molten Ore",
+	"Molten Ingot"
+]
+
 //randomly fill inventory for testing
 var ii = 0; repeat(inv_slots){
 	ds_inventory[# 0, ii] = irandom_range(1, 3);
