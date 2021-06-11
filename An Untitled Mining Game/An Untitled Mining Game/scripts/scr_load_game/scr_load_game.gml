@@ -38,6 +38,8 @@ if (file_exists("savegame.sav")) {
 				case "obj_NodeController":
 					node_spawn_limit = load_entity.node_spawn_limit;
 					nodes_spawned = load_entity.nodes_spawned;
+					node_region_spawns = load_entity.node_region_spawns;
+					node_region_spawn_limit = load_entity.node_region_spawn_limit;
 					break;
 				case "obj_node_parent":  
 					bonus_multiplier = load_entity.bonus_multiplier;

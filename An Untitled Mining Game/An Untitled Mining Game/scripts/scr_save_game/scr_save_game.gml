@@ -27,6 +27,8 @@ var i = 0; repeat(array_length(node_type_array)) {
 				case "obj_NodeController":
 					save_entity.node_spawn_limit = node_spawn_limit;
 					save_entity.nodes_spawned = nodes_spawned;
+					save_entity.node_region_spawns = node_region_spawns;
+					save_entity.node_region_spawn_limit = node_region_spawn_limit;
 					break;					
 				case "obj_node_parent":  
 					save_entity.bonus_multiplier = bonus_multiplier;
