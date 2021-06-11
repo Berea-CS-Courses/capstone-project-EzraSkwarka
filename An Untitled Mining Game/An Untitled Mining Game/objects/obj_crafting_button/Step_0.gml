@@ -9,7 +9,6 @@ if (_hover and click) {
 	obj_MenuBuilder.recipe_name = display_text;
 	obj_MenuBuilder.input = input;
 	obj_MenuBuilder.output = output;
-	show_debug_message(obj_MenuBuilder.output)
 	obj_MenuBuilder.crafting_time = crafting_time;
 	obj_MenuBuilder.draw_craft = true;
 	

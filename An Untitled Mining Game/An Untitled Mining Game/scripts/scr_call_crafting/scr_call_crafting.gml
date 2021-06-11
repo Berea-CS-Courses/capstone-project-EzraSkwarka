@@ -23,10 +23,8 @@ function scr_call_crafting()
 
 		//Check if I need to skip scaling
 		var _skip_input_calc = false;
-		show_debug_message(obj_MenuBuilder.output[0])
-		if (obj_MenuBuilder.output[@ 0] == "Level up") {
+		if ((obj_MenuBuilder.output[@ 0] == "Level up") or (obj_MenuBuilder.output[@ 0] == "Renown")) {
 			_skip_input_calc = true;
-			show_debug_message(string(_skip_input_calc))
 		}
 		
 		// Adjust input for quantity
