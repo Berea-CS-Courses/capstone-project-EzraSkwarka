@@ -97,29 +97,50 @@ switch (menu_to_draw) {
 		
 	case menu_type.mouse_tool:
 	if !(menu_drawn) {
-			var _width = 250;
-			var _height = 25;
-			var _h_space = 5;
+			var _button_count = 1;
+			var _width = 256;
+			var _height = 32;
+			var _h_space = 8;
+			var _i = 0;
+			
+			// Background
+			var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
+														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
+				ds_list_add(button_ref_list, _background)
+				
 			//3x Rock -> 1x Shiny rock, 60 tics
-			level_up_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * 0, _width, _height, 
+			level_up_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
 										"Level up!", [item.shiny_rock, floor(power(1.1, scr_get_mouse_level()))], ["Level up", ""], x_base, y_base,
 										struct_refrence, 60);
-			}
+										_i++;
+				ds_list_add(button_ref_list, level_up_button)
+		}
 		//recalc inputs for recipies with non-static inputs
 		level_up_button.input =  [item.shiny_rock, floor(power(1.1, scr_get_mouse_level()))];
+		
 		
 		menu_drawn = true;
 		break;
 	
 	case menu_type.points_shop:
 	if !(menu_drawn) {
-			var _width = 250;
-			var _height = 25;
-			var _h_space = 5;
+			var _button_count = 1;
+			var _width = 256;
+			var _height = 32;
+			var _h_space = 8;
+			var _i = 0;
+			
+			// Background
+			var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
+														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
+				ds_list_add(button_ref_list, _background)
+			
 			//Renown -> Pick Power, 600 tics
-			scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * 0, _width, _height, 
+			var _button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
 										"Strengthen Pickaxe", [item.renown_ref, floor(power(1.1, obj_relics_menu.pick_power))], ["Renown", minor_relics.pick_power], x_base, y_base,
 										struct_refrence, 600);
+										_i++;
+				ds_list_add(button_ref_list, _button)
 			}
 			
 		menu_drawn = true;

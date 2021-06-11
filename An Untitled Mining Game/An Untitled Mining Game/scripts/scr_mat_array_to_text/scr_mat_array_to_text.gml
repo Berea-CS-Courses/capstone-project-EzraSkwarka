@@ -25,7 +25,11 @@ name_array = [
 ]
 var i = 0; repeat (array_length(_array)/2) {
 	_output_string += (string(_array[i+1]) + "x ")
-	_output_string += name_array[_array[i]];
+	if (_array[i] == -2) {
+		_output_string += "Renown";
+	} else {
+		_output_string += name_array[_array[i]];
+	}
 	i += 2;
 	if (i < array_length(_array)) {
 		_output_string += ", "
