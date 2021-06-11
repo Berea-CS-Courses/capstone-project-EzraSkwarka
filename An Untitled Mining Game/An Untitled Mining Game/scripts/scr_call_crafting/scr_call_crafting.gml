@@ -20,15 +20,19 @@ function scr_call_crafting()
 	//Write to Struct
 	with (_struct_ref) {
 		if in_use return; //Early exit
+
+		//Check if I need to skip scaling
 		var _skip_input_calc = false;
-		show_debug_message(output[0])
-		if (output[0] == "Level up") {
+		show_debug_message(obj_MenuBuilder.output[0])
+		if (obj_MenuBuilder.output[@ 0] == "Level up") {
+			_skip_input_calc = true;
 			show_debug_message(string(_skip_input_calc))
-			_skip_input_calc = true;			
 		}
+		
 		// Adjust input for quantity
+		var _input = [];
+		array_copy(_input, 0, obj_MenuBuilder.input, 0, array_length(obj_MenuBuilder.input));
 		if !(_skip_input_calc) {
-			var _input = [];
 			array_copy(_input, 0, obj_MenuBuilder.input, 0, array_length(obj_MenuBuilder.input));
 			var i = 0; repeat (array_length(_input)/2) {
 				_input[@ i + 1] = _input[i + 1] * _quantity
