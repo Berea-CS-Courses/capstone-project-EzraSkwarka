@@ -9,5 +9,17 @@ hover = lerp(hover, _hover, 0.1);
 if (_click and left) {
 	obj_MenuBuilder.item_amount = max(1, obj_MenuBuilder.item_amount - 1);
 } else if (_click) {
-	obj_MenuBuilder.item_amount += 1;
+	//Make Container
+	var _display_input = [];
+	//Fill Cont
+	array_copy(_display_input, 0, obj_MenuBuilder.input, 0, array_length(obj_MenuBuilder.input));
+	//Scale to amount
+	var i = 0; repeat (array_length(obj_MenuBuilder.input)/2) {
+		_display_input[@ i + 1] = (obj_MenuBuilder.input[i + 1] * (obj_MenuBuilder.item_amount + 1))
+		i += 2;
+	}
+	i = 0;
+	if (scr_have_mats(_display_input)) { //if can craft item amount + 1
+		obj_MenuBuilder.item_amount += 1;
+	}
 }

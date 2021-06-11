@@ -15,7 +15,8 @@ recipe_name = "";
 input = 0;
 output = 0;
 crafting_time = 0;
-craft_amount = 1;
+item_amount = 1;
+
 
 
 //GUI settings

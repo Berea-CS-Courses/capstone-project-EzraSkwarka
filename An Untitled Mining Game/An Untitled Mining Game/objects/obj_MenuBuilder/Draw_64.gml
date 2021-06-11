@@ -212,7 +212,7 @@ if (menu_drawn) {
 			
 			//Display
 			draw_text(_top_left_x + 20, _top_left_y + 40, "Cost: " + scr_mat_array_to_text(_display_input));
-			draw_text(_top_left_x + 20, _top_left_y + 60, "Crafting Time: " + string(floor(_display_time/6)) + " seconds");
+			draw_text(_top_left_x + 20, _top_left_y + 60, "Crafting Time: " + string(floor(_display_time/60)) + " seconds");
 			draw_text(_top_left_x + 20, _top_left_y + 80, "Amount: " + string(item_amount));
 			
 			draw_set_color(c_black);
