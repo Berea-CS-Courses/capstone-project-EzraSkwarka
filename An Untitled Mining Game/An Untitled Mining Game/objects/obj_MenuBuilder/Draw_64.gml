@@ -207,7 +207,6 @@ if (menu_drawn) {
 					_display_input[@ i + 1] = (input[i + 1] * item_amount)
 					i += 2;
 					}
-				i = 0;
 				var _display_time = crafting_time * item_amount;
 			
 			//Display
