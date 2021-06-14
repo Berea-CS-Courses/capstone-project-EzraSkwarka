@@ -7,7 +7,7 @@ if (is_free) {
 			scr_create_region_node(region);
 		}
 		alarm_step = 0;
-		spawn_delay = irandom_range(75, 105);
+		spawn_delay = irandom_range(300, 420);
 	} else {
 		alarm_step += 1;	
 	}
