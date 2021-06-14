@@ -96,5 +96,5 @@ buffer_write(_buffer, buffer_string, out_string);
 buffer_save(_buffer, "savegame.sav");
 buffer_delete(_buffer);
 
-show_debug_message("Game saved! " + out_string);
+show_debug_message("Game saved!");
 }

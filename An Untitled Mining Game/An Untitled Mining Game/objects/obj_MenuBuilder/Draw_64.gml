@@ -10,7 +10,37 @@ if global.is_paused {
 switch (menu_to_draw) {
 	case menu_type.pebble_refiner:
 		if !(menu_drawn) {
-			var _button_count = 9;
+			Recipes = [
+			// [Recipe Name, [Input Array], [Output Array], Base Crafting Time, "Button Display Text", "Flavor Text"]
+
+			//3x Rock -> 1x Shiny rock, 60 tics
+				["Make Shiny", [item.rock, 3], [item.shiny_rock, 1], 60,
+					"Make Shiny", "Its a rock, that's shiny"],
+			//3x Iron Ore, 1x Coal -> 1x Iron Ingot, 120 tics
+				["Iron Bar", [item.iron_ore, 3, item.coal, 1], [item.iron_ingot, 1], 120, 
+					"Iron Bar", ""],
+			//3x Copper Ore, 1x Coal -> 1x Copper Ingot, 120 tics
+				["Copper Bar", [item.copper_ore, 3, item.coal, 1], [item.copper_ingot, 1], 120, 
+					"Copper Bar", ""],
+			//3x Steel Ore, 1x Coal -> 1x Steel Ingot, 60 tics
+				["Steel Bar", [item.steel_ore, 3, item.coal, 1], [item.steel_ingot, 1], 120, 
+					"Steel Bar", ""],
+			//3x Mythril Ore, 1x Coal -> 1x Mythril Ingot, 120 tics
+				["Mythril Bar", [item.mythril_ore, 3, item.coal, 1], [item.mythril_ingot, 1], 120, 
+					"Mythril Bar", ""],
+			//3x Uranium Ore, 1x Coal -> 1x Unranium Ingot, 120 tics
+				["Uranium Bar", [item.uranium_ore, 3, item.coal, 1], [item.uranium_ingot, 1], 120, 
+					"Uranium Bar", ""],
+			//3x Molten Ore, 1x Coal -> 1x Molten Ingot, 120 tics
+				["Molten Bar", [item.molten_ore, 3, item.coal, 1], [item.molten_ingot, 1], 120, 
+					"Molten Bar", ""],
+			//1x Shinny rock -> 2x Shinny Rock, 600 tic
+				["Level Up", [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))], ["Level up", ""], 0,
+					"Level Up", ""],
+
+			]
+			
+			var _button_count = array_length(Recipes);
 			var _width = 256;
 			var _height = 32;
 			var _h_space = 8;
@@ -19,80 +49,37 @@ switch (menu_to_draw) {
 			// Background
 			var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
 														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
+				ds_list_add(button_ref_list, _background)
 			
+
 			
-			ds_list_add(button_ref_list, _background)
 			//Buttons
 			var _button;
+			repeat(_button_count - 1) {
 			//3x Rock -> 1x Shiny rock, 60 tics
 			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Make Shiny", [item.rock, 3], [item.shiny_rock, 1], x_base, y_base,
-										struct_refrence, 60);
-										_i++;
+										Recipes[_i], struct_refrence);					
 				ds_list_add(button_ref_list, _button)
-				
-			//3x Iron Ore, 1x Coal -> 1x Iron Ingot, 120 tics
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Iron Bar", [item.iron_ore, 3, item.coal, 1], [item.iron_ingot, 1], x_base, y_base,
-										struct_refrence, 120);
-										_i++;
-				ds_list_add(button_ref_list, _button)
-				
-			//3x Copper Ore, 1x Coal -> 1x Copper Ingot, 120 tics
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Copper Bar", [item.copper_ore, 3, item.coal, 1], [item.copper_ingot, 1], x_base, y_base,
-										struct_refrence, 120);
-										_i++;
-				ds_list_add(button_ref_list, _button)
-				
-			//3x Steel Ore, 1x Coal -> 1x Steel Ingot, 60 tics
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Steel Bar", [item.steel_ore, 3, item.coal, 1], [item.steel_ingot, 1], x_base, y_base,
-										struct_refrence, 120);
-										_i++;
-				ds_list_add(button_ref_list, _button)
-				
-			//3x Mythril Ore, 1x Coal -> 1x Mythril Ingot, 120 tics
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Mythril Bar", [item.mythril_ore, 3, item.coal, 1], [item.mythril_ingot, 1], x_base, y_base,
-										struct_refrence, 120);
-										_i++;
-				ds_list_add(button_ref_list, _button)
+				_i++;
+			}
 			
-			//3x Uranium Ore, 1x Coal -> 1x Unranium Ingot, 120 tics
+			//Level Up Button
 			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Uranium Bar", [item.uranium_ore, 3, item.coal, 1], [item.uranium_ingot, 1], x_base, y_base,
-										struct_refrence, 120);
-										_i++;
-				ds_list_add(button_ref_list, _button)
-
-			//3x Molten Ore, 1x Coal -> 1x Molten Ingot, 120 tics
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Molten Bar", [item.molten_ore, 3, item.coal, 1], [item.molten_ingot, 1], x_base, y_base,
-										struct_refrence, 120);
-										_i++;
-				ds_list_add(button_ref_list, _button)
-			
-			//1x Shinny rock -> 2x Shinny Rock, 600 tic
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Infinate Shiny", [item.shiny_rock, 1], [item.shiny_rock, 2], x_base, y_base,
-										struct_refrence, 600);
-										_i++;
-				ds_list_add(button_ref_list, _button)
-			
-			// nx Shinny Rocks -> Increse Struct Level, 0 ticks
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Level up", [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))], ["Level up", "Stupid math, .5 rounds to 0, whatever"], x_base, y_base,
-										struct_refrence, 0);
-										_i++
+										Recipes[array_length(Recipes) - 1], struct_refrence);
 				ds_list_add(button_ref_list, _button)
 				ds_list_add(button_update_ref_list, _button)
 				level_up_button = _button;
-			}
-		//recalc inputs for recipies with non-static inputs
-		level_up_button.input = [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))];
+				
+			menu_drawn = true;
+		}
+		
+		//Update Dynamic Inputs
+			//Level Up Button
+				//Cost
+				Recipes[@ array_length(Recipes) - 1][@ 1] = floor(power(1.1, struct_refrence.structure_level));
+				//Time
+				Recipes[@ 3] = 60 * struct_refrence.structure_level;
 
-		menu_drawn = true;
 		break;
 		
 	case menu_type.mouse_tool:
