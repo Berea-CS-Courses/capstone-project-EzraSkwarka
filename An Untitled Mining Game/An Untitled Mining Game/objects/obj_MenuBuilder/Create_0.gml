@@ -8,6 +8,8 @@ struct_refrence = 0;
 crafting_menu_drawn = false;
 level_up_button = 0;
 
+
+
 //Button Containers
 button_ref_list = ds_list_create();
 button_update_ref_list = ds_list_create();

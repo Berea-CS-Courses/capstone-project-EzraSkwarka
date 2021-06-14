@@ -73,9 +73,11 @@ switch (menu_to_draw) {
 		//Update Dynamic Inputs
 			//Level Up Button
 				//Cost
-				Recipes[@ array_length(Recipes) - 1][@ 1] = floor(power(1.1, struct_refrence.structure_level));
+				Recipes[@ array_length(Recipes) - 1][@ 1][@ 1] = floor(power(1.1, struct_refrence.structure_level))
+					button_update_ref_list[| 0].input = Recipes[@ 0][@ 1];
 				//Time
 				Recipes[@ array_length(Recipes) - 1][@ 3] = 60 * struct_refrence.structure_level;
+					button_update_ref_list[| 0].crafting_time = Recipes[@ 0][@ 3];
 
 		break;
 		
@@ -106,14 +108,15 @@ switch (menu_to_draw) {
 			level_up_button = _button;
 				
 		menu_drawn = true;
-		show_debug_message(string(Recipes[@ array_length(Recipes) - 1][@ 3]))
 	}
 	//Update Dynamic Inputs
 		//Level Up Button
 			//Cost
-			Recipes[@ 0][@ 1] = floor(power(1.1, scr_get_mouse_level()));
+			Recipes[@ 0][@ 1][@ 1] = floor(power(1.1, scr_get_mouse_level()));
+				button_update_ref_list[|0 ].input = Recipes[@ 0][@ 1];
 			//Time
 			Recipes[@ 0][@ 3] = 60 * scr_get_mouse_level();
+				button_update_ref_list[|0 ].crafting_time = Recipes[@ 0][@ 3];
 	break;
 	
 	case menu_type.points_shop:
@@ -151,9 +154,11 @@ switch (menu_to_draw) {
 	//Update Dynamic Inputs
 		//Level Up Button
 			//Cost
-			Recipes[@ 0][@ 1] = floor(power(1.1, obj_relics_menu.pick_power));
+			Recipes[@ 0][@ 1][@ 1] = floor(power(1.1, obj_relics_menu.pick_power));
+				button_update_ref_list[| 0].input = Recipes[@ 0][@ 1];
 			//Time
 			Recipes[@ 0][@ 3] = 60 * obj_relics_menu.pick_power;
+				button_update_ref_list[| 0].crafting_time = Recipes[@ 0][@ 3];
 
 	break
 	
