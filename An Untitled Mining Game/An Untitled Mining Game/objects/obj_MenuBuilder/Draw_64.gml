@@ -34,7 +34,7 @@ switch (menu_to_draw) {
 			//3x Molten Ore, 1x Coal -> 1x Molten Ingot, 120 tics
 				["Molten Bar", [item.molten_ore, 3, item.coal, 1], [item.molten_ingot, 1], 120, 
 					"Molten Bar", ""],
-			//1x Shinny rock -> 2x Shinny Rock, 600 tic
+			//1Level Up
 				["Level Up", [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))], ["Level up", ""], 0,
 					"Level Up", ""],
 
@@ -51,13 +51,10 @@ switch (menu_to_draw) {
 														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
 				ds_list_add(button_ref_list, _background)
 			
-
-			
 			//Buttons
 			var _button;
 			repeat(_button_count - 1) {
-			//3x Rock -> 1x Shiny rock, 60 tics
-			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
+				_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
 										Recipes[_i], struct_refrence);					
 				ds_list_add(button_ref_list, _button)
 				_i++;
@@ -78,65 +75,95 @@ switch (menu_to_draw) {
 				//Cost
 				Recipes[@ array_length(Recipes) - 1][@ 1] = floor(power(1.1, struct_refrence.structure_level));
 				//Time
-				Recipes[@ 3] = 60 * struct_refrence.structure_level;
+				Recipes[@ array_length(Recipes) - 1][@ 3] = 60 * struct_refrence.structure_level;
 
 		break;
 		
 	case menu_type.mouse_tool:
 	if !(menu_drawn) {
-			var _button_count = 1;
-			var _width = 256;
-			var _height = 32;
-			var _h_space = 8;
-			var _i = 0;
+		Recipes = [
+		//Level Up Button
+				["Level Up", [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))], ["Level up", ""], 60,
+					"Level Up", ""],
+		];
+		
+		var _button_count = array_length(Recipes);
+		var _width = 256;
+		var _height = 32;
+		var _h_space = 8;
+		var _i = 0;
 			
-			// Background
-			var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
-														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
-				ds_list_add(button_ref_list, _background)
+		// Background
+		var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
+														(1.2 * _width), (_button_count * (_height + _h_space) + 150))
+			ds_list_add(button_ref_list, _background)
 				
-			//3x Rock -> 1x Shiny rock, 60 tics
-			level_up_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Level up!", [item.shiny_rock, floor(power(1.1, scr_get_mouse_level()))], ["Level up", ""], x_base, y_base,
-										struct_refrence, 60);
-										_i++;
-				ds_list_add(button_ref_list, level_up_button)
-		}
-		//recalc inputs for recipies with non-static inputs
-		level_up_button.input =  [item.shiny_rock, floor(power(1.1, scr_get_mouse_level()))];
-		
-		
+		//Level Up Button
+		_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
+									Recipes[array_length(Recipes) - 1], struct_refrence);
+			ds_list_add(button_ref_list, _button)
+			ds_list_add(button_update_ref_list, _button)
+			level_up_button = _button;
+				
 		menu_drawn = true;
-		break;
+		show_debug_message(string(Recipes[@ array_length(Recipes) - 1][@ 3]))
+	}
+	//Update Dynamic Inputs
+		//Level Up Button
+			//Cost
+			Recipes[@ 0][@ 1] = floor(power(1.1, scr_get_mouse_level()));
+			//Time
+			Recipes[@ 0][@ 3] = 60 * scr_get_mouse_level();
+	break;
 	
 	case menu_type.points_shop:
 	if !(menu_drawn) {
-			var _button_count = 1;
-			var _width = 256;
-			var _height = 32;
-			var _h_space = 8;
-			var _i = 0;
+		Recipes = [
+		//Renown -> Pick Power, 600 tics
+				["Pick Power", [item.renown_ref, floor(power(1.1, obj_relics_menu.pick_power))], ["Renown", minor_relics.pick_power], 600,
+					"Level Up Relic", ""],
+		];
+		
+		var _button_count = array_length(Recipes);
+		var _width = 256;
+		var _height = 32;
+		var _h_space = 8;
+		var _i = 0;
 			
-			// Background
-			var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
-														   (1.2 * _width), (_button_count * (_height + _h_space) + 150))
-				ds_list_add(button_ref_list, _background)
-			
-			//Renown -> Pick Power, 600 tics
-			var _button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
-										"Strengthen Pickaxe", [item.renown_ref, floor(power(1.1, obj_relics_menu.pick_power))], ["Renown", minor_relics.pick_power], x_base, y_base,
-										struct_refrence, 600);
-										_i++;
-				ds_list_add(button_ref_list, _button)
-			}
-			
+		// Background
+		var _background = scr_static_background_button(spr_brown_button_base, (screen_width / 2) - (.6 * _width), 70,
+														(1.2 * _width), (_button_count * (_height + _h_space) + 150))
+			ds_list_add(button_ref_list, _background)
+		
+		//Buttons
+		var _button;
+		repeat(_button_count) {
+			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
+									Recipes[_i], struct_refrence);					
+			ds_list_add(button_ref_list, _button)
+			_i++;
+		}
+		//Level Up Button
+			//This Struct doesn't have a level
+				
 		menu_drawn = true;
-		break
+	}
+	//Update Dynamic Inputs
+		//Level Up Button
+			//Cost
+			Recipes[@ 0][@ 1] = floor(power(1.1, obj_relics_menu.pick_power));
+			//Time
+			Recipes[@ 0][@ 3] = 60 * obj_relics_menu.pick_power;
+
+	break
 	
 	
 	case menu_type.none: // this means only one "type" of menu can be active at a time
 	default:
 		menu_drawn = false;
+		if instance_exists(struct_refrence) { 
+			struct_refrence.menu_up = false;
+		}
 		crafting_menu_drawn = false;
 		draw_craft = false;
 		level_up_button = 0;

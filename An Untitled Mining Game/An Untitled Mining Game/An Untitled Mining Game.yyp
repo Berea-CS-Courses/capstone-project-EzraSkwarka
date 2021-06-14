@@ -48,7 +48,7 @@
     {"id":{"name":"obj_toolbar","path":"objects/obj_toolbar/obj_toolbar.yy",},"order":1,},
     {"id":{"name":"spr_tools_UI","path":"sprites/spr_tools_UI/spr_tools_UI.yy",},"order":5,},
     {"id":{"name":"spr_node_rock_iron","path":"sprites/spr_node_rock_iron/spr_node_rock_iron.yy",},"order":7,},
-    {"id":{"name":"obj_NodeController","path":"objects/obj_NodeController/obj_NodeController.yy",},"order":5,},
+    {"id":{"name":"obj_NodeController","path":"objects/obj_NodeController/obj_NodeController.yy",},"order":3,},
     {"id":{"name":"scr_create_crafting_button","path":"scripts/scr_create_crafting_button/scr_create_crafting_button.yy",},"order":1,},
     {"id":{"name":"scr_show_and_craft","path":"scripts/scr_show_and_craft/scr_show_and_craft.yy",},"order":4,},
     {"id":{"name":"fnt_text_24","path":"fonts/fnt_text_24/fnt_text_24.yy",},"order":4,},

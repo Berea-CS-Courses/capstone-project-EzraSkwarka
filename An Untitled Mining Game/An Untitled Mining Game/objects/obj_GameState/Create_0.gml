@@ -5,6 +5,9 @@ global.mouse_level = 0;
 global.renown = 0;
 global.is_paused = false;
 
+//Reset Call
+Reset = false;
+
 screen_width = 1280;
 global.ScreenWidth = 1280;
 screen_height = 960;
