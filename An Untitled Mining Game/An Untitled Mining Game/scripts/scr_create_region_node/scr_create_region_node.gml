@@ -113,10 +113,9 @@ if target_rarity == node_rarity.common {
 // Spawn Node
 switch node_type {
 	case node_types.rock:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 2;
 		node.spr_to_draw = spr_node_rock;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.rock;
 		node.base_rate = 10;
@@ -124,10 +123,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_coal:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 2;
 		node.spr_to_draw = spr_node_rock_coal;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.coal;
 		node.base_rate = 3;
@@ -135,10 +133,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_iron:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 4;
 		node.spr_to_draw = spr_node_rock_iron;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.iron_ore;
 		node.base_rate = 2;
@@ -146,10 +143,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_coral:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 1;
 		node.spr_to_draw = spr_node_rock_coral;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.coral;
 		node.base_rate = 2;
@@ -157,10 +153,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_mythril:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 10;
 		node.spr_to_draw = spr_node_rock_mythril;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.mythril_ore;
 		node.base_rate = 2;
@@ -168,10 +163,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_steel:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 8;
 		node.spr_to_draw = spr_node_rock_steel;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.steel_ore;
 		node.base_rate = 2;
@@ -179,10 +173,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_sandstone:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 6;
 		node.spr_to_draw = spr_node_rock_sandstone;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.copper_ore;
 		node.base_rate = 2;
@@ -190,10 +183,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_uranium:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 14;
 		node.spr_to_draw = spr_node_rock_uranium;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.uranium_ore;
 		node.base_rate = 2;
@@ -201,10 +193,9 @@ switch node_type {
 		break;
 		
 	case node_types.rock_molten:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 20;
 		node.spr_to_draw = spr_node_rock_molten;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.pickaxe;
 		node.spawn_resource = item.molten_ore;
 		node.base_rate = 2;
@@ -212,10 +203,9 @@ switch node_type {
 		break;
 		
 	case node_types.tree:
-		var node = instance_create_layer(x + 0, y + 0, "Active", obj_node_parent);
+		var node = instance_create_layer(x, y, "Active", obj_node_parent);
 		node.node_health = 1;
 		node.spr_to_draw = spr_node_tree;
-		node.mask_index = node.spr_to_draw;
 		node.tool_to_use = tools.axe;
 		node.spawn_resource = item.wood;
 		node.base_rate = 5;
@@ -228,6 +218,10 @@ switch node_type {
 }
 
 if (_successful_spawn) {
+	// Non Varing Comands
+	node.mask_index = node.spr_to_draw;
+	node.max_health = node.node_health;
+	
 	obj_NodeController.nodes_spawned += 1;
 	obj_NodeController.node_region_spawns[_region] += 1;
 	node.region = _region;

@@ -1,4 +1,4 @@
-draw_sprite(draw_spr, 0, x + 0, y + 0);
+draw_sprite(draw_spr, 0, x, y);
 mask_index = draw_spr;
 
 draw_set_font(fnt_smalldigits);
