@@ -2,6 +2,7 @@
 
 bonus_multiplier = 0;
 node_health = 1;
+max_health = 1;
 spr_to_draw = spr_node_tree;
 mask_index = spr_to_draw;
 region = -1;

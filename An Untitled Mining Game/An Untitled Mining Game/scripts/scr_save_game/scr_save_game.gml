@@ -33,6 +33,7 @@ var i = 0; repeat(array_length(node_type_array)) {
 				case "obj_node_parent":  
 					save_entity.bonus_multiplier = bonus_multiplier;
 					save_entity.node_health = node_health;
+					save_entity.max_health = max_health;
 					save_entity.spr_to_draw = spr_to_draw;
 					save_entity.mask_index= mask_index;
 					save_entity.spawn_resource = spawn_resource;
