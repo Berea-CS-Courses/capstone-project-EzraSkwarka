@@ -18,9 +18,12 @@ if struct_id.in_use and (struct_id.current_step < struct_id.wait_time) {
 			
 		//Renown Shop and Relics
 			} else if (struct_id.output[@ 0] == "Renown") {
-				switch (struct_id.output[@ 0]) {
+				switch (struct_id.output[@ 1]) {
 					case (minor_relics.pick_power):
 						obj_relics_menu.pick_power += 1;
+						break;
+					case (minor_relics.bonus_inv_slots):
+						obj_relics_menu.bonus_inv_slots += 1;
 						break;
 				}
 				

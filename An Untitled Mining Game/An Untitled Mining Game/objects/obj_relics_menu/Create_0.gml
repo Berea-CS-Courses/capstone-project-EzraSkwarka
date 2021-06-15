@@ -107,7 +107,9 @@ relics_UI_y = (gui_height * 0.75) - (relics_UI_height * 0.5 * scale);
 enum minor_relics{
 	none,
 	pick_power,
+	bonus_inv_slots,
 	height
 }
 
 pick_power = 1;
+bonus_inv_slots = 0;

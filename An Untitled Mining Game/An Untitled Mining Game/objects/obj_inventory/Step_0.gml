@@ -1,5 +1,11 @@
 if(!show_inventory) exit;
+// Check Number of slots
+inv_slots = base_slots + obj_relics_menu.bonus_inv_slots;
 
+//Rezize Grid if need be
+if (ds_grid_height(ds_inventory) != inv_slots) {
+	ds_grid_resize(ds_inventory,2,inv_slots)
+}
 //-------
 // Determine Active Slot
 //-------

@@ -2,7 +2,8 @@ depth = -1;
 scale = 2.5;
 show_inventory = false;
 
-inv_slots = 10;
+inv_slots = 6;
+base_slots = 6;
 inv_slots_width = 8;
 inv_slots_height = 3;
 

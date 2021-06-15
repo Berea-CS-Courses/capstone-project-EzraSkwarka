@@ -124,8 +124,11 @@ switch (menu_to_draw) {
 	if !(menu_drawn) {
 		Recipes = [
 		//Renown -> Pick Power, 600 tics
-				["Pick Power", [item.renown_ref, floor(power(1.1, obj_relics_menu.pick_power))], ["Renown", minor_relics.pick_power], 600,
-					"Level Up Relic", "", true],
+			["Level Up Relic", [item.renown_ref, floor(power(1.1, obj_relics_menu.pick_power))], ["Renown", minor_relics.pick_power], 600,
+				"Pick Power", "", true],
+		//Renown -> Inventory Slots, 600 tics
+			["Level Up Relic", [item.renown_ref, floor(power(1.1, obj_relics_menu.bonus_inv_slots))], ["Renown", minor_relics.bonus_inv_slots], 600,
+				"Inventory Space", "", true],
 		];
 		
 		var _button_count = array_length(Recipes);
@@ -162,6 +165,13 @@ switch (menu_to_draw) {
 				button_update_ref_list[| 0].input = Recipes[@ 0][@ 1];
 			//Time
 			Recipes[@ 0][@ 3] = 300 * obj_relics_menu.pick_power;
+				button_update_ref_list[| 0].crafting_time = Recipes[@ 0][@ 3];
+		//Inventory Slots
+			//Cost
+			Recipes[@ 1][@ 1][@ 1] = floor(power(1.1, obj_relics_menu.bonus_inv_slots));
+				button_update_ref_list[| 0].input = Recipes[@ 0][@ 1];
+			//Time
+			Recipes[@ 1][@ 3] = 300 * obj_relics_menu.bonus_inv_slots;
 				button_update_ref_list[| 0].crafting_time = Recipes[@ 0][@ 3];
 
 	break
