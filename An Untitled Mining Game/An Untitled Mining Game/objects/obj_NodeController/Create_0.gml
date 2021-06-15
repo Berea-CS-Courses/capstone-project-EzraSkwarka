@@ -31,6 +31,19 @@ enum node_types {
 	
 }
 
+enum mob_types {
+	none	,
+	slime
+}
+
+enum mob_states {
+	idle,
+	roam,
+	follow,
+	attack,
+}
+
+
 enum node_rarity {
 	common		= 0,
 	uncommon	= 1,
