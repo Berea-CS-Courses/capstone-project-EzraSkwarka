@@ -5,7 +5,6 @@ nta = [
 	obj_node_parent,
 	obj_item,
 	obj_structure_parent, 
-	//obj_structure_pebble_refiner,
 	obj_player,
 	obj_inventory,
 	obj_NodeController,

@@ -79,6 +79,7 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.layer = "UI";
 					save_entity.renown = global.renown;
 					save_entity.pick_power = pick_power;
+					save_entity.bonus_inv_slots = bonus_inv_slots;
 					break;
 				default:
 					break;

@@ -87,6 +87,7 @@ if (file_exists("savegame.sav")) {
 				case "obj_relics_menu":
 					global.renown = load_entity.renown;
 					pick_power = load_entity.pick_power;
+					bonus_inv_slots = load_entity.bonus_inv_slots;
 					break;
 				default:
 					break;
