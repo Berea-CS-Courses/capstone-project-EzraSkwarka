@@ -118,6 +118,10 @@ switch node_type {
 		node.spr_to_draw = spr_node_rock;
 		node.tool_to_use = tools.pickaxe;
 		node.drop_array = [item.rock, 10]
+		random_number = irandom(100)
+		if random_number >= 50 {
+			array_push(node.drop_array, item.coal, 2);
+		}
 		_successful_spawn = true;
 		break;
 		
@@ -126,7 +130,7 @@ switch node_type {
 		node.node_health = 2;
 		node.spr_to_draw = spr_node_rock_coal;
 		node.tool_to_use = tools.pickaxe;
-		node.drop_array = [item.coal, 3];
+		node.drop_array = [item.coal, 5];
 		_successful_spawn = true;
 		break;
 		
