@@ -24,7 +24,6 @@ function scr_node_left_click(_self)
 					instance_destroy(_self);
 					obj_NodeController.nodes_spawned -= 1;
 					obj_NodeController.node_region_spawns[@ _self.region] -= 1
-					//show_debug_message(string(scr_get_mouse_level()))
 					var bonus_multiplier = (1 + .1 * (scr_get_mouse_level() + global.renown));
 					repeat(floor(_self.base_rate * bonus_multiplier))	{
 						var inst = instance_create_layer(x, y, "Active", obj_item);

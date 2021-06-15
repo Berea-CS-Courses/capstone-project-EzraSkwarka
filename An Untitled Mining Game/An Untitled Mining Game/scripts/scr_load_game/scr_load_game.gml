@@ -32,7 +32,6 @@ if (file_exists("savegame.sav")) {
 	while (array_length(load_data) > 0 ) {
 		var load_entity = array_pop(load_data);
 		with (instance_create_layer(load_entity.x, load_entity.y, load_entity.layer, asset_get_index(load_entity.obj))) {
-			show_debug_message("Created a " + load_entity.obj);
 			switch (load_entity.obj) {
 			//-----Nodes
 				case "obj_NodeController":
@@ -104,5 +103,5 @@ if (file_exists("savegame.sav")) {
 		}
 	}
 }
-
+show_debug_message("Loaded savegame.sav")
 }

@@ -6,7 +6,7 @@ hover = lerp(hover, _hover, 0.1);
 
 //if (_hover and click and (!struct_in_use)) {
 if (_hover and click) {
-	obj_MenuBuilder.recipe_name = display_text;
+	obj_MenuBuilder.recipe_name = recipe_name;
 	obj_MenuBuilder.input = input;
 	obj_MenuBuilder.output = output;
 	obj_MenuBuilder.crafting_time = crafting_time;

@@ -16,6 +16,7 @@ if(place_meeting(x, y, obj_player)) {
 	}
 
 	obj_NodeController.nodes_spawned = 0;
+	obj_NodeController.node_region_spawns =	[0, 0, 0, 0, 0, 0, 0];
 	global.renown += max(floor(log2(total_count)),0);
 	global.mouse_level = 0;
 	room_restart();
