@@ -1,9 +1,16 @@
 nodes_spawned = 0;
 node_spawn_limit = 15;
 
-node_region_spawns =		[0, 0, 0, 0, 0, 0, 0];
-node_region_spawn_limit =	[3, 4, 5, 6, 4, 3, 2];
-node_region_spawn_limit =	[0, 4, 0, 0, 0, 0, 0];
+node_region_spawns = [0, 0, 0, 0, 0, 0, 0];
+node_region_spawn_limit = [
+	3,	//Beach 
+	6,	//Forest
+	4,	//Desert
+	4,	//Mines
+	3,	//Mountian
+	3,	//Tundra
+	2	//Volcano
+];
 
 
 enum region_list {
