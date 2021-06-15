@@ -1,4 +1,12 @@
 state = mob_states.idle;
+
+states_array = [
+	scr_enemy_idle,
+	scr_enemy_roam,
+	scr_enemy_follow,
+	scr_enemy_attack
+]
+
 timer = 0;
 
 move_spd = .5;

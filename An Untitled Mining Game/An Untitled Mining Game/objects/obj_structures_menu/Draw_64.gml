@@ -7,11 +7,16 @@ draw_sprite_part_ext(
 	inv_UI_x, inv_UI_y, scale, scale, c_white, 1
 );
 
+//draw_set_font(fnt_Omom_solid_24);
+//var c = c_white; 
+//draw_text_color(info_x, info_y, "Structures", c,c,c,c, 1);
 
-draw_set_font(fnt_text_24);
-var c = c_black; 
-draw_text_color(info_x, info_y, "Structures", c,c,c,c, 1);
+//draw_set_font(fnt_Omom_24);
+//var c = c_black; 
+//draw_text_color(info_x, info_y, "Structures", c,c,c,c, 1);
 
+draw_text_layered(info_x, info_y, fnt_Omom_24, c_black, 
+					fnt_Omom_solid_24, c_white, "Structures")
 
 draw_set_font(fnt_smalldigits);
 
@@ -62,6 +67,7 @@ repeat(inv_slots){
 	//Draw item Number
 	if(iitem > 0){
 		var number = inv_grid[# 1, ii];
+		var c = c_white;
 		draw_text_color(xx, yy, string(number), c,c,c,c, 1);
 	}
 	
