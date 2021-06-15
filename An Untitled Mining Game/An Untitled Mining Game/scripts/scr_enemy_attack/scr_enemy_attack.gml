@@ -10,7 +10,9 @@ with (_self) {
 		state = mob_states.idle;
 	}
 	//Animation
-	
+	if (sprite_index != spr_mob_slime_attack) {
+		sprite_index = spr_mob_slime_attack;
+	}
 	
 }
 }

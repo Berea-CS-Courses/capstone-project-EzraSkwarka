@@ -20,5 +20,8 @@ with (_self) {
 	}
 	
 	//Animation
+	if (sprite_index != spr_mob_slime_follow) {
+		sprite_index = spr_mob_slime_follow;
+	}
 }
 }

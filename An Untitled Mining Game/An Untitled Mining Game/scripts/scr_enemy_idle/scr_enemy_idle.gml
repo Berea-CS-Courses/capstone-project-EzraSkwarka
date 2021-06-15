@@ -20,6 +20,9 @@ with (_self) {
 	}
 	
 	//Animation
+	if (sprite_index != spr_mob_slime_idle) {
+		sprite_index = spr_mob_slime_idle;
+	}
 	
 }
 }
