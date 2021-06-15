@@ -36,9 +36,7 @@ switch (_region) {
 		
 	case region_list.forest:
 		common = [node_types.tree, node_types.mob_slime];
-		common = [node_types.mob_slime];
 		uncommon = [node_types.rock_iron];
-		uncommon = [];
 		rare = [];
 		ultrarare = [];
 		break;
@@ -98,16 +96,16 @@ var random_number = floor(random_range(0, 100));
 
 // Roll node from Rarity
 if target_rarity == node_rarity.common {
-	random_number = floor(random_range(0, array_length(common) - 1));
+	random_number = floor(random_range(0, array_length(common)));
 	node_type = common[@ random_number];
 } else if target_rarity == node_rarity.uncommon {
-	random_number = floor(random_range(0, array_length(uncommon) - 1));
+	random_number = floor(random_range(0, array_length(uncommon)));
 	node_type = uncommon[@ random_number];
 } else if target_rarity == node_rarity.rare { 
-	random_number = floor(random_range(0, array_length(rare) - 1));
+	random_number = floor(random_range(0, array_length(rare)));
 	node_type = rare[@ random_number];
 } else { // ultrarare
-	random_number = floor(random_range(0, array_length(ultrarare) - 1));
+	random_number = floor(random_range(0, array_length(ultrarare)));
 	node_type = ultrarare[@ random_number];
 }
 

@@ -3,6 +3,7 @@ node_spawn_limit = 15;
 
 node_region_spawns =		[0, 0, 0, 0, 0, 0, 0];
 node_region_spawn_limit =	[3, 4, 5, 6, 4, 3, 2];
+node_region_spawn_limit =	[0, 4, 0, 0, 0, 0, 0];
 
 
 enum region_list {
