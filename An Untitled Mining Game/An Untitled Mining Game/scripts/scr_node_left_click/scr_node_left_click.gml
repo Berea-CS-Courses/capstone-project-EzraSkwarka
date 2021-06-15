@@ -32,6 +32,18 @@ function scr_node_left_click(_self)
 							x_frame = item_num mod (spr_width/cell_size);
 							y_frame = item_num div (spr_width/cell_size);
 						}
+						var _i = 0; repeat(array_length(_self.drop_array)/2) {
+							repeat(_self.drop_array[@_i + 1]) {
+							var inst = instance_create_layer(x, y, "Active", obj_item);
+								with (inst) {
+									item_num = _self.drop_array[@_i];
+									x_frame = item_num mod (spr_width/cell_size);
+									y_frame = item_num div (spr_width/cell_size);
+								}
+							}
+							_i += 2;
+						}
+							
 					}
 				}
 			}
