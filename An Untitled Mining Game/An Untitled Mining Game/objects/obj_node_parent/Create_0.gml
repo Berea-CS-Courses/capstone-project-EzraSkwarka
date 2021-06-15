@@ -8,6 +8,7 @@ region = -1;
 tool_to_use = tools.axe;
 spawn_resource = item.rock;
 base_rate = 15;
+drop_array = [item.wood, 3]
 
 //Internal
 bar_offset_x = -16;

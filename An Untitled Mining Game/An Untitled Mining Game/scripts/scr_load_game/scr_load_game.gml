@@ -46,8 +46,7 @@ if (file_exists("savegame.sav")) {
 					max_health = load_entity.max_health;
 					spr_to_draw = load_entity.spr_to_draw;
 					mask_index = load_entity.mask_index;
-					spawn_resource = load_entity.spawn_resource;
-					base_rate = load_entity.base_rate;
+					drop_array = load_entity.drop_array;
 					tool_to_use = load_entity.tool_to_use;
 					region = load_entity.region;
 					break;

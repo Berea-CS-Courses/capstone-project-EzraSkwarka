@@ -117,8 +117,11 @@ switch node_type {
 		node.node_health = 2;
 		node.spr_to_draw = spr_node_rock;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.rock;
-		node.base_rate = 10;
+		node.drop_array = [item.rock, 10]
+		random_number = irandom(100)
+		if random_number >= 50 {
+			array_push(node.drop_array, item.coal, 2);
+		}
 		_successful_spawn = true;
 		break;
 		
@@ -127,8 +130,7 @@ switch node_type {
 		node.node_health = 2;
 		node.spr_to_draw = spr_node_rock_coal;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.coal;
-		node.base_rate = 3;
+		node.drop_array = [item.coal, 5];
 		_successful_spawn = true;
 		break;
 		
@@ -137,8 +139,7 @@ switch node_type {
 		node.node_health = 4;
 		node.spr_to_draw = spr_node_rock_iron;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.iron_ore;
-		node.base_rate = 2;
+		node.drop_array = [item.iron_ore, 2];
 		_successful_spawn = true;
 		break;
 		
@@ -147,8 +148,7 @@ switch node_type {
 		node.node_health = 1;
 		node.spr_to_draw = spr_node_rock_coral;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.coral;
-		node.base_rate = 2;
+		node.drop_array = [item.coral, 2];
 		_successful_spawn = true;
 		break;
 		
@@ -157,8 +157,7 @@ switch node_type {
 		node.node_health = 10;
 		node.spr_to_draw = spr_node_rock_mythril;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.mythril_ore;
-		node.base_rate = 2;
+		node.drop_array = [item.mythril_ore, 2];
 		_successful_spawn = true;
 		break;
 		
@@ -167,8 +166,7 @@ switch node_type {
 		node.node_health = 8;
 		node.spr_to_draw = spr_node_rock_steel;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.steel_ore;
-		node.base_rate = 2;
+		node.drop_array = [item.steel_ore, 2];
 		_successful_spawn = true;
 		break;
 		
@@ -177,8 +175,7 @@ switch node_type {
 		node.node_health = 6;
 		node.spr_to_draw = spr_node_rock_sandstone;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.copper_ore;
-		node.base_rate = 2;
+		node.drop_array = [item.copper_ore, 2];
 		_successful_spawn = true;
 		break;
 		
@@ -187,8 +184,7 @@ switch node_type {
 		node.node_health = 14;
 		node.spr_to_draw = spr_node_rock_uranium;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.uranium_ore;
-		node.base_rate = 2;
+		node.drop_array = [item.uranium_ore, 2];
 		_successful_spawn = true;
 		break;
 		
@@ -197,8 +193,7 @@ switch node_type {
 		node.node_health = 20;
 		node.spr_to_draw = spr_node_rock_molten;
 		node.tool_to_use = tools.pickaxe;
-		node.spawn_resource = item.molten_ore;
-		node.base_rate = 2;
+		node.drop_array = [item.molten_ore, 2];
 		_successful_spawn = true;
 		break;
 		
@@ -207,8 +202,7 @@ switch node_type {
 		node.node_health = 1;
 		node.spr_to_draw = spr_node_tree;
 		node.tool_to_use = tools.axe;
-		node.spawn_resource = item.wood;
-		node.base_rate = 5;
+		node.drop_array = [item.wood, 5];
 		_successful_spawn = true;
 		break;
 
