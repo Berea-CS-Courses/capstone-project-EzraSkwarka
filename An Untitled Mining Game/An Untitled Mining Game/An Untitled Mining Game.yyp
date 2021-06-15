@@ -27,6 +27,7 @@
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},"order":0,},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"order":4,},
     {"id":{"name":"spr_pickaxe","path":"sprites/spr_pickaxe/spr_pickaxe.yy",},"order":0,},
+    {"id":{"name":"spr_inventory_slot","path":"sprites/spr_inventory_slot/spr_inventory_slot.yy",},"order":5,},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":0,},
     {"id":{"name":"obj_tile_tundra","path":"objects/obj_tile_tundra/obj_tile_tundra.yy",},"order":6,},
     {"id":{"name":"obj_SaveTracker","path":"objects/obj_SaveTracker/obj_SaveTracker.yy",},"order":2,},
