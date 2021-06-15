@@ -7,6 +7,7 @@ hover = -1;
 
 
 //What item and where to make it
+recipe_name = "";
 input = [];
 output = [];
 x_loc = 0;

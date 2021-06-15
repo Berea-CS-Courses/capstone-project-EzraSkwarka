@@ -6,7 +6,6 @@ menu_to_draw = menu_type.none;
 menu_drawn = false;
 struct_refrence = 0;
 crafting_menu_drawn = false;
-level_up_button = 0;
 
 
 

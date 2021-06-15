@@ -11,35 +11,37 @@ switch (menu_to_draw) {
 	case menu_type.pebble_refiner:
 		if !(menu_drawn) {
 			Recipes = [
-			// [Recipe Name, [Input Array], [Output Array], Base Crafting Time, "Button Display Text", "Flavor Text"]
+			// [Recipe Name, [Input Array], [Output Array], Base Crafting Time, 
+			//	"Button Display Text", "Flavor Text", Dynamic]
 
 			//3x Rock -> 1x Shiny rock, 60 tics
-				["Make Shiny", [item.rock, 3], [item.shiny_rock, 1], 60,
-					"Make Shiny", "Its a rock, that's shiny"],
+				["Shiny Rock", [item.rock, 3], [item.shiny_rock, 1], 60,
+					"Make Shiny", "Its a rock, that's shiny", false],
 			//3x Iron Ore, 1x Coal -> 1x Iron Ingot, 120 tics
 				["Iron Bar", [item.iron_ore, 3, item.coal, 1], [item.iron_ingot, 1], 120, 
-					"Iron Bar", ""],
+					"Iron Bar", "", false],
 			//3x Copper Ore, 1x Coal -> 1x Copper Ingot, 120 tics
 				["Copper Bar", [item.copper_ore, 3, item.coal, 1], [item.copper_ingot, 1], 120, 
-					"Copper Bar", ""],
+					"Copper Bar", "", false],
 			//3x Steel Ore, 1x Coal -> 1x Steel Ingot, 60 tics
 				["Steel Bar", [item.steel_ore, 3, item.coal, 1], [item.steel_ingot, 1], 120, 
-					"Steel Bar", ""],
+					"Steel Bar", "", false],
 			//3x Mythril Ore, 1x Coal -> 1x Mythril Ingot, 120 tics
 				["Mythril Bar", [item.mythril_ore, 3, item.coal, 1], [item.mythril_ingot, 1], 120, 
-					"Mythril Bar", ""],
+					"Mythril Bar", "", false],
 			//3x Uranium Ore, 1x Coal -> 1x Unranium Ingot, 120 tics
 				["Uranium Bar", [item.uranium_ore, 3, item.coal, 1], [item.uranium_ingot, 1], 120, 
-					"Uranium Bar", ""],
+					"Uranium Bar", "", false],
 			//3x Molten Ore, 1x Coal -> 1x Molten Ingot, 120 tics
 				["Molten Bar", [item.molten_ore, 3, item.coal, 1], [item.molten_ingot, 1], 120, 
-					"Molten Bar", ""],
-			//1Level Up
+					"Molten Bar", "", false],
+			//Level Up
 				["Level Up", [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))], ["Level up", ""], 0,
-					"Level Up", ""],
+					"Level Up", "", true],
 
 			]
 			
+			//Button Formating
 			var _button_count = array_length(Recipes);
 			var _width = 256;
 			var _height = 32;
@@ -65,7 +67,7 @@ switch (menu_to_draw) {
 										Recipes[array_length(Recipes) - 1], struct_refrence);
 				ds_list_add(button_ref_list, _button)
 				ds_list_add(button_update_ref_list, _button)
-				level_up_button = _button;
+	
 				
 			menu_drawn = true;
 		}
@@ -86,7 +88,7 @@ switch (menu_to_draw) {
 		Recipes = [
 		//Level Up Button
 				["Level Up", [item.shiny_rock, floor(power(1.1, struct_refrence.structure_level))], ["Level up", ""], 60,
-					"Level Up", ""],
+					"Level Up", "", true],
 		];
 		
 		var _button_count = array_length(Recipes);
@@ -105,7 +107,6 @@ switch (menu_to_draw) {
 									Recipes[array_length(Recipes) - 1], struct_refrence);
 			ds_list_add(button_ref_list, _button)
 			ds_list_add(button_update_ref_list, _button)
-			level_up_button = _button;
 				
 		menu_drawn = true;
 	}
@@ -124,7 +125,7 @@ switch (menu_to_draw) {
 		Recipes = [
 		//Renown -> Pick Power, 600 tics
 				["Pick Power", [item.renown_ref, floor(power(1.1, obj_relics_menu.pick_power))], ["Renown", minor_relics.pick_power], 600,
-					"Level Up Relic", ""],
+					"Level Up Relic", "", true],
 		];
 		
 		var _button_count = array_length(Recipes);
@@ -144,6 +145,9 @@ switch (menu_to_draw) {
 			_button = scr_create_crafting_button(screen_width/2 -  _width/2, 100 + (_height + _h_space) * _i, _width, _height, 
 									Recipes[_i], struct_refrence);					
 			ds_list_add(button_ref_list, _button)
+			if Recipes[_i][6] {
+				ds_list_add(button_update_ref_list, _button)	
+			}
 			_i++;
 		}
 		//Level Up Button
@@ -152,12 +156,12 @@ switch (menu_to_draw) {
 		menu_drawn = true;
 	}
 	//Update Dynamic Inputs
-		//Level Up Button
+		//Pick Power
 			//Cost
 			Recipes[@ 0][@ 1][@ 1] = floor(power(1.1, obj_relics_menu.pick_power));
 				button_update_ref_list[| 0].input = Recipes[@ 0][@ 1];
 			//Time
-			Recipes[@ 0][@ 3] = 60 * obj_relics_menu.pick_power;
+			Recipes[@ 0][@ 3] = 300 * obj_relics_menu.pick_power;
 				button_update_ref_list[| 0].crafting_time = Recipes[@ 0][@ 3];
 
 	break
@@ -171,7 +175,6 @@ switch (menu_to_draw) {
 		}
 		crafting_menu_drawn = false;
 		draw_craft = false;
-		level_up_button = 0;
 		item_amount = 1;
 		while (ds_list_size(button_ref_list) > 0) {
 			with(button_ref_list[|0]) {

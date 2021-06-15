@@ -9,9 +9,10 @@ with (button) {
 	//Where
 	width = button_width;
 	height = button_height;
-	display_text = recipe[0];
+	display_text = recipe[4];
 	struct_id = struct_refrence
 	//What
+	recipe_name = recipe[0];
 	input = recipe[1];
 	output = recipe[2];
 	x_loc = struct_refrence.x;
