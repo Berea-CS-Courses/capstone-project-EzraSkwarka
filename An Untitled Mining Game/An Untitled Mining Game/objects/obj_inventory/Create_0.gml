@@ -1,9 +1,8 @@
 depth = -1;
-scale = 2;
+scale = 2.5;
 show_inventory = false;
-//i_am_inventory = "Don't worry about it, im for the save file";
 
-inv_slots = 6;
+inv_slots = 10;
 inv_slots_width = 8;
 inv_slots_height = 3;
 
@@ -20,8 +19,8 @@ gui_height = display_get_gui_height();
 
 cell_size = 32;
 
-inv_UI_width = 288;
-inv_UI_height = 192;
+inv_UI_width = 400;
+inv_UI_height = 350;
 
 spr_inv_UI = spr_inventory_UI;
 spr_inv_items = spr_inventory_items;
@@ -29,14 +28,15 @@ spr_inv_items = spr_inventory_items;
 spr_inv_items_columns = sprite_get_width(spr_inv_items)/cell_size;
 spr_inv_items_rows = sprite_get_height(spr_inv_items)/cell_size;
 
-inv_UI_x = (gui_width * 0.5) - (inv_UI_width * 0.5 * scale);
-inv_UI_y = (gui_height * 0.5) - (inv_UI_height * 0.5 * scale);
+//Starting Draw position
+inv_UI_x = (gui_width * 0.175);
+inv_UI_y = (gui_height * 0.20);
 
 info_x = inv_UI_x + (9 * scale);
 info_y = inv_UI_y + (9 * scale);
 
-slots_x = info_x;
-slots_y = inv_UI_y + (40 * scale);
+slots_x = inv_UI_x;
+slots_y = inv_UI_y;
 
 //---------Player Info
 //0 = NAME
