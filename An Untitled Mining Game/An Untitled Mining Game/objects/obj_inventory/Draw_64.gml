@@ -1,11 +1,31 @@
 if(!show_inventory) exit;
 
 //-------Inventory Back
+
+var _xx = 0; 
+var _yy = 0;
+var _cell_size = 140;
+
+repeat (inv_slots_height) {
+	repeat (inv_slots_width) {
+		draw_sprite(spr_inventory_slot, 0, 
+			inv_UI_x + _xx * (_cell_size + x_buffer),
+			inv_UI_y + _yy * (_cell_size + y_buffer));
+		_xx++;
+	}
+	_xx = 0;
+	_yy++;
+}
+
+/* Old backdrop
 draw_sprite_part_ext(
 	spr_inv_UI, 0, cell_size, 0, inv_UI_width, inv_UI_height, 
 	inv_UI_x, inv_UI_y, scale, scale, c_white, 1
 );
+*/
 
+
+/*	Old player info
 var info_grid = ds_player_info;
 
 draw_set_font(fnt_text_24);
@@ -17,13 +37,14 @@ draw_text_color(
 	info_x + (192*scale) + ((15+18)*scale), info_y, 
 	string(info_grid[# 1, 1]), c,c,c,c, 1
 	);
-
+*/
 
 //------Inventory
 var ii, ix, iy, xx, yy, sx, sy, iitem, inv_grid;
+var c = c_black; 
 // ii is the inventory slot index, ix and iy denote its xy cords
 // xx yy are the x,y location for slot
-//sx and sy are the cords of the sprite on iots sprite sheet
+//sx and sy are the cords of the sprite on its sprite sheet
 //iitem is the inventory item/object
 //inv_grid is the local version of the enumerated item grid
 ii = 0; ix = 0; iy = 0; inv_grid = ds_inventory;

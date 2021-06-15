@@ -12,8 +12,8 @@ pickup_slot = -1;
 m_slotx = 0;
 m_sloty = 0;
 
-x_buffer = 2;
-y_buffer = 4;
+x_buffer = 8;
+y_buffer = 8;
 
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
