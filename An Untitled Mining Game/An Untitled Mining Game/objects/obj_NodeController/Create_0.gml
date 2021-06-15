@@ -27,14 +27,11 @@ enum node_types {
 	rock_sandstone,
 	rock_uranium,
 	rock_molten,
+	mob_slime,
 	
 	
 }
 
-enum mob_types {
-	none	,
-	slime
-}
 
 enum mob_states {
 	idle,

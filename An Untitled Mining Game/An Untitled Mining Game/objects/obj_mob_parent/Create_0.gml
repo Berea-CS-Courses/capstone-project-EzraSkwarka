@@ -12,8 +12,11 @@ timer = 0;
 follow_radius = 32;
 attack_radius = 16;
 
-mob_health = 2;
+max_health = 0;
+_health = 2;
 tool_to_use = tools.pickaxe;
+region = region_list.forest;
+drop_array = [item.shiny_rock, 2];
 
 move_spd = .5;
 dir = irandom_range(0, 359);

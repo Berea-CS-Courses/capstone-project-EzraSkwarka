@@ -42,7 +42,7 @@ if (file_exists("savegame.sav")) {
 					break;
 				case "obj_node_parent":  
 					bonus_multiplier = load_entity.bonus_multiplier;
-					node_health = load_entity.node_health;
+					_health = load_entity._health;
 					max_health = load_entity.max_health;
 					spr_to_draw = load_entity.spr_to_draw;
 					mask_index = load_entity.mask_index;
