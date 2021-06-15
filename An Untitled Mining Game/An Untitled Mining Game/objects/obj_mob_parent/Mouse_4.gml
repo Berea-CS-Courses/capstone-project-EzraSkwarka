@@ -1,0 +1,1 @@
+scr_mob_left_click(id)

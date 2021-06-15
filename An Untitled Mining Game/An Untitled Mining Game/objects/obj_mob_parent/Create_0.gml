@@ -9,6 +9,12 @@ states_array = [
 
 timer = 0;
 
+follow_radius = 32;
+attack_radius = 16;
+
+mob_health = 2;
+tool_to_use = tools.pickaxe;
+
 move_spd = .5;
 dir = irandom_range(0, 359);
 move_x = lengthdir_x(move_spd, dir);

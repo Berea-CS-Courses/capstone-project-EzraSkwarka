@@ -15,7 +15,7 @@ with (_self) {
 		}
 	}
 	
-	if collision_circle(x, y, 64, obj_player, false, false) { //player spotted
+	if collision_circle(x, y, follow_radius, obj_player, false, false) { //player spotted
 		state = mob_states.follow;
 	}
 	

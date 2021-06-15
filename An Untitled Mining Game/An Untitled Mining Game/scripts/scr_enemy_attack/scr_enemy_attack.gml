@@ -6,7 +6,7 @@ with (_self) {
 	//Actions
 	
 	//Conditionals
-	if !collision_circle(x, y, 64, obj_player, false, false) { //player got away
+	if !collision_circle(x, y, attack_radius, obj_player, false, false) { //player got away
 		state = mob_states.idle;
 	}
 	//Animation

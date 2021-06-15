@@ -11,11 +11,11 @@ with (_self) {
 	y += move_y;
 	
 	//Conditionals
-	if collision_circle(x, y, 32, obj_player, false, false) { //player in range
+	if collision_circle(x, y, attack_radius, obj_player, false, false) { //player in range
 		state = mob_states.attack;
 	}
 
-	if !collision_circle(x, y, 64, obj_player, false, false) { //player got away
+	if !collision_circle(x, y, follow_radius, obj_player, false, false) { //player got away
 		state = mob_states.idle;
 	}
 	
