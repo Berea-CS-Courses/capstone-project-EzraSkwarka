@@ -14,12 +14,10 @@ function scr_mob_left_click(_self)
 		}
 	}
 	if ((current_tool == _self.tool_to_use) or (true)) {
-		show_debug_message(string("hit"))
 		if !is_swinging {
 			if (distance_to_object(obj_player) <= 16) {
 				if (_self._health > 0) {
 					_self._health -= obj_relics_menu.pick_power;
-					show_debug_message(string("Hurt"))
 				} 
 		
 				if (_self._health <= 0) {

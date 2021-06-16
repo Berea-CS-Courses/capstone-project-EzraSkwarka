@@ -34,3 +34,7 @@ if !(place_free(x, y + moveY)) {
 } else {
 	y += moveY;
 }
+
+
+x = clamp(x, 6, room_width);
+y = clamp(y, 12, room_height);

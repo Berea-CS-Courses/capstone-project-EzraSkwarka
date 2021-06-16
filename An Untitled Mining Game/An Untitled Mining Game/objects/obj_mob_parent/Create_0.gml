@@ -12,8 +12,20 @@ timer = 0;
 follow_radius = 32;
 attack_radius = 16;
 
+spr_to_draw = 0;
 max_health = 0;
 _health = 2;
+
+//Internal
+bar_offset_x = -16;
+bar_offset_y = 10;
+bar_width = 30;
+bar_height = 6;
+
+time_since_damaged = 0;
+timer_cooldown = 180; //tics
+
+
 tool_to_use = tools.pickaxe;
 region = region_list.forest;
 drop_array = [item.shiny_rock, 2];
