@@ -16,6 +16,11 @@ case (node_types.mob_slime):
 		}
 		timer = 0;
 	}
+	
+	if (timer >= 50) and (timer <= 56) { //between frames 10 and 11
+		scr_hurt_player(1);	
+	}
+	
 	//Animation
 	if (sprite_index != spr_mob_slime_attack) {
 		sprite_index = spr_mob_slime_attack;

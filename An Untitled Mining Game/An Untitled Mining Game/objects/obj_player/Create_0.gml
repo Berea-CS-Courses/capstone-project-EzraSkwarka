@@ -13,6 +13,9 @@ y_frame = 0;
 dir = 0;
 
 health = 3;
+i_frames = 20;
+i_frames_remaning = 0;
+
 
 anim_length = 4; //length of strip
 anim_speed = 4;  //tweak later

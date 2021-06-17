@@ -120,6 +120,7 @@
     {"id":{"name":"spr_struct_mouse_level_station","path":"sprites/spr_struct_mouse_level_station/spr_struct_mouse_level_station.yy",},"order":1,},
     {"id":{"name":"spr_pickaxe_swing","path":"sprites/spr_pickaxe_swing/spr_pickaxe_swing.yy",},"order":1,},
     {"id":{"name":"obj_resource_node_spawner","path":"objects/obj_resource_node_spawner/obj_resource_node_spawner.yy",},"order":2,},
+    {"id":{"name":"scr_hurt_player","path":"scripts/scr_hurt_player/scr_hurt_player.yy",},"order":4,},
     {"id":{"name":"spr_room_tile_spawner_refiner","path":"sprites/spr_room_tile_spawner_refiner/spr_room_tile_spawner_refiner.yy",},"order":1,},
     {"id":{"name":"obj_tile_volcano","path":"objects/obj_tile_volcano/obj_tile_volcano.yy",},"order":7,},
     {"id":{"name":"spr_blue_button_base","path":"sprites/spr_blue_button_base/spr_blue_button_base.yy",},"order":0,},
