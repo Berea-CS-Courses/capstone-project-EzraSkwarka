@@ -11,7 +11,6 @@ case (node_types.mob_slime_forest):
 case (node_types.mob_slime_artic):
 case (node_types.mob_slime_molten):
 	//Actions
-	timer++;
 	if (image_index <= 5) {
 		dir = point_direction(x, y, obj_player.x, obj_player.y);
 		move_spd = 1.5;
@@ -29,7 +28,6 @@ case (node_types.mob_slime_molten):
 		} else if !collision_circle(x, y, follow_radius, obj_player, false, false) { //player got away
 			state = mob_states.idle;
 		}
-	timer = 0;
 	}
 	
 	//Animation

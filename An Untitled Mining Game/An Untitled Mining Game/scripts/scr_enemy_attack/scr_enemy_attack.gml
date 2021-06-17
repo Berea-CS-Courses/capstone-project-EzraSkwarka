@@ -11,17 +11,15 @@ case (node_types.mob_slime_forest):
 case (node_types.mob_slime_artic):
 case (node_types.mob_slime_molten):
 	//Actions
-	timer++;
 	
 	//Conditionals	
-	if (timer >= 70) { //14 frams @ 12 fps
+	if (image_index >= 13) { //14 frams @ 12 fps
 		if !collision_circle(x, y, attack_radius, obj_player, false, false) { //player got away
 			state = mob_states.idle;
 		}
-		timer = 0;
 	}
 	
-	if (timer >= 50) and (timer <= 56) { //between frames 10 and 11
+	if (image_index >= 9) and (image_index < 11.1) { //between frames 10 and 11
 		if (collision_circle(x, y, attack_radius - 3, obj_player, false, false)) {
 			scr_hurt_player(attack_power);	
 		}
