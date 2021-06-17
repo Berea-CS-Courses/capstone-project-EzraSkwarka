@@ -7,10 +7,21 @@ switch(_self.mob_type) {
 #region Slime
 case (node_types.mob_slime):
 	//Actions
+	timer += 1;
 	
 	//Conditionals
 	if !collision_circle(x, y, attack_radius, obj_player, false, false) { //player got away
-		state = mob_states.idle;
+		transition_after_animation = true;
+	} else {
+		transition_after_animation = false;		
+	}
+	
+	if (timer >= 70) { //14 frams @ 12 fps
+		if (transition_after_animation) {
+			state = mob_states.idle;
+			transition_after_animation = false;	
+		}
+		timer = 0;
 	}
 	//Animation
 	if (sprite_index != spr_mob_slime_attack) {

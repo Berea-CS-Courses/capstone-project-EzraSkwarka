@@ -8,6 +8,7 @@ states_array = [
 ]
 
 timer = 0;
+transition_after_animation = false;
 
 mob_type = node_types.mob_slime;
 
