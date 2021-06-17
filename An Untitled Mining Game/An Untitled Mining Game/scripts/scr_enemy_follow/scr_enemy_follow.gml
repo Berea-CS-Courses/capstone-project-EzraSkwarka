@@ -11,8 +11,10 @@ case (node_types.mob_slime):
 	dir = point_direction(x, y, obj_player.x, obj_player.y);
 	move_x = lengthdir_x(move_spd, dir);
 	move_y = lengthdir_y(move_spd, dir);
-	scr_try_move(move_x, move_y)
-	
+	if	(timer >= 30) and // fith frame
+		(timer <= 140) {  // fourteenth frame
+			scr_try_move(move_x, move_y);
+	}
 	//Conditionals
 	if (timer >= 180) { // 18 frames @ 6 fps
 		if collision_circle(x, y, attack_radius, obj_player, false, false) { //player in range

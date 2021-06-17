@@ -30,8 +30,7 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.node_region_spawns = node_region_spawns;
 					save_entity.node_region_spawn_limit = node_region_spawn_limit;
 					break;					
-				case "obj_node_parent":  
-					save_entity.bonus_multiplier = bonus_multiplier;
+				case "obj_node_parent": 
 					save_entity._health = _health;
 					save_entity.max_health = max_health;
 					save_entity.spr_to_draw = spr_to_draw;
@@ -39,6 +38,20 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.drop_array = drop_array;
 					save_entity.tool_to_use = tool_to_use;
 					save_entity.region = region;
+					break;
+				case "obj_mob_parent":
+					save_entity.timer = timer;
+					save_entity.mob_type = mob_type;
+					save_entity.follow_radius = follow_radius;
+					save_entity.attack_radius = attack_radius;
+					save_entity._health = _health;
+					save_entity.max_health = max_health;
+					save_entity.spr_to_draw = spr_to_draw;
+					save_entity.mask_index= mask_index;
+					save_entity.drop_array = drop_array;
+					save_entity.tool_to_use = tool_to_use;
+					save_entity.region = region;
+					save_entity.move_spd = move_spd;
 					break;
 			//-----Obj_items
 				case "obj_item":

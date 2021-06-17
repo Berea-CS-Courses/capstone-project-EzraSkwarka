@@ -40,8 +40,7 @@ if (file_exists("savegame.sav")) {
 					node_region_spawns = load_entity.node_region_spawns;
 					node_region_spawn_limit = load_entity.node_region_spawn_limit;
 					break;
-				case "obj_node_parent":  
-					bonus_multiplier = load_entity.bonus_multiplier;
+				case "obj_node_parent":
 					_health = load_entity._health;
 					max_health = load_entity.max_health;
 					spr_to_draw = load_entity.spr_to_draw;
@@ -49,6 +48,20 @@ if (file_exists("savegame.sav")) {
 					drop_array = load_entity.drop_array;
 					tool_to_use = load_entity.tool_to_use;
 					region = load_entity.region;
+					break;
+				case "obj_mob_parent":
+					timer = load_entity.timer;
+					mob_type = load_entity.mob_type;
+					follow_radius = load_entity.follow_radius;
+					attack_radius = load_entity.attack_radius;
+					_health = load_entity._health;
+					max_health = load_entity.max_health;
+					spr_to_draw = load_entity.spr_to_draw;
+					mask_index= load_entity.mask_index;
+					drop_array = load_entity.drop_array;
+					tool_to_use = load_entity.tool_to_use;
+					region = load_entity.region;
+					move_spd = load_entity.move_spd;
 					break;
 			//-----Obj_items
 				case "obj_item":
