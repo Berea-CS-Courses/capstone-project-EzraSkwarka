@@ -1,5 +1,3 @@
-if (global.is_paused) exit;
-
 with (obj_player) {
 	var handsx = x + 5;
 	var handsy = y;
