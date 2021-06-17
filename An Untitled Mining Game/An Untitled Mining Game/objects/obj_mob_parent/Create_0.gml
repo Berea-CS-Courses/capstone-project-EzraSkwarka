@@ -11,7 +11,7 @@ timer = 0;
 
 mob_type = node_types.mob_slime;
 
-follow_radius = 32;
+follow_radius = 48;
 attack_radius = 16;
 
 spr_to_draw = 0;

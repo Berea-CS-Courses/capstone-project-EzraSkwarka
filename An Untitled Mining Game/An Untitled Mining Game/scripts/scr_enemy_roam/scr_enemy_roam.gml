@@ -10,13 +10,14 @@ switch (_self.mob_type) {
 case (node_types.mob_slime):
 	//Actions
 	timer++;
-	if	(timer >= 30) and // fith frame
-		(timer <= 140) {  // fourteenth frame
+	move_spd = .75;
+	if	(image_index >= 5) and // fith frame
+		(image_index < 14) {  // fourteenth frame
 			scr_try_move(move_x, move_y);
 	}
 	
 	//Conditionals
-	if (timer >= 180) { //18 frames @ 6 fps
+	if (image_index >= 18) {
 		var ran_num = choose(0,1) //flip a coin
 		switch (ran_num) {
 			case 0: state = mob_states.idle;	//heads, idle

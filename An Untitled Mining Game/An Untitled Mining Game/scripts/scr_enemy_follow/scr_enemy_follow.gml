@@ -10,15 +10,18 @@ switch (_self.mob_type) {
 case (node_types.mob_slime):
 	//Actions
 	timer++;
-	dir = point_direction(x, y, obj_player.x, obj_player.y);
+	if (image_index <= 5) {
+		dir = point_direction(x, y, obj_player.x, obj_player.y);
+		move_spd = 1.5;
+	}
 	move_x = lengthdir_x(move_spd, dir);
 	move_y = lengthdir_y(move_spd, dir);
-	if	(timer >= 30) and // fith frame
-		(timer <= 140) {  // fourteenth frame
+	if	(image_index >= 5) and // fith frame
+		(image_index < 14) {  // fourteenth frame
 			scr_try_move(move_x, move_y);
 	}
 	//Conditionals
-	if (timer >= 180) { // 18 frames @ 6 fps
+	if (image_index >= 18) {
 		if collision_circle(x, y, attack_radius, obj_player, false, false) { //player in range
 			state = mob_states.attack;
 		} else if !collision_circle(x, y, follow_radius, obj_player, false, false) { //player got away
