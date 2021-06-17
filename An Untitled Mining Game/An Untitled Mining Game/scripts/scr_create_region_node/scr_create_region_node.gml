@@ -57,7 +57,6 @@ switch (_region) {
 
 	case region_list.tundra:
 		common = [node_types.rock];
-		common = [node_types.mob_slime_artic];
 		uncommon = [node_types.mob_slime_artic];
 		rare = [node_types.rock_uranium];
 		ultrarare = [];
@@ -65,7 +64,6 @@ switch (_region) {
 
 	case region_list.volcano:
 		common = [node_types.rock];
-		common = [node_types.mob_slime_molten];
 		uncommon = [node_types.mob_slime_molten];
 		rare = [node_types.rock_molten];
 		ultrarare = [];

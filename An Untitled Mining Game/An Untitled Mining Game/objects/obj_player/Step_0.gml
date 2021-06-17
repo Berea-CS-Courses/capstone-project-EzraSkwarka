@@ -7,6 +7,14 @@ if (i_frames_remaning > 0) {
 
 if (health <= 0) {scr_load_game(); exit;}
 
+if (health < 5) {
+	health_timer++;
+	if (health_timer >= health_timer_threshold) {
+		health += 1;
+		health_timer = 0;
+	}
+}
+
 // Grab inputs
 hInput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 vInput = keyboard_check(ord("S")) - keyboard_check(ord("W"));
