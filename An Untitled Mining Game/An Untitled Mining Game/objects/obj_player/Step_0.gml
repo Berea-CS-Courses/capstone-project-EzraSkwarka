@@ -5,6 +5,8 @@ if (i_frames_remaning > 0) {
 	i_frames_remaning--;	
 }
 
+if (health <= 0) {scr_load_game(); exit;}
+
 // Grab inputs
 hInput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 vInput = keyboard_check(ord("S")) - keyboard_check(ord("W"));

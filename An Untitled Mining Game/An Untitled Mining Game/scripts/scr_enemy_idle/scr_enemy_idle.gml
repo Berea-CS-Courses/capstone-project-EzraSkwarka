@@ -2,6 +2,8 @@
 // // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_enemy_idle(_self) 
 {
+if global.is_paused exit;
+
 with (_self) {
 switch (_self.mob_type) {
 #region Slime
