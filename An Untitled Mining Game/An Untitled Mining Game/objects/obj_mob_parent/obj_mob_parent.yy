@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_mob_slime_follow",
-    "path": "sprites/spr_mob_slime_follow/spr_mob_slime_follow.yy",
+    "name": "spr_mob_slime_attack",
+    "path": "sprites/spr_mob_slime_attack/spr_mob_slime_attack.yy",
   },
   "solid": true,
   "visible": true,

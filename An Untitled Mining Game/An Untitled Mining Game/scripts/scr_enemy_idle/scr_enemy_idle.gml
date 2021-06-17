@@ -3,6 +3,9 @@
 function scr_enemy_idle(_self) 
 {
 with (_self) {
+switch (_self.mob_type) {
+#region Slime
+case (node_types.mob_slime):
 	//Actions
 	timer++;
 	
@@ -23,6 +26,9 @@ with (_self) {
 	if (sprite_index != spr_mob_slime_idle) {
 		sprite_index = spr_mob_slime_idle;
 	}
+	break;
+	#endregion
 	
+}
 }
 }

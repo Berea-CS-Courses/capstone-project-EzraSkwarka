@@ -3,12 +3,14 @@
 function scr_enemy_follow(_self) 
 {
 with (_self) {
+switch (_self.mob_type) {
+#region Slime
+case (node_types.mob_slime):
 	//Actions
 	dir = point_direction(x, y, obj_player.x, obj_player.y);
 	move_x = lengthdir_x(move_spd, dir);
 	move_y = lengthdir_y(move_spd, dir);
-	x += move_x;
-	y += move_y;
+	scr_try_move(move_x, move_y)
 	
 	//Conditionals
 	if collision_circle(x, y, attack_radius, obj_player, false, false) { //player in range
@@ -20,8 +22,11 @@ with (_self) {
 	}
 	
 	//Animation
-	if (sprite_index != spr_mob_slime_follow) {
-		sprite_index = spr_mob_slime_follow;
+	if (sprite_index != spr_mob_slime_jump) {
+		sprite_index = spr_mob_slime_jump;
 	}
+	break;
+	#endregion
+}
 }
 }

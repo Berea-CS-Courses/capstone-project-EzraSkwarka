@@ -18,23 +18,7 @@ if(hInput != 0 or vInput != 0){
    
 }
 
-// Move/Aproach X
-if !(place_free(x + moveX, y)) {
-	while (place_free(x + sign(moveX), y)) {
-		x += sign(moveX)
-	}
-} else {
-	x += moveX;
-}
-// Move/Aproach  Y
-if !(place_free(x, y + moveY)) {
-	while (place_free(x, y + sign(moveY))) {
-		y += sign(moveY)
-	}
-} else {
-	y += moveY;
-}
-
+scr_try_move(moveX, moveY)
 
 x = clamp(x, 6, room_width);
 y = clamp(y, 12, room_height);

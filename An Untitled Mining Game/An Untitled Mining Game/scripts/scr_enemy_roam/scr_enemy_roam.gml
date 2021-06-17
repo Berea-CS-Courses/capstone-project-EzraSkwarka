@@ -3,10 +3,12 @@
 function scr_enemy_roam(_self) 
 {
 with (_self) {
+switch (_self.mob_type) {
+#region Slime
+case (node_types.mob_slime):
 	//Actions
 	timer++;
-	x += move_x;
-	y += move_y;
+	scr_try_move(move_x, move_y)
 	
 	//Conditionals
 	if (timer >= room_speed * 2) { //every two seconds
@@ -27,8 +29,11 @@ with (_self) {
 	}
 	
 	//Animation
-	if (sprite_index != spr_mob_slime_roam) {
-		sprite_index = spr_mob_slime_roam;
+	if (sprite_index != spr_mob_slime_jump) {
+		sprite_index = spr_mob_slime_jump;
 	}
+	break;
+	#endregion
+}
 }	
 }

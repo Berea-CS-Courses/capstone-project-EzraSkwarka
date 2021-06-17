@@ -3,6 +3,9 @@
 function scr_enemy_attack(_self) 
 {
 with (_self) {
+switch(_self.mob_type) {
+#region Slime
+case (node_types.mob_slime):
 	//Actions
 	
 	//Conditionals
@@ -13,6 +16,8 @@ with (_self) {
 	if (sprite_index != spr_mob_slime_attack) {
 		sprite_index = spr_mob_slime_attack;
 	}
-	
+	break;
+	#endregion
+}
 }
 }

@@ -9,6 +9,8 @@ states_array = [
 
 timer = 0;
 
+mob_type = node_types.mob_slime;
+
 follow_radius = 32;
 attack_radius = 16;
 
