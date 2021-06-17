@@ -75,6 +75,17 @@ var i = 0; repeat(array_length(node_type_array)) {
 					
 					break;
 			//-----Player
+				case "obj_player":
+					save_entity.spd = spd;
+					save_entity.x_frame = x_frame;
+					save_entity.y_frame = y_frame;
+					save_entity.dir = dir;
+					save_entity._health = health;
+					save_entity.health_timer = health_timer;
+					save_entity.health_timer_threshold = health_timer_threshold;
+					save_entity.i_frames = i_frames;
+					save_entity.i_frames_remaning = i_frames_remaning;
+					break;
 				//-----Inventory
 				case "obj_inventory":
 					save_entity.layer = "UI";

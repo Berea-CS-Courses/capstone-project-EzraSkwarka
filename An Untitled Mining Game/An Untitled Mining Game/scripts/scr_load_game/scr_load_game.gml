@@ -85,6 +85,17 @@ if (file_exists("savegame.sav")) {
 					draw_menu = load_entity.draw_menu;
 					break;
 			//-----Player
+			case "obj_player":
+				spd = load_entity.spd;
+				x_frame = load_entity.x_frame;
+				y_frame = load_entity.y_frame;
+				dir = load_entity.dir;
+				health = load_entity._health;
+				health_timer = load_entity.health_timer;
+				health_timer_threshold = load_entity.health_timer_threshold;
+				i_frames = load_entity.i_frames;
+				i_frames_remaning = load_entity.i_frames_remaning;
+				break;
 				//-----Inventory
 				case "obj_inventory":
 					inv_slots = load_entity.inv_slots;
