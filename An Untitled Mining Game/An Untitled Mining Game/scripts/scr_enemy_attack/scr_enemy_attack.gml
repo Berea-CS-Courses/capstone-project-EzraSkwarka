@@ -5,9 +5,11 @@ function scr_enemy_attack(_self)
 if global.is_paused exit;	
 
 with (_self) {
-switch(_self.mob_type) {
-#region Slime
-case (node_types.mob_slime):
+switch(mob_type) {
+#region Slimes
+case (node_types.mob_slime_forest):
+case (node_types.mob_slime_artic):
+case (node_types.mob_slime_molten):
 	//Actions
 	timer++;
 	
@@ -26,8 +28,24 @@ case (node_types.mob_slime):
 	}
 	
 	//Animation
-	if (sprite_index != spr_mob_slime_attack) {
-		sprite_index = spr_mob_slime_attack;
+	switch(mob_type) {
+		case (node_types.mob_slime_forest):
+			if (sprite_index != spr_mob_slime_attack) {
+				sprite_index = spr_mob_slime_attack;
+			}
+		break;
+		
+		case (node_types.mob_slime_artic):
+			if (sprite_index != spr_mob_slime_attack_artic) {
+				sprite_index = spr_mob_slime_attack_artic;
+			}
+		break;
+		
+		case (node_types.mob_slime_molten):
+			if (sprite_index != spr_mob_slime_attack_molten) {
+				sprite_index = spr_mob_slime_attack_molten;
+			}
+		break;
 	}
 	break;
 	#endregion

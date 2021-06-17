@@ -36,7 +36,9 @@ enum node_types {
 	rock_sandstone,
 	rock_uranium,
 	rock_molten,
-	mob_slime,
+	mob_slime_forest,
+	mob_slime_artic,
+	mob_slime_molten,
 	
 	
 }

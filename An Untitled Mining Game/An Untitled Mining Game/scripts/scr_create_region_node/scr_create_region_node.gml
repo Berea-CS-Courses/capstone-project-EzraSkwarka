@@ -37,7 +37,7 @@ switch (_region) {
 	case region_list.forest:
 		common = [node_types.tree];
 		uncommon = [node_types.rock_iron];
-		rare = [node_types.mob_slime];
+		rare = [node_types.mob_slime_forest];
 		ultrarare = [];
 		break;
 		
@@ -57,14 +57,16 @@ switch (_region) {
 
 	case region_list.tundra:
 		common = [node_types.rock];
-		uncommon = [];
+		common = [node_types.mob_slime_artic];
+		uncommon = [node_types.mob_slime_artic];
 		rare = [node_types.rock_uranium];
 		ultrarare = [];
 		break;
 
 	case region_list.volcano:
 		common = [node_types.rock];
-		uncommon = [];
+		common = [node_types.mob_slime_molten];
+		uncommon = [node_types.mob_slime_molten];
 		rare = [node_types.rock_molten];
 		ultrarare = [];
 		break;
@@ -208,14 +210,36 @@ switch node_type {
 		break;
 
 	//Mobs
-	case node_types.mob_slime:
-		show_debug_message("Slime")
+	case node_types.mob_slime_forest:
 		var node = instance_create_layer(x, y, "Active", obj_mob_parent);
+		node.mob_type = node_types.mob_slime_forest;
 		node._health = 2;
 		node.attack_power = 1;
 		node.tool_to_use = tools.pickaxe;
 		node.spr_to_draw = 0;
 		node.drop_array = [item.shiny_rock, 3];
+		_successful_spawn = true;
+		break;
+		
+	case node_types.mob_slime_artic:
+		var node = instance_create_layer(x, y, "Active", obj_mob_parent);
+		node.mob_type = node_types.mob_slime_artic;
+		node._health = 4;
+		node.attack_power = 2;
+		node.tool_to_use = tools.pickaxe;
+		node.spr_to_draw = 0;
+		node.drop_array = [item.shiny_rock, 5];
+		_successful_spawn = true;
+		break;
+		
+	case node_types.mob_slime_molten:
+		var node = instance_create_layer(x, y, "Active", obj_mob_parent);
+		node.mob_type = node_types.mob_slime_molten;
+		node._health = 8;
+		node.attack_power = 3;
+		node.tool_to_use = tools.pickaxe;
+		node.spr_to_draw = 0;
+		node.drop_array = [item.shiny_rock, 10];
 		_successful_spawn = true;
 		break;
 

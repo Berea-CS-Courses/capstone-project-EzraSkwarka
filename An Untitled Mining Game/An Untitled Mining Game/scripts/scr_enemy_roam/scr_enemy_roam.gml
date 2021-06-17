@@ -6,8 +6,10 @@ if global.is_paused exit;
 
 with (_self) {
 switch (_self.mob_type) {
-#region Slime
-case (node_types.mob_slime):
+#region Slimes
+case (node_types.mob_slime_forest):
+case (node_types.mob_slime_artic):
+case (node_types.mob_slime_molten):
 	//Actions
 	timer++;
 	move_spd = .75;
@@ -35,8 +37,24 @@ case (node_types.mob_slime):
 	}
 	
 	//Animation
-	if (sprite_index != spr_mob_slime_jump) {
-		sprite_index = spr_mob_slime_jump;
+	switch(mob_type) {
+		case (node_types.mob_slime_forest):
+			if (sprite_index != spr_mob_slime_jump) {
+				sprite_index = spr_mob_slime_jump;
+			}
+		break;
+		
+		case (node_types.mob_slime_artic):
+			if (sprite_index != spr_mob_slime_jump_artic) {
+				sprite_index = spr_mob_slime_jump_artic;
+			}
+		break;
+		
+		case (node_types.mob_slime_molten):
+			if (sprite_index != spr_mob_slime_jump_molten) {
+				sprite_index = spr_mob_slime_jump_molten;
+			}
+		break;
 	}
 	break;
 	#endregion
