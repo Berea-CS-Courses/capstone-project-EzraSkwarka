@@ -1,4 +1,5 @@
 draw_sprite(sprite_index, image_index, x, y);
+mask_index = sprite_index;
 
 if (_health != max_health) {
 	if (time_since_damaged >= timer_cooldown) {

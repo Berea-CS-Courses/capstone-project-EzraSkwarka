@@ -12,6 +12,16 @@ node_region_spawn_limit = [
 	2	//Volcano
 ];
 
+node_region_spawn_limit = [
+	0,	//Beach 
+	10,	//Forest
+	0,	//Desert
+	0,	//Mines
+	0,	//Mountian
+	0,	//Tundra
+	0	//Volcano
+];
+
 
 enum region_list {
 	beach,
