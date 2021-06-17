@@ -21,7 +21,7 @@ case (node_types.mob_slime):
 	
 	if (timer >= 50) and (timer <= 56) { //between frames 10 and 11
 		if (collision_circle(x, y, attack_radius - 3, obj_player, false, false)) {
-			scr_hurt_player(1);	
+			scr_hurt_player(attack_power);	
 		}
 	}
 	

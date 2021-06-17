@@ -56,6 +56,7 @@ if (file_exists("savegame.sav")) {
 					attack_radius = load_entity.attack_radius;
 					_health = load_entity._health;
 					max_health = load_entity.max_health;
+					attack_power = load_entity.attack_power;
 					spr_to_draw = load_entity.spr_to_draw;
 					mask_index= load_entity.mask_index;
 					drop_array = load_entity.drop_array;

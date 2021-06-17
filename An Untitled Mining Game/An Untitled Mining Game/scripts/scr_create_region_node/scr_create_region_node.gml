@@ -35,9 +35,9 @@ switch (_region) {
 		break;
 		
 	case region_list.forest:
-		common = [node_types.tree, node_types.mob_slime];
+		common = [node_types.tree];
 		uncommon = [node_types.rock_iron];
-		rare = [];
+		rare = [node_types.mob_slime];
 		ultrarare = [];
 		break;
 		
@@ -212,6 +212,7 @@ switch node_type {
 		show_debug_message("Slime")
 		var node = instance_create_layer(x, y, "Active", obj_mob_parent);
 		node._health = 2;
+		node.attack_power = 1;
 		node.tool_to_use = tools.pickaxe;
 		node.spr_to_draw = 0;
 		node.drop_array = [item.shiny_rock, 3];

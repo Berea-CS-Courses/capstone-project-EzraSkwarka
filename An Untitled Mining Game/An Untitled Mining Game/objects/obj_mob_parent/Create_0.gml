@@ -17,6 +17,7 @@ attack_radius = 16;
 spr_to_draw = 0;
 max_health = 0;
 _health = 2;
+attack_power = 1;
 
 //Internal
 bar_offset_x = -16;

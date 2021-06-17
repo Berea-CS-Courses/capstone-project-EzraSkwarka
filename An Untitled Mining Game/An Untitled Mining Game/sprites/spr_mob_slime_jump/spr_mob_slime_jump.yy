@@ -137,8 +137,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Slime",
-    "path": "folders/Sprites/Resources/Mobs/Slime.yy",
+    "name": "Forest",
+    "path": "folders/Sprites/Resources/Mobs/Slimes/Forest.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_mob_slime_jump",
