@@ -214,7 +214,6 @@ switch node_type {
 		node._health = 2;
 		node.attack_power = 1;
 		node.tool_to_use = tools.pickaxe;
-		node.spr_to_draw = 0;
 		node.drop_array = [item.shiny_rock, 3];
 		_successful_spawn = true;
 		break;
@@ -225,7 +224,6 @@ switch node_type {
 		node._health = 4;
 		node.attack_power = 2;
 		node.tool_to_use = tools.pickaxe;
-		node.spr_to_draw = 0;
 		node.drop_array = [item.shiny_rock, 5];
 		_successful_spawn = true;
 		break;
@@ -236,7 +234,6 @@ switch node_type {
 		node._health = 8;
 		node.attack_power = 3;
 		node.tool_to_use = tools.pickaxe;
-		node.spr_to_draw = 0;
 		node.drop_array = [item.shiny_rock, 10];
 		_successful_spawn = true;
 		break;
@@ -248,7 +245,9 @@ switch node_type {
 
 if (_successful_spawn) {
 	// Non Varing Comands
-	node.mask_index = node.spr_to_draw;
+	if !(node.spr_to_draw == 0) {
+		node.mask_index = node.spr_to_draw;
+	}
 	node.max_health = node._health;
 	
 	obj_NodeController.nodes_spawned += 1;

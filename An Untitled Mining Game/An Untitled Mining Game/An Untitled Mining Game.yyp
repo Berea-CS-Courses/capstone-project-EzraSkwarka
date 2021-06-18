@@ -196,7 +196,7 @@
     {"folderPath":"folders/Sprites/Resources/Nodes/Rock.yy","order":9,"resourceVersion":"1.0","name":"Rock","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/!WORKSPACE.yy","order":7,"resourceVersion":"1.0","name":"!WORKSPACE","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Buttons.yy","order":8,"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Scripts/Mob State Managment.yy","order":7,"resourceVersion":"1.0","name":"Mob State Managment","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/Nodes/Mob State Management.yy","order":3,"resourceVersion":"1.0","name":"Mob State Management","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Resources/Mobs.yy","order":3,"resourceVersion":"1.0","name":"Mobs","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Resources/Mobs/Slimes.yy","order":1,"resourceVersion":"1.0","name":"Slimes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Resources/Mobs/Slimes/Forest.yy","order":6,"resourceVersion":"1.0","name":"Forest","tags":[],"resourceType":"GMFolder",},

@@ -1,13 +1,10 @@
 //Set on spawn
-bonus_multiplier = 0;
 _health = 1;
 max_health = 1;
-spr_to_draw = spr_node_tree;
+spr_to_draw = 0;
 mask_index = spr_to_draw;
 region = -1;
 tool_to_use = tools.axe;
-spawn_resource = item.rock;
-base_rate = 15;
 drop_array = [item.wood, 3]
 
 //Internal

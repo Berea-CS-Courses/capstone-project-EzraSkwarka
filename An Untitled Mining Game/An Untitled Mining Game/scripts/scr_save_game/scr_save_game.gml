@@ -47,7 +47,6 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity._health = _health;
 					save_entity.max_health = max_health;
 					save_entity.attack_power = attack_power;
-					save_entity.spr_to_draw = spr_to_draw;
 					save_entity.mask_index= mask_index;
 					save_entity.drop_array = drop_array;
 					save_entity.tool_to_use = tool_to_use;
