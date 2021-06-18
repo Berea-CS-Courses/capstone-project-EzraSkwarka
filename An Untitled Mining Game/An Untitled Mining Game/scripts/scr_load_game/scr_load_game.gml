@@ -40,15 +40,29 @@ if (file_exists("savegame.sav")) {
 					node_region_spawns = load_entity.node_region_spawns;
 					node_region_spawn_limit = load_entity.node_region_spawn_limit;
 					break;
-				case "obj_node_parent":  
-					bonus_multiplier = load_entity.bonus_multiplier;
-					node_health = load_entity.node_health;
+				case "obj_node_parent":
+					_health = load_entity._health;
 					max_health = load_entity.max_health;
 					spr_to_draw = load_entity.spr_to_draw;
 					mask_index = load_entity.mask_index;
 					drop_array = load_entity.drop_array;
 					tool_to_use = load_entity.tool_to_use;
 					region = load_entity.region;
+					break;
+				case "obj_mob_parent":
+					timer = load_entity.timer;
+					mob_type = load_entity.mob_type;
+					follow_radius = load_entity.follow_radius;
+					attack_radius = load_entity.attack_radius;
+					_health = load_entity._health;
+					max_health = load_entity.max_health;
+					attack_power = load_entity.attack_power;
+					spr_to_draw = load_entity.spr_to_draw;
+					mask_index= load_entity.mask_index;
+					drop_array = load_entity.drop_array;
+					tool_to_use = load_entity.tool_to_use;
+					region = load_entity.region;
+					move_spd = load_entity.move_spd;
 					break;
 			//-----Obj_items
 				case "obj_item":
@@ -71,6 +85,17 @@ if (file_exists("savegame.sav")) {
 					draw_menu = load_entity.draw_menu;
 					break;
 			//-----Player
+			case "obj_player":
+				spd = load_entity.spd;
+				x_frame = load_entity.x_frame;
+				y_frame = load_entity.y_frame;
+				dir = load_entity.dir;
+				health = load_entity._health;
+				health_timer = load_entity.health_timer;
+				health_timer_threshold = load_entity.health_timer_threshold;
+				i_frames = load_entity.i_frames;
+				i_frames_remaning = load_entity.i_frames_remaning;
+				break;
 				//-----Inventory
 				case "obj_inventory":
 					inv_slots = load_entity.inv_slots;

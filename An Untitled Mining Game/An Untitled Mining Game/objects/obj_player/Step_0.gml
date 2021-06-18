@@ -1,6 +1,20 @@
 //Pause interupt
 if global.is_paused exit;
 
+if (i_frames_remaning > 0) {
+	i_frames_remaning--;	
+}
+
+if (health <= 0) {scr_load_game(); exit;}
+
+if (health < 5) {
+	health_timer++;
+	if (health_timer >= health_timer_threshold) {
+		health += 1;
+		health_timer = 0;
+	}
+}
+
 // Grab inputs
 hInput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 vInput = keyboard_check(ord("S")) - keyboard_check(ord("W"));
@@ -18,19 +32,7 @@ if(hInput != 0 or vInput != 0){
    
 }
 
-// Move/Aproach X
-if !(place_free(x + moveX, y)) {
-	while (place_free(x + sign(moveX), y)) {
-		x += sign(moveX)
-	}
-} else {
-	x += moveX;
-}
-// Move/Aproach  Y
-if !(place_free(x, y + moveY)) {
-	while (place_free(x, y + sign(moveY))) {
-		y += sign(moveY)
-	}
-} else {
-	y += moveY;
-}
+scr_try_move(moveX, moveY)
+
+x = clamp(x, 6, room_width);
+y = clamp(y, 12, room_height);

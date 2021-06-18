@@ -3,6 +3,7 @@
 //node_type_array
 nta = [
 	obj_node_parent,
+	obj_mob_parent,
 	obj_item,
 	obj_structure_parent, 
 	obj_player,

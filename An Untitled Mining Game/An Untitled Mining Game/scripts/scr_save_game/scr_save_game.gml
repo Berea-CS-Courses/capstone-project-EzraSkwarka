@@ -30,15 +30,29 @@ var i = 0; repeat(array_length(node_type_array)) {
 					save_entity.node_region_spawns = node_region_spawns;
 					save_entity.node_region_spawn_limit = node_region_spawn_limit;
 					break;					
-				case "obj_node_parent":  
-					save_entity.bonus_multiplier = bonus_multiplier;
-					save_entity.node_health = node_health;
+				case "obj_node_parent": 
+					save_entity._health = _health;
 					save_entity.max_health = max_health;
 					save_entity.spr_to_draw = spr_to_draw;
 					save_entity.mask_index= mask_index;
 					save_entity.drop_array = drop_array;
 					save_entity.tool_to_use = tool_to_use;
 					save_entity.region = region;
+					break;
+				case "obj_mob_parent":
+					save_entity.timer = timer;
+					save_entity.mob_type = mob_type;
+					save_entity.follow_radius = follow_radius;
+					save_entity.attack_radius = attack_radius;
+					save_entity._health = _health;
+					save_entity.max_health = max_health;
+					save_entity.attack_power = attack_power;
+					save_entity.spr_to_draw = spr_to_draw;
+					save_entity.mask_index= mask_index;
+					save_entity.drop_array = drop_array;
+					save_entity.tool_to_use = tool_to_use;
+					save_entity.region = region;
+					save_entity.move_spd = move_spd;
 					break;
 			//-----Obj_items
 				case "obj_item":
@@ -61,6 +75,17 @@ var i = 0; repeat(array_length(node_type_array)) {
 					
 					break;
 			//-----Player
+				case "obj_player":
+					save_entity.spd = spd;
+					save_entity.x_frame = x_frame;
+					save_entity.y_frame = y_frame;
+					save_entity.dir = dir;
+					save_entity._health = health;
+					save_entity.health_timer = health_timer;
+					save_entity.health_timer_threshold = health_timer_threshold;
+					save_entity.i_frames = i_frames;
+					save_entity.i_frames_remaning = i_frames_remaning;
+					break;
 				//-----Inventory
 				case "obj_inventory":
 					save_entity.layer = "UI";
