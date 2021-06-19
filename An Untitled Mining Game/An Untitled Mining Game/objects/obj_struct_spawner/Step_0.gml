@@ -18,27 +18,27 @@ if (!building) {
 	mousey = mouse_y;
 	
 	// Determine active struct
-	/*if (mouse_wheel_up()) {selected_struct += 1};
-	if (mouse_wheel_down()) {selected_struct -= 1};
-	
-	if (selected_struct >= struct.height) {selected_struct = 1};
-	if (selected_struct <= 0) {selected_struct = struct.height -1};*/
-	
 	switch (selected_struct) {
 		case struct.pebble_refiner:
 			active_sprite = spr_struct_pebble_refiner;
 			active_object = struct.pebble_refiner
 			required_mats = [item.rock, 10];
+			col_width = 30;
+			col_height = 22;
 			break;
 		case struct.mouse_tool:
 			active_sprite = spr_struct_mouse_level_station;
 			active_object = struct.mouse_tool;
 			required_mats = [item.shiny_rock, 10];
+			col_width = 22;
+			col_height = 29;
 			break;
 		case struct.points_shop:
 			active_sprite = spr_struct_points_shop;
 			active_object = struct.points_shop;
 			required_mats = [item.wood, 50];
+			col_width = 24;
+			col_height = 18;
 			break;
 		
 		default:
@@ -56,11 +56,15 @@ if (!building) {
 		mousey_adjusted = (mousey div cH) * cH + cell_offset_y + cH;	
 	}
 	mousex_adjusted = mousex_adjusted * cW + cell_offset_x + (cW/2);
-	
-	if (!place_free(mousex_adjusted, mousey_adjusted)) {
-		hex_empty = false;	
-	} else {
-		hex_empty = true;
+
+	hex_empty = true
+	var _i = 0; repeat (array_length(solid_objects)) {
+		if (collision_rectangle(mousex_adjusted - col_width/2, mousey_adjusted - col_height/2,
+								mousex_adjusted + col_width/2, mousey_adjusted + col_height/2,
+								solid_objects[_i], false, true) != noone) {
+			hex_empty = false;
+		}
+		_i++;
 	}
 	
 	//Build
